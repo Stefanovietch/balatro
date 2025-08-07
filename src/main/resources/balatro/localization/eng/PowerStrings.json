@@ -1,0 +1,158 @@
+{
+  "${modID}:PowerID": {
+    "NAME": "Ultimate Power",
+    "DESCRIPTIONS": [
+      "You are Very Cool and Strong."
+    ]
+  },
+  "${modID}:LoyaltyCard": {
+    "NAME": "Loyalty Card",
+    "DESCRIPTIONS": [
+      "Your next card deals #b4 times damage",
+      "Your #b2nd card deals #b4 times damage",
+      "Your #b",
+      "th card deals #b4 times damage."
+    ]
+  },
+  "${modID}:OopsAll6s": {
+    "NAME": "Oops! All 6s",
+    "DESCRIPTIONS": [
+      "Double all your probabilities. ( #b",
+      " times)"
+    ]
+  },
+  "${modID}:Pareidolia": {
+    "NAME": "Pareidolia",
+    "DESCRIPTIONS": [
+      "All cards are considered #yPowers."
+    ]
+  },
+  "${modID}:ScaryFace": {
+    "NAME": "Scary Face",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yBlock whenever you play a #yPower."
+    ]
+  },
+  "${modID}:Egg": {
+    "NAME": "Egg",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yGold at the end of the turn if you didn't take damage."
+    ]
+  },
+  "${modID}:BusinessCard": {
+    "NAME": "Business Card",
+    "DESCRIPTIONS": [
+      "Whenever you play a #yPower, you have a #b",
+      " in #b4 #yChance to gain #b",
+      " #yGold."
+    ]
+  },
+  "${modID}:ToDoList": {
+    "NAME": "To Do List",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yGold whenever ",
+      " is played. Changes at the end of each turn."
+    ]
+  },
+  "${modID}:Cavendish": {
+    "NAME": "Cavendish",
+    "DESCRIPTIONS": [
+      "Your next #yAttack deals #b",
+      " times more damage."
+    ]
+  },
+  "${modID}:Photograph": {
+    "NAME": "Photograph",
+    "DESCRIPTIONS": [
+      "Your next #yPower card is played twice",
+      "Your next #b",
+      " #yPower cards are played twice."
+      ]
+  },
+  "${modID}:Juggler": {
+    "NAME": "Juggler",
+    "DESCRIPTIONS": [
+      "At the start of your turn, draw #b",
+      " additional card.",
+      " additional cards."
+    ]
+  },
+  "${modID}:BaseballCard": {
+    "NAME": "Baseball Card",
+    "DESCRIPTIONS": [
+      "All #yUncommon cards damage is increased by #bx",
+      "."
+      ]
+  },
+  "${modID}:TradingCard": {
+    "NAME": "Trading Card",
+    "DESCRIPTIONS": [
+      "At the start of your turn, Exhaust one card and gain #b",
+      " Gold."
+      ]
+  },
+  "${modID}:WalkieTalkie": {
+    "NAME": "Walkie Talkie",
+    "DESCRIPTIONS": [
+      "When playing a cost #b1 card gain #b",
+      " #yBlock and deal #b",
+      " damage to a random enemy."
+      ]
+  },
+
+  "${modID}:Seltzer": {
+    "NAME": "Seltzer",
+    "DESCRIPTIONS": [
+      "Replay the next card",
+      "Replay the next #b",
+      " cards."
+      ]
+  },
+  "${modID}:MrBones": {
+    "NAME": "Mr. Bones",
+    "DESCRIPTIONS": [
+      "Revives with 25% health when taking Fatal damage, then removes this from your deck."
+      ]
+  },
+  "${modID}:Astronomer": {
+    "NAME": "Astronomer",
+    "DESCRIPTIONS": [
+      "Your next upgraded card costs #b0.",
+      "Your next #b",
+      " upgraded cards costs #b0."
+      ]
+  },
+  "${modID}:Triboulet": {
+    "NAME": "Triboulet",
+    "DESCRIPTIONS": [
+      "Double the damage and Block of all 2 Cost cards."
+    ]
+  },
+  "${modID}:LuckyCat": {
+    "NAME": "Lucky Cat",
+    "DESCRIPTIONS": [
+      "At start of your turn, #b",
+      " in #b4 #yChance to gain #b",
+      " #yBlock and #b",
+      " in #b4 #yChance to deal #b",
+      " damage to ALL enemies."
+    ]
+  },
+  "${modID}:Arrowhead": {
+    "NAME": "Arrowhead",
+    "DESCRIPTIONS": [
+      "At the start of your turn, add #b",
+      " #ySafety into your hand and discard #b",
+      " cards."
+    ]
+  },
+  "${modID}:SeeingDouble": {
+    "NAME": "Seeing Double",
+    "DESCRIPTIONS": [
+      "Deal double damage."
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+package balatro.patches;
+
+import balatro.cards.*;
+import com.evacipated.cardcrawl.modthespire.lib.*;
+import com.evacipated.cardcrawl.modthespire.patcher.PatchingException;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import javassist.CannotCompileException;
+import javassist.CtBehavior;
+
+import java.util.ArrayList;
+
+import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.*;
+
+public class AddLegendaryCardToColorlessRewardsPatches {
+    @SpirePatch2(clz = AbstractDungeon.class, method = "getColorlessCardFromPool")
+    public static class ColorlessHook {
+        @SpirePostfixPatch
+        public static AbstractCard replaceRareWithLegendary(AbstractCard __result) {
+            if (aiRng.randomBoolean(0.05F) && __result.rarity == AbstractCard.CardRarity.RARE) {
+                CardGroup legendaryCardPool = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+                legendaryCardPool.addToRandomSpot(new Canio());
+                legendaryCardPool.addToRandomSpot(new Triboulet());
+                legendaryCardPool.addToRandomSpot(new Yorick());
+                legendaryCardPool.addToRandomSpot(new Chicot());
+                legendaryCardPool.addToRandomSpot(new Perkeo());
+                return legendaryCardPool.getRandomCard(true).makeCopy();
+            }
+            return __result;
+        }
+    }
+}

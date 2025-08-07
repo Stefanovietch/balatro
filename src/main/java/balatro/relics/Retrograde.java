@@ -1,0 +1,37 @@
+package balatro.relics;
+
+import balatro.cards.JollyJoker;
+import balatro.character.baseDeck;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+
+import static balatro.balatroMod.makeID;
+import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.aiRng;
+
+public class Retrograde extends BaseRelic{
+    private static final String NAME = makeID(Retrograde.class.getSimpleName()); //The name will be used for determining the image file as well as the ID.
+    public static final String ID = makeID(NAME); //This adds the mod's prefix to the relic ID, resulting in modID:MyRelic
+    private static final RelicTier RARITY = RelicTier.STARTER; //The relic's rarity.
+    private static final LandingSound SOUND = LandingSound.CLINK; //The sound played when the relic is clicked.
+    private static final int REGEN = 3;
+
+    public Retrograde() {
+        super(ID, NAME, baseDeck.Enums.CARD_COLOR, RARITY, SOUND);
+    }
+
+    public String getUpdatedDescription() {
+        return DESCRIPTIONS[0];
+    }
+
+    public void onEquip() {
+        AbstractDungeon.player.masterDeck.group.get(0).upgrade();
+        AbstractDungeon.player.masterDeck.group.get(1).upgrade();
+        AbstractDungeon.player.masterDeck.group.get(4).upgrade();
+        AbstractDungeon.player.masterDeck.group.get(5).upgrade();
+        if (aiRng.randomBoolean()) {
+            AbstractDungeon.player.masterDeck.group.get(8).upgrade();
+        } else {
+            AbstractDungeon.player.masterDeck.group.get(9).upgrade();
+        }
+    }
+}

@@ -1,0 +1,119 @@
+{
+  "${modID}:Example": {
+    "TEXT": [
+      "This is",
+      "an array of Strings."
+    ],
+    "EXTRA_TEXT": [
+      "This is another",
+      "array of Strings."
+    ],
+    "TEXT_DICT": {
+      "This": "Contains pairs of Strings, used to get values based on keys.",
+      "This is a key": "This is a value."
+    }
+  },
+  "${modID}:deckselectionUI": {
+    "TEXT": [
+      "This is",
+      "an array of Strings."
+    ]
+  },
+  "${modID}:redDeck": {
+    "TEXT": [
+      "Red Deck",
+      "A good starting point."
+    ]
+  },
+  "${modID}:blueDeck": {
+    "TEXT": [
+      "Blue Deck",
+      "A simple way to play."
+    ]
+  },
+  "${modID}:yellowDeck": {
+    "TEXT": [
+      "Yellow Deck",
+      "For that extra money."
+    ]
+  },
+  "${modID}:greenDeck": {
+    "TEXT": [
+      "Green Deck",
+      "Making your own cash."
+    ]
+  },
+  "${modID}:blackDeck": {
+    "TEXT": [
+      "Black Deck",
+      "More options, more ways to play."
+    ]
+  },
+  "${modID}:magicDeck": {
+    "TEXT": [
+      "Magic Deck",
+      "Brewing up some magic."
+    ]
+  },
+  "${modID}:nebulaDeck": {
+    "TEXT": [
+      "Nebula Deck",
+      "Learn by playing, play by learning."
+    ]
+  },
+  "${modID}:ghostDeck": {
+    "TEXT": [
+      "Ghost Deck",
+      "Expect the unexpected."
+    ]
+  },
+  "${modID}:abandonedDeck": {
+    "TEXT": [
+      "Abandoned Deck",
+      "To gain power, you need to lose it first."
+    ]
+  },
+  "${modID}:checkeredDeck": {
+    "TEXT": [
+      "Checkered Deck",
+      "Check and mate with precision."
+    ]
+  },
+  "${modID}:zodiacDeck": {
+    "TEXT": [
+      "Zodiac Deck",
+      "Spend money like you have stars."
+    ]
+  },
+  "${modID}:paintedDeck": {
+    "TEXT": [
+      "Painted Deck",
+      "Beauty is in the hands of an artist."
+    ]
+  },
+  "${modID}:anaglyphDeck": {
+    "TEXT": [
+      "Anaglyph Deck",
+      "To see something twice, you need two eyes."
+    ]
+  },
+  "${modID}:plasmaDeck": {
+    "TEXT": [
+      "Plasma Deck",
+      "The fourth act is what that matters."
+    ]
+  },
+  "${modID}:erraticDeck": {
+    "TEXT": [
+      "Erratic Deck",
+      "Don't look for a pattern, be the pattern."
+    ]
+  },
+
+  "${modID}:GoldPerCombat": {
+    "TEXT": [
+      "Combat gold earned.",
+      "Maximum amount of gold to be earned each combat."
+    ]
+  }
+}

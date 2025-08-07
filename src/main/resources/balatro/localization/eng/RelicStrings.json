@@ -1,0 +1,228 @@
+{
+  "${modID}:RelicID": {
+    "NAME": "Good Relic",
+    "FLAVOR": "Flavor text displayed in detailed relic view.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your turn. [E] is an energy icon."
+    ]
+  },
+  "${modID}:LowStakes": {
+    "NAME": "Low Stakes",
+    "FLAVOR": "This one sounds familiar.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, discard any number of cards then draw that many."
+    ]
+  },
+  "${modID}:HeadsUp": {
+    "NAME": "Heads Up",
+    "FLAVOR": "Losing is for suckers.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your turn."
+    ]
+  },
+  "${modID}:NestEgg": {
+    "NAME": "Nest Egg",
+    "FLAVOR": "Some extra cash for on the way.",
+    "DESCRIPTIONS": [
+      "Gain #b300 #yGold at the start of the run."
+    ]
+  },
+  "${modID}:YouGetWhatYouGet": {
+    "NAME": "You Get What You Get",
+    "FLAVOR": "There no free handouts.",
+    "DESCRIPTIONS": [
+      "At the end of the turn gain #b2 #yGold for each card in hand. Gain no #yGold in combat rewards. "
+    ]
+  },
+  "${modID}:CardPlayer": {
+    "NAME": "Card Player",
+    "FLAVOR": "Is this the reward you are looking for?",
+    "DESCRIPTIONS": [
+      "On Card Reward screens you have #b2 additional cards to choose from. Lose [E] at the start of your turn. "
+    ]
+  },
+  "${modID}:Cartomancy": {
+    "NAME": "Cartomancy",
+    "FLAVOR": "Everybody needs a little bit of magic.",
+    "DESCRIPTIONS": [
+      "Gain an extra #yPotion slot and #b2 #yDuplication #yPotions."
+    ]
+  },
+  "${modID}:Astronomy": {
+    "NAME": "Astronomy",
+    "FLAVOR": "You'll end up grading everything with stickers.",
+    "DESCRIPTIONS": [
+      "After you play a card, #yUpgrade it for this combat. Lose a #yPotion slot."
+    ]
+  },
+  "${modID}:Clairvoyance": {
+    "NAME": "Clairvoyance",
+    "FLAVOR": "Don't turn as gray as a ghost.",
+    "DESCRIPTIONS": [
+      "Combat rewards can now contain #yColorless cards. Choose a #yRare #yColorless card at the start of the run."
+    ]
+  },
+  "${modID}:Flushed": {
+    "NAME": "Flushed",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "If you have not played any #yPowers during your turn, gain an extra [E] next turn."
+    ]
+  },
+  "${modID}:Retrograde": {
+    "NAME": "Retrograde",
+    "FLAVOR": "Quick check if everything is ready.",
+    "DESCRIPTIONS": [
+      "#yUpgrade half of your deck."
+    ]
+  },
+  "${modID}:ROI": {
+    "NAME": "ROI",
+    "FLAVOR": "Lift the shop to new heights.",
+    "DESCRIPTIONS": [
+      "Cards in shops are #yUpgraded. #yPotions in the shops are at least #yUncommon. Guarantee one #yRare card in the shop."
+    ]
+  },
+  "${modID}:BigHands": {
+    "NAME": "Big Hands",
+    "FLAVOR": "Believe in the hands of fate.",
+    "DESCRIPTIONS": [
+      "Draw #b2 additional cards each turn. On Card Reward screens, you have #b1 less card to choose from."
+    ]
+  },
+  "${modID}:HighStakes": {
+    "NAME": "High Stakes",
+    "FLAVOR": "Not quite seeing double.",
+    "DESCRIPTIONS": [
+      "After selecting a Boss relic, gain another random Boss relic."
+    ]
+  },
+  "${modID}:RuleBender": {
+    "NAME": "Rule Bender",
+    "FLAVOR": "How balanced will this be?.",
+    "DESCRIPTIONS": [
+      "Whenever an #yAttack is played, gain half of the damage as #yBlock. #bALL enemies have double their health."
+    ]
+  },
+  "${modID}:Shattered": {
+    "NAME": "Shattered",
+    "FLAVOR": "It broke.",
+    "DESCRIPTIONS": [
+      "Start with a random deck of #b20 cards.",
+      "Your shattered deck."
+    ]
+  },
+
+  "${modID}:OverstockPlus": {
+    "NAME": "Overstock Plus",
+    "FLAVOR": "Don't be too greedy.",
+    "DESCRIPTIONS": [
+      "Show three additional relics in the shop."
+    ]
+  },
+  "${modID}:Liquidation": {
+    "NAME": "Liquidation",
+    "FLAVOR": "Don't be too greedy.",
+    "DESCRIPTIONS": [
+      "50% discount on all products!"
+    ]
+  },
+  "${modID}:GlowUp": {
+    "NAME": "Glow Up",
+    "FLAVOR": "Don't be too greedy.",
+    "DESCRIPTIONS": [
+      "Add a random Legendary card to your deck."
+    ]
+  },
+  "${modID}:RerollGlut ": {
+    "NAME": "Reroll Glut ",
+    "FLAVOR": "Don't be too greedy.",
+    "DESCRIPTIONS": [
+      "Click to reroll the cards in the shop, costs 50 per roll."
+    ]
+  },
+  "${modID}:OmenGlobe": {
+    "NAME": "Omen Globe",
+    "FLAVOR": "Don't be too greedy.",
+    "DESCRIPTIONS": [
+      "Whenever you use a potion in combat, get a random Colorless card."
+    ]
+  },
+  "${modID}:Observatory": {
+    "NAME": "Observatory",
+    "FLAVOR": "Don't be too greedy.",
+    "DESCRIPTIONS": [
+      "Upgrade 4 cards."
+    ]
+  },
+  "${modID}:NachoTong": {
+    "NAME": "Nacho Tong",
+    "FLAVOR": "Don't be too greedy.",
+    "DESCRIPTIONS": [
+      "Gain 1 Energy at the start of each turn."
+    ]
+  },
+  "${modID}:Recyclomancy": {
+    "NAME": "Recyclomancy",
+    "FLAVOR": "Don't be too greedy.",
+    "DESCRIPTIONS": [
+      "Whenever you discard 5 cards, gain 10 Block."
+    ]
+  },
+  "${modID}:TarotTycoon": {
+    "NAME": "Tarot Tycoon",
+    "FLAVOR": "Don't be too greedy.",
+    "DESCRIPTIONS": [
+      "Whenever you use a potion, gain 50 Gold."
+    ]
+  },
+  "${modID}:PlanetTycoon": {
+    "NAME": "Planet Tycoon",
+    "FLAVOR": "Don't be too greedy.",
+    "DESCRIPTIONS": [
+      "Whenever you add a Common card to your deck, it is Upgraded."
+    ]
+  },
+  "${modID}:MoneyTree": {
+    "NAME": "Money Tree",
+    "FLAVOR": "Don't be too greedy.",
+    "DESCRIPTIONS": [
+      "Increase the maximum Gold earned in combat to 400."
+    ]
+  },
+  "${modID}:Antimatter": {
+    "NAME": "Antimatter",
+    "FLAVOR": "Don't be too greedy.",
+    "DESCRIPTIONS": [
+      "Future card rewards have 1 additional card to choose from."
+    ]
+  },
+  "${modID}:Illusion": {
+    "NAME": "Illusion",
+    "FLAVOR": "Don't be too greedy.",
+    "DESCRIPTIONS": [
+      "Choose and add a Common, Uncommon and Rare card to your deck."
+    ]
+  },
+  "${modID}:Petroglyph": {
+    "NAME": "Petroglyph",
+    "FLAVOR": "Don't be too greedy.",
+    "DESCRIPTIONS": [
+      "Reduce the max health of all enemies by 10%."
+    ]
+  },
+  "${modID}:Retcon": {
+    "NAME": "Retcon",
+    "FLAVOR": "Don't be too greedy.",
+    "DESCRIPTIONS": [
+      "Click to reroll a Blind, costs 50 Gold per roll."
+    ]
+  },
+  "${modID}:Palette": {
+    "NAME": "Palette",
+    "FLAVOR": "Don't be too greedy.",
+    "DESCRIPTIONS": [
+      "At the start of your turn, draw 1 additional card."
+    ]
+  }
+}
