@@ -1,6 +1,5 @@
 package balatro.relics;
 
-import balatro.cards.TheIdol;
 import balatro.character.baseDeck;
 import com.megacrit.cardcrawl.actions.common.ObtainPotionAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -20,7 +19,7 @@ import java.util.Objects;
 import static balatro.balatroMod.makeID;
 
 public class Astronomy extends BaseRelic{
-    private static final String NAME = makeID(Astronomy.class.getSimpleName()); //The name will be used for determining the image file as well as the ID.
+    private static final String NAME = "Astronomy"; //The name will be used for determining the image file as well as the ID.
     public static final String ID = makeID(NAME); //This adds the mod's prefix to the relic ID, resulting in modID:MyRelic
     private static final RelicTier RARITY = RelicTier.STARTER; //The relic's rarity.
     private static final LandingSound SOUND = LandingSound.CLINK; //The sound played when the relic is clicked.

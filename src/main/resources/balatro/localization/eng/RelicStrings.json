@@ -201,7 +201,8 @@
     "NAME": "Illusion",
     "FLAVOR": "Don't be too greedy.",
     "DESCRIPTIONS": [
-      "Choose and add a Common, Uncommon and Rare card to your deck."
+      "Choose and add a Common, Uncommon and Rare card to your deck.",
+      "Magic!"
     ]
   },
   "${modID}:Petroglyph": {

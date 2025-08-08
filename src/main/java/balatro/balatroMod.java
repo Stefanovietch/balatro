@@ -1,7 +1,7 @@
 package balatro;
 
 import balatro.cards.*;
-import balatro.util.GoldPerCombat;
+import balatro.ui.GoldPerCombat;
 import balatro.relics.*;
 import balatro.ui.DeckSelectionUI;
 import balatro.util.Data;
