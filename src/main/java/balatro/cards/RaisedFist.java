@@ -49,8 +49,10 @@ public class RaisedFist extends BaseCard {
             lowestCost = 0;
         }
 
-        addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, 2 * lowestCost),2 * lowestCost));
-        addToBot(new ApplyPowerAction(p, p, new LoseStrengthPower(p, 2 * lowestCost),2 * lowestCost));
+        if (lowestCost > 0) {
+            addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, 2 * lowestCost), 2 * lowestCost));
+            addToBot(new ApplyPowerAction(p, p, new LoseStrengthPower(p, 2 * lowestCost), 2 * lowestCost));
+        }
 
     }
 

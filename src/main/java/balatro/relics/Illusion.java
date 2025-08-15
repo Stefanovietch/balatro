@@ -4,6 +4,7 @@ import balatro.character.baseDeck;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rewards.RewardItem;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 import java.util.ArrayList;
 
@@ -13,8 +14,8 @@ import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.cardRng;
 public class Illusion extends BaseRelic{
     private static final String NAME = "Illusion"; //The name will be used for determining the image file as well as the ID.
     public static final String ID = makeID(NAME); //This adds the mod's prefix to the relic ID, resulting in modID:MyRelic
-    private static final RelicTier RARITY = RelicTier.STARTER; //The relic's rarity.
-    private static final LandingSound SOUND = LandingSound.CLINK; //The sound played when the relic is clicked.
+    private static final RelicTier RARITY = RelicTier.SHOP; //The relic's rarity.
+    private static final LandingSound SOUND = LandingSound.MAGICAL; //The sound played when the relic is clicked.
 
     public Illusion() {
         super(ID, NAME, baseDeck.Enums.CARD_COLOR, RARITY, SOUND);
@@ -27,6 +28,7 @@ public class Illusion extends BaseRelic{
 
         AbstractDungeon.combatRewardScreen.open(this.DESCRIPTIONS[1]);
         (AbstractDungeon.getCurrRoom()).rewardPopOutTimer = 0.0F;
+
     }
 
     public String getUpdatedDescription() {

@@ -13,6 +13,7 @@ import javassist.CtBehavior;
 
 import java.util.ArrayList;
 
+import static balatro.util.GeneralUtils.hasRelic;
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.*;
 import static com.megacrit.cardcrawl.helpers.RelicLibrary.getRelic;
 
@@ -43,16 +44,6 @@ public class ROIShopPatches {
                 }
             }
         }
-
-
-
-        private static boolean hasRelic(String targetID) {
-            for (AbstractRelic r : AbstractDungeon.player.relics) {
-                if (r.relicId.equals(targetID))
-                    return true;
-            }
-            return false;
-        }
     }
 
     @SpirePatch2(clz = ShopScreen.class, method = "init")
@@ -71,14 +62,6 @@ public class ROIShopPatches {
                     }
                 }
             }
-        }
-
-        private static boolean hasRelic(String targetID) {
-            for (AbstractRelic r : AbstractDungeon.player.relics) {
-                if (r.relicId.equals(targetID))
-                    return true;
-            }
-            return false;
         }
     }
 }

@@ -21,7 +21,7 @@ public class DelayedGratification extends BaseCard {
             -2 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
 
-    private static final int MONEY = 25;
+    private static final int MONEY = 15;
     private static final int UPG_MONEY = 10;
     private boolean discardedCard;
 
@@ -29,6 +29,7 @@ public class DelayedGratification extends BaseCard {
         super(ID, info); //Pass the required information to the BaseCard constructor.
         setMagic(MONEY,UPG_MONEY);
         discardedCard = GameActionManager.totalDiscardedThisTurn > 0;
+
     }
 
     public void didDiscard() {

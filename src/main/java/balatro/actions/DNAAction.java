@@ -37,9 +37,9 @@ public class DNAAction extends AbstractGameAction {
     public void update() {
         ArrayList<AbstractCard> cards = AbstractDungeon.actionManager.cardsPlayedThisCombat;
         if (cards.size() >= 2) {
-            AbstractCard card = cards.get(cards.size()-2).makeCopy();
+            AbstractCard card = cards.get(cards.size()-2).makeStatEquivalentCopy();
             AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(card));
-            p.masterDeck.group.set(this.DNAindex, card);
+            p.masterDeck.group.set(this.DNAindex, card.makeCopy());
         }
         this.isDone = true;
     }

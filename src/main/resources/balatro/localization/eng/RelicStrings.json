@@ -34,15 +34,15 @@
       "At the end of the turn gain #b2 #yGold for each card in hand. Gain no #yGold in combat rewards. "
     ]
   },
-  "${modID}:CardPlayer": {
-    "NAME": "Card Player",
+  "${modID}:Royale": {
+    "NAME": "Royale",
     "FLAVOR": "Is this the reward you are looking for?",
     "DESCRIPTIONS": [
       "On Card Reward screens you have #b2 additional cards to choose from. Lose [E] at the start of your turn. "
     ]
   },
-  "${modID}:Cartomancy": {
-    "NAME": "Cartomancy",
+  "${modID}:CrystalBall": {
+    "NAME": "Crystal Ball",
     "FLAVOR": "Everybody needs a little bit of magic.",
     "DESCRIPTIONS": [
       "Gain an extra #yPotion slot and #b2 #yDuplication #yPotions."
@@ -124,84 +124,85 @@
     "NAME": "Liquidation",
     "FLAVOR": "Don't be too greedy.",
     "DESCRIPTIONS": [
-      "50% discount on all products!"
+      "#b50% discount on all products!"
     ]
   },
   "${modID}:GlowUp": {
     "NAME": "Glow Up",
     "FLAVOR": "Don't be too greedy.",
     "DESCRIPTIONS": [
-      "Add a random Legendary card to your deck."
+      "Add a random #yLegendary card to your deck."
     ]
   },
-  "${modID}:RerollGlut ": {
+  "${modID}:RerollGlut": {
     "NAME": "Reroll Glut ",
     "FLAVOR": "Don't be too greedy.",
     "DESCRIPTIONS": [
-      "Click to reroll the cards in the shop, costs 50 per roll."
+      "Click to reroll the cards in the shop, costs #b50 #yGold per roll."
     ]
   },
   "${modID}:OmenGlobe": {
     "NAME": "Omen Globe",
     "FLAVOR": "Don't be too greedy.",
     "DESCRIPTIONS": [
-      "Whenever you use a potion in combat, get a random Colorless card."
+      "Whenever you use a potion in combat, get a random #yColorless card."
     ]
   },
   "${modID}:Observatory": {
     "NAME": "Observatory",
     "FLAVOR": "Don't be too greedy.",
     "DESCRIPTIONS": [
-      "Upgrade 4 cards."
+      "Upgrade #b4 cards.",
+      "Choose 4 cards for "
     ]
   },
   "${modID}:NachoTong": {
     "NAME": "Nacho Tong",
     "FLAVOR": "Don't be too greedy.",
     "DESCRIPTIONS": [
-      "Gain 1 Energy at the start of each turn."
+      "Gain [E] at the start of each turn."
     ]
   },
   "${modID}:Recyclomancy": {
     "NAME": "Recyclomancy",
     "FLAVOR": "Don't be too greedy.",
     "DESCRIPTIONS": [
-      "Whenever you discard 5 cards, gain 10 Block."
+      "Whenever you manually discard #b7 cards, gain #b1 #yStrength."
     ]
   },
   "${modID}:TarotTycoon": {
     "NAME": "Tarot Tycoon",
     "FLAVOR": "Don't be too greedy.",
     "DESCRIPTIONS": [
-      "Whenever you use a potion, gain 50 Gold."
+      "Whenever you obtain a potion, gain #b2 maximum Health."
     ]
   },
   "${modID}:PlanetTycoon": {
     "NAME": "Planet Tycoon",
     "FLAVOR": "Don't be too greedy.",
     "DESCRIPTIONS": [
-      "Whenever you add a Common card to your deck, it is Upgraded."
+      "Whenever you add a #yCommon card to your deck, it is #yUpgraded."
     ]
   },
   "${modID}:MoneyTree": {
     "NAME": "Money Tree",
-    "FLAVOR": "Don't be too greedy.",
+    "FLAVOR": "You believed them when they said money doesn't grow on trees?",
     "DESCRIPTIONS": [
-      "Increase the maximum Gold earned in combat to 400."
+      "Increase the maximum combat Gold to #b400."
     ]
   },
   "${modID}:Antimatter": {
     "NAME": "Antimatter",
-    "FLAVOR": "Don't be too greedy.",
+    "FLAVOR": "Maybe this one looks better than that one.",
     "DESCRIPTIONS": [
-      "Future card rewards have 1 additional card to choose from."
+      "Future card rewards have #b1 additional card to choose from."
     ]
   },
   "${modID}:Illusion": {
     "NAME": "Illusion",
     "FLAVOR": "Don't be too greedy.",
     "DESCRIPTIONS": [
-      "Choose and add a Common, Uncommon and Rare card to your deck.",
+      "Choose and add a #yCommon, #yUncommon and #yRare card to your deck.",
       "Magic!"
     ]
   },
@@ -209,21 +210,21 @@
     "NAME": "Petroglyph",
     "FLAVOR": "Don't be too greedy.",
     "DESCRIPTIONS": [
-      "Reduce the max health of all enemies by 10%."
+      "Reduce the max health of all enemies by #b10%."
     ]
   },
   "${modID}:Retcon": {
     "NAME": "Retcon",
     "FLAVOR": "Don't be too greedy.",
     "DESCRIPTIONS": [
-      "Click to reroll a Blind, costs 50 Gold per roll."
+      "Click to reroll a Blind, costs #b50 #yGold per roll. (Only usable on first turn before playing a card)"
     ]
   },
   "${modID}:Palette": {
     "NAME": "Palette",
     "FLAVOR": "Don't be too greedy.",
     "DESCRIPTIONS": [
-      "At the start of your turn, draw 1 additional card."
+      "At the start of your turn, draw #b1 additional card."
     ]
   }
 }

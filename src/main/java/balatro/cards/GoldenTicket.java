@@ -36,7 +36,7 @@ public class GoldenTicket extends BaseCard {
         addToBot(new MakeTempCardInHandAction(AbstractDungeon.rareCardPool.getRandomCard(cardRng),1));
         int rareCardCount = 0;
         for (AbstractCard c : p.masterDeck.group) {
-            if (c.rarity == CardRarity.RARE) {rareCardCount++;}
+            if (c.rarity == CardRarity.RARE && !c.hasTag(CardTags.HEALING)) {rareCardCount++;}
         }
         addToBot(new GainGoldAction(magicNumber * rareCardCount));
     }

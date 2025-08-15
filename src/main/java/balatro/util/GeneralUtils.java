@@ -4,6 +4,7 @@ import balatro.cards.*;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import static basemod.BaseMod.logger;
 
@@ -34,5 +35,13 @@ public class GeneralUtils {
             }
         }
         return temp;
+    }
+
+    public static boolean hasRelic(String targetID) {
+        for (AbstractRelic r : AbstractDungeon.player.relics) {
+            if (r.relicId.equals(targetID))
+                return true;
+        }
+        return false;
     }
 }

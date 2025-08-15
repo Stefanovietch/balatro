@@ -154,5 +154,173 @@
     "DESCRIPTIONS": [
       "Deal double damage."
     ]
+  },
+
+  "${modID}:TheHook": {
+    "NAME": "The Hook",
+    "DESCRIPTIONS": [
+      "Start of your turn, discard #b2 cards."
+    ]
+  },
+  "${modID}:TheOx": {
+    "NAME": "The Ox",
+    "DESCRIPTIONS": [
+      "At the start of your turn, makes one card in hand set #yGold to #b0."
+    ]
+  },
+  "${modID}:TheHouse": {
+    "NAME": "The House",
+    "DESCRIPTIONS": [
+      "All cards in your first hand cost #b3 for the turn."
+    ]
+  },
+  "${modID}:TheWall": {
+    "NAME": "The Wall",
+    "DESCRIPTIONS": [
+      "Has double the Health."
+    ]
+  },
+  "${modID}:TheWheel": {
+    "NAME": "The Wheel",
+    "DESCRIPTIONS": [
+      "When drawing a card have #b",
+      " in #b7 #yChance to set its cost to #b3."
+    ]
+  },
+  "${modID}:TheArm": {
+    "NAME": "The Arm",
+    "DESCRIPTIONS": [
+      "Your upgraded cards cost #b1 more this fight."
+    ]
+  },
+  "${modID}:TheClub": {
+    "NAME": "The Club",
+    "DESCRIPTIONS": [
+      "."
+    ]
+  },
+  "${modID}:TheFish": {
+    "NAME": "The Fish",
+    "DESCRIPTIONS": [
+      "Cards drawn by cards cost #b3 for that turn."
+    ]
+  },
+  "${modID}:ThePsychic": {
+    "NAME": "The Psychic",
+    "DESCRIPTIONS": [
+      "You can't play more than #b5 cards each turn."
+    ]
+  },
+  "${modID}:TheGoad": {
+    "NAME": "The Goad",
+    "DESCRIPTIONS": [
+      "."
+    ]
+  },
+  "${modID}:TheWater": {
+    "NAME": "The Water",
+    "DESCRIPTIONS": [
+      "You are unable to manually discard cards."
+    ]
+  },
+  "${modID}:TheWindow": {
+    "NAME": "The Window",
+    "DESCRIPTIONS": [
+      "."
+    ]
+  },
+  "${modID}:TheManacle": {
+    "NAME": "The Manacle",
+    "DESCRIPTIONS": [
+      "You draw #b1 card less each turn."
+    ]
+  },
+  "${modID}:TheEye": {
+    "NAME": "The Eye",
+    "DESCRIPTIONS": [
+      "You can't play the same card type consecutively."
+    ]
+  },
+  "${modID}:TheMouth": {
+    "NAME": "The Mouth",
+    "DESCRIPTIONS": [
+      "You can only play two card types each turn."
+    ]
+  },
+  "${modID}:ThePlant": {
+    "NAME": "The Plant",
+    "DESCRIPTIONS": [
+      "All #yPowers exhaust at the end of your turn."
+    ]
+  },
+  "${modID}:TheSerpent": {
+    "NAME": "The Serpent",
+    "DESCRIPTIONS": [
+      "."
+    ]
+  },
+  "${modID}:TheNeedle": {
+    "NAME": "The Needle",
+    "DESCRIPTIONS": [
+      "You die after #b",
+      " turns.",
+      "You die next turn",
+      "You're still alive?? Don't worry, you will still die next turn."
+    ]
+  },
+  "${modID}:TheHead": {
+    "NAME": "The Head",
+    "DESCRIPTIONS": [
+      "You take #b10% more damage for each card played this turn."
+    ]
+  },
+  "${modID}:TheTooth": {
+    "NAME": "The Tooth",
+    "DESCRIPTIONS": [
+      "Whenever you play a card, lose #b10 #yGold."
+    ]
+  },
+  "${modID}:TheFlint": {
+    "NAME": "The Flint",
+    "DESCRIPTIONS": [
+      "You are always #yWeak and #yVulnerable."
+    ]
+  },
+  "${modID}:TheMark": {
+    "NAME": "The Mark",
+    "DESCRIPTIONS": [
+      "All your #yPowers cost #b3."
+    ]
+  },
+
+  "${modID}:AmberAcorn": {
+    "NAME": "Amber Acorn",
+    "DESCRIPTIONS": [
+      "At the end of your turn, shuffle your discard pile into your draw pile."
+    ]
+  },
+  "${modID}:VerdantLeaf": {
+    "NAME": "Verdant Leaf",
+    "DESCRIPTIONS": [
+      "At the start of your turn, Exhaust a card."
+    ]
+  },
+  "${modID}:VioletVessel": {
+    "NAME": "Violet Vessel",
+    "DESCRIPTIONS": [
+      "Has triple the Health."
+    ]
+  },
+  "${modID}:CrimsonHeart": {
+    "NAME": "Crimson Heart",
+    "DESCRIPTIONS": [
+      "At the start of your turn, discard a random card."
+    ]
+  },
+  "${modID}:CeruleanBell": {
+    "NAME": "Cerulean Bell",
+    "DESCRIPTIONS": [
+      "At the start of your turn, play a random card."
+    ]
   }
 }

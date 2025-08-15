@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.screens.charSelect.CharacterOption;
 
+import static balatro.util.GeneralUtils.hasRelic;
 import static com.megacrit.cardcrawl.helpers.RelicLibrary.getRelic;
 
 public class NoGoldRewardPatches {
@@ -23,14 +24,6 @@ public class NoGoldRewardPatches {
                 getRelic("Balatro:YouGetWhatYouGet").flash();
                 gold[0] = 0;
             }
-        }
-
-        private static boolean hasRelic(String targetID) {
-            for (AbstractRelic r : AbstractDungeon.player.relics) {
-                if (r.relicId.equals(targetID))
-                    return true;
-            }
-            return false;
         }
     }
 }

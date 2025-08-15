@@ -19,7 +19,7 @@ public class TradingCard extends BaseCard {
             1 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
 
-    private static final int GOLD = 30;
+    private static final int GOLD = 20;
     private static final int UPG_GOLD = 10;
 
     public TradingCard() {

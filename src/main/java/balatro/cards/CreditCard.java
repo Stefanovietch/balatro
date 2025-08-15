@@ -26,6 +26,7 @@ public class CreditCard extends BaseCard {
         super(ID, info); //Pass the required information to the BaseCard constructor.
         setMagic(GOLD,UPG_GOLD);
         setExhaust(true);
+
     }
 
     @Override

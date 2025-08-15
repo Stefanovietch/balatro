@@ -28,6 +28,7 @@ public class SixthSense extends BaseCard {
         super(ID, info); //Pass the required information to the BaseCard constructor.
         setInnate(true,false);
         cardPlayed = false;
+        tags.add(CardTags.HEALING);
     }
 
     @Override

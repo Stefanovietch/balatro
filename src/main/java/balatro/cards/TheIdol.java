@@ -56,7 +56,7 @@ public class TheIdol extends BaseCard implements RandomType{
 
     @Override
     public void setRandomType() {
-        this.rawDescription = cardStrings.EXTENDED_DESCRIPTION[0] + " NONE " + cardStrings.EXTENDED_DESCRIPTION[1];
+        this.rawDescription = cardStrings.DESCRIPTION;
         if (CardCrawlGame.isInARun()) {
             if (!AbstractDungeon.player.drawPile.isEmpty()) {
                 ArrayList<CardType> availableCardTypes = new ArrayList<>();

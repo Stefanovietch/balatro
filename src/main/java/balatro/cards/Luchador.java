@@ -28,6 +28,7 @@ public class Luchador extends BaseCard {
         super(ID, info); //Pass the required information to the BaseCard constructor.
         purgeOnUse = true;
         setMagic(MAGIC, UPG_MAGIC);
+        tags.add(CardTags.HEALING);
     }
 
     @Override

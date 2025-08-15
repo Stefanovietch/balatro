@@ -32,12 +32,12 @@ public class GreenJoker extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL)));
-        baseDamage += baseMagicNumber;
+        baseDamage += 2 * baseMagicNumber;
     }
 
     @Override
-    public void moveToDiscardPile() {
-        super.moveToDiscardPile();
+    public void onMoveToDiscard() {
+        super.onMoveToDiscard();
         baseDamage -= baseMagicNumber;
     }
 

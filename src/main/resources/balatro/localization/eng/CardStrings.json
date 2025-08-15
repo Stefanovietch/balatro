@@ -458,7 +458,7 @@
   },
   "${modID}:Certificate": {
     "NAME": "Certificate",
-    "DESCRIPTION": "Unplayable. Innate. NL When you draw this card, add !M! random card to your hand and Exhaust."
+    "DESCRIPTION": "Unplayable. Innate. NL When you draw this card, add !M! random cards to your hand and Exhaust."
   },
   "${modID}:SmearedJoker": {
     "NAME": "Smeared Joker",
@@ -545,7 +545,7 @@
   "${modID}:HitTheRoad": {
     "NAME": "Hit the Road",
     "DESCRIPTION": "Gain Strength equal to the amount of cards discarded this turn. NL Exhaust.",
-    "UPGRADED_DESCRIPTION": "Gain Strength equal to the amount of cards discarded this turn.",
+    "UPGRADE_DESCRIPTION": "Gain Strength equal to the amount of cards discarded this turn.",
     "EXTENDED_DESCRIPTION": [
       " NL (!M! total)"
       ]
@@ -576,7 +576,7 @@
   },
   "${modID}:InvisibleJoker": {
     "NAME": "Invisible Joker",
-    "DESCRIPTION": "After playing this twice, it permanently becomes a cost 0 copy of a random card in the deck. NL Exhaust."
+    "DESCRIPTION": "After playing this twice, it permanently transforms into cost 0 copy of a random card in the deck. NL Exhaust."
   },
   "${modID}:Brainstorm": {
     "NAME": "Brainstorm",

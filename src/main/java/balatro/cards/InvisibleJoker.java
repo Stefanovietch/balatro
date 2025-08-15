@@ -30,6 +30,7 @@ public class InvisibleJoker extends BaseCard {
         setExhaust(true);
         setCostUpgrade(2);
         this.misc = 0;
+        tags.add(CardTags.HEALING);
     }
 
     @Override

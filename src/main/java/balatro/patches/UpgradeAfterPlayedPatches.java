@@ -12,6 +12,7 @@ import javassist.CtBehavior;
 
 import java.util.ArrayList;
 
+import static balatro.util.GeneralUtils.hasRelic;
 import static com.megacrit.cardcrawl.helpers.RelicLibrary.getRelic;
 
 public class UpgradeAfterPlayedPatches {
@@ -45,14 +46,6 @@ public class UpgradeAfterPlayedPatches {
                 // that matches the finalMatcher.
                 return LineFinder.findInOrder(ctMethodToPatch, new ArrayList<Matcher>(), finalMatcher);
             }
-        }
-
-        private static boolean hasRelic(String targetID) {
-            for (AbstractRelic r : AbstractDungeon.player.relics) {
-                if (r.relicId.equals(targetID))
-                    return true;
-            }
-            return false;
         }
     }
 }

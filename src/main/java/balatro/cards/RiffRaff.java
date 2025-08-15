@@ -4,6 +4,7 @@ import balatro.character.baseDeck;
 import balatro.util.CardStats;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -33,8 +34,12 @@ public class RiffRaff extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        CardGroup commonCards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+        for (AbstractCard c : AbstractDungeon.srcCommonCardPool.group) {
+            if (!c.hasTag(CardTags.HEALING) && !(c instanceof RiffRaff)) {commonCards.addToRandomSpot(c);}
+        }
         for (int i = 0; i < magicNumber; i++) {
-            AbstractCard c = AbstractDungeon.commonCardPool.getRandomCard(true);
+            AbstractCard c = commonCards.getRandomCard(true);
             c.setCostForTurn(-99);
             addToBot(new MakeTempCardInHandAction(c, true));
         }

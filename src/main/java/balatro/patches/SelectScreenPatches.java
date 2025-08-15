@@ -11,9 +11,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
-import com.megacrit.cardcrawl.relics.BurningBlood;
-import com.megacrit.cardcrawl.relics.GamblingChip;
-import com.megacrit.cardcrawl.relics.Lantern;
 import com.megacrit.cardcrawl.screens.charSelect.CharacterOption;
 
 import java.util.Objects;
@@ -65,9 +62,9 @@ public class SelectScreenPatches {
                 } else if (Objects.equals(deckName, "greenDeck")) {
                     relicID = YouGetWhatYouGet.ID;
                 } else if (Objects.equals(deckName, "blackDeck")) {
-                    relicID = CardPlayer.ID;
+                    relicID = Royale.ID;
                 } else if (Objects.equals(deckName, "magicDeck")) {
-                    relicID = Cartomancy.ID;
+                    relicID = CrystalBall.ID;
                 } else if (Objects.equals(deckName, "nebulaDeck")) {
                     relicID = Astronomy.ID;
                 } else if (Objects.equals(deckName, "ghostDeck")) {

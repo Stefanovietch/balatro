@@ -10,8 +10,8 @@ import static balatro.balatroMod.makeID;
 public class Petroglyph extends BaseRelic{
     private static final String NAME = "Petroglyph"; //The name will be used for determining the image file as well as the ID.
     public static final String ID = makeID(NAME); //This adds the mod's prefix to the relic ID, resulting in modID:MyRelic
-    private static final RelicTier RARITY = RelicTier.STARTER; //The relic's rarity.
-    private static final LandingSound SOUND = LandingSound.CLINK; //The sound played when the relic is clicked.
+    private static final RelicTier RARITY = RelicTier.UNCOMMON; //The relic's rarity.
+    private static final LandingSound SOUND = LandingSound.HEAVY; //The sound played when the relic is clicked.
 
     private final float MODIFIER_AMT = 0.9F;
 
@@ -24,6 +24,7 @@ public class Petroglyph extends BaseRelic{
             flash();
             for (AbstractMonster m : (AbstractDungeon.getCurrRoom()).monsters.monsters) {
                 m.maxHealth = (int) (m.maxHealth * MODIFIER_AMT);
+                if (m.currentHealth > m.maxHealth) {m.currentHealth = m.maxHealth;}
                 m.healthBarUpdatedEvent();
             }
             addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));

@@ -44,12 +44,14 @@ public class Popcorn extends BaseCard {
     public void applyPowers() {
         super.applyPowers();
         damage -= GameActionManager.turn * magicNumber;
+        isDamageModified = damage != baseDamage;
     }
 
     @Override
     public void calculateCardDamage(AbstractMonster m) {
         super.calculateCardDamage(m);
         damage -= GameActionManager.turn * magicNumber;
+        isDamageModified = damage != baseDamage;
     }
 
     @Override

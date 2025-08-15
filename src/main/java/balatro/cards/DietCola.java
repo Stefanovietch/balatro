@@ -26,6 +26,7 @@ public class DietCola extends BaseCard {
         super(ID, info); //Pass the required information to the BaseCard constructor.
         setExhaust(true);
         setEthereal(false,true);
+        tags.add(CardTags.HEALING);
     }
 
     @Override

@@ -37,15 +37,15 @@ public class JokerStencil extends BaseCard {
     @Override
     public void applyPowers() {
         super.applyPowers();
-        this.damage *= (10 - AbstractDungeon.player.hand.size());
-        isDamageModified = baseDamage != damage;
+        this.baseDamage = (10 - AbstractDungeon.player.hand.size()) * (upgraded ? UPG_DAMAGE + DAMAGE : DAMAGE);
+        isDamageModified = true;
     }
 
     @Override
     public void calculateCardDamage(AbstractMonster m) {
         super.calculateCardDamage(m);
-        this.damage *= (10 - AbstractDungeon.player.hand.size());
-        isDamageModified = baseDamage != damage;
+        this.baseDamage = (10 - AbstractDungeon.player.hand.size()) * (upgraded ? UPG_DAMAGE + DAMAGE : DAMAGE);
+        isDamageModified = true;
     }
 
     @Override

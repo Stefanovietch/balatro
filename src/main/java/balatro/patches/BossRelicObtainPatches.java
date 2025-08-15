@@ -1,27 +1,17 @@
 package balatro.patches;
 
-import balatro.balatroMod;
-import balatro.util.Data;
-import basemod.devcommands.relic.Relic;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.evacipated.cardcrawl.modthespire.patcher.PatchingException;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.EventHelper;
-import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.CallingBell;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import com.megacrit.cardcrawl.rooms.RestRoom;
-import com.megacrit.cardcrawl.scenes.AbstractScene;
-import com.megacrit.cardcrawl.screens.select.BossRelicSelectScreen;
 import com.megacrit.cardcrawl.ui.buttons.ProceedButton;
 import javassist.CannotCompileException;
 import javassist.CtBehavior;
 
 import java.util.ArrayList;
 
+import static balatro.util.GeneralUtils.hasRelic;
 import static com.megacrit.cardcrawl.helpers.RelicLibrary.getRelic;
 
 public class BossRelicObtainPatches {
@@ -56,14 +46,6 @@ public class BossRelicObtainPatches {
                 // that matches the finalMatcher.
                 return LineFinder.findInOrder(ctMethodToPatch, new ArrayList<Matcher>(), finalMatcher);
             }
-        }
-
-        private static boolean hasRelic(String targetID) {
-            for (AbstractRelic r : AbstractDungeon.player.relics) {
-                if (r.relicId.equals(targetID))
-                    return true;
-            }
-            return false;
         }
     }
 }
