@@ -1,12 +1,12 @@
 package balatro.cards;
 
+import balatro.balatroMod;
 import balatro.patches.LegendaryPatch;
+import balatro.util.CardStats;
 import balatro.util.GeneralUtils;
 import basemod.BaseMod;
 import basemod.abstracts.CustomCard;
 import basemod.abstracts.DynamicVariable;
-import balatro.balatroMod;
-import balatro.util.CardStats;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -24,10 +24,7 @@ import static balatro.balatroMod.characterPath;
 import static balatro.balatroMod.imagePath;
 import static balatro.util.GeneralUtils.removePrefix;
 import static balatro.util.TextureLoader.getCardTextureString;
-import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.aiRng;
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.miscRng;
-import static com.megacrit.cardcrawl.helpers.ImageMaster.*;
-
 
 public abstract class BaseCard extends CustomCard {
     final private static Map<String, DynamicVariable> customVars = new HashMap<>();

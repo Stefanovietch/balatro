@@ -1,11 +1,9 @@
 package balatro.character;
 
-import balatro.balatroMod;
 import balatro.cards.CleverJoker;
 import balatro.cards.JollyJoker;
 import balatro.cards.MadJoker;
 import balatro.cards.SlyJoker;
-import balatro.relics.*;
 import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
@@ -15,25 +13,19 @@ import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.blue.Defend_Blue;
-import com.megacrit.cardcrawl.cards.green.Neutralize;
 import com.megacrit.cardcrawl.cards.red.Strike_Red;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.*;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
-import com.megacrit.cardcrawl.relics.BurningBlood;
-import com.megacrit.cardcrawl.relics.GamblingChip;
-import com.megacrit.cardcrawl.relics.Lantern;
-import com.megacrit.cardcrawl.relics.OldCoin;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Objects;
 
 import static balatro.balatroMod.characterPath;
 import static balatro.balatroMod.makeID;
@@ -64,9 +56,9 @@ public class baseDeck extends CustomPlayer {
         //Library color is basically the same as card color, but you need both because that's how the game was made.
         @SpireEnum
         public static PlayerClass BASEDECK;
-        @SpireEnum(name = "BASEDECK_GRAY_COLOR") // These two MUST match. Change it to something unique for your character.
+        @SpireEnum(name = "BASEDECK") // These two MUST match. Change it to something unique for your character.
         public static AbstractCard.CardColor CARD_COLOR;
-        @SpireEnum(name = "BASEDECK_GRAY_COLOR") @SuppressWarnings("unused")
+        @SpireEnum(name = "BASEDECK") @SuppressWarnings("unused")
         public static CardLibrary.LibraryType LIBRARY_COLOR;
     }
 

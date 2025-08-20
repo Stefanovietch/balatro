@@ -12,12 +12,8 @@ public class TheWaterPower extends BlindPower{
     }
 
     @Override
-    public void onInitialApplication() {
-        super.onInitialApplication();
-    }
-
-    public void onRemove() {
-
+    public void atEndOfTurnPreEndTurnCards(boolean isPlayer) {
+        super.atEndOfTurnPreEndTurnCards(isPlayer);
     }
 
     public void updateDescription() {

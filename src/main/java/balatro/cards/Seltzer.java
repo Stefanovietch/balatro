@@ -1,7 +1,6 @@
 package balatro.cards;
 
 import balatro.character.baseDeck;
-import balatro.powers.PhotographPower;
 import balatro.powers.SeltzerPower;
 import balatro.util.CardStats;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;

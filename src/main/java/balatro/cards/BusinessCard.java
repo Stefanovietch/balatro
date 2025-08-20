@@ -2,7 +2,6 @@ package balatro.cards;
 
 import balatro.character.baseDeck;
 import balatro.powers.BusinessCardPower;
-import balatro.powers.EggPower;
 import balatro.util.CardStats;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;

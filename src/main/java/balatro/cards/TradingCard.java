@@ -1,7 +1,6 @@
 package balatro.cards;
 
 import balatro.character.baseDeck;
-import balatro.powers.BaseballCardPower;
 import balatro.powers.TradingCardPower;
 import balatro.util.CardStats;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;

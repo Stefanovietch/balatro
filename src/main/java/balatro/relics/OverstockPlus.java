@@ -3,7 +3,6 @@ package balatro.relics;
 import balatro.character.baseDeck;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rooms.ShopRoom;
-import com.megacrit.cardcrawl.shop.ShopScreen;
 
 import static balatro.balatroMod.makeID;
 

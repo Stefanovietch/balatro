@@ -1,10 +1,10 @@
 package balatro.patches;
 
-import balatro.balatroMod;
 import balatro.powers.TheEyePower;
 import balatro.powers.TheMouthPower;
 import balatro.powers.ThePsychicPower;
-import com.evacipated.cardcrawl.modthespire.lib.*;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePatch2;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;

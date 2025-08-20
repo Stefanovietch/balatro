@@ -196,7 +196,7 @@
   "${modID}:TheClub": {
     "NAME": "The Club",
     "DESCRIPTIONS": [
-      "."
+      "At the end of your turn, shuffle a #yWound into your draw pile."
     ]
   },
   "${modID}:TheFish": {
@@ -214,7 +214,7 @@
   "${modID}:TheGoad": {
     "NAME": "The Goad",
     "DESCRIPTIONS": [
-      "."
+      "At the end of your turn, lose #b2 #yHP."
     ]
   },
   "${modID}:TheWater": {
@@ -226,7 +226,7 @@
   "${modID}:TheWindow": {
     "NAME": "The Window",
     "DESCRIPTIONS": [
-      "."
+      "Has #b4 Thorns."
     ]
   },
   "${modID}:TheManacle": {
@@ -256,7 +256,7 @@
   "${modID}:TheSerpent": {
     "NAME": "The Serpent",
     "DESCRIPTIONS": [
-      "."
+      "Cannot be Debuffed."
     ]
   },
   "${modID}:TheNeedle": {

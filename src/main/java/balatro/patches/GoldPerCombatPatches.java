@@ -4,13 +4,9 @@ import balatro.util.Data;
 import com.evacipated.cardcrawl.modthespire.lib.ByRef;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch2;
-import com.megacrit.cardcrawl.actions.common.GainGoldAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-
-import static com.megacrit.cardcrawl.helpers.RelicLibrary.getRelic;
 
 public class GoldPerCombatPatches {
     @SpirePatch2(clz = AbstractPlayer.class, method = "gainGold")

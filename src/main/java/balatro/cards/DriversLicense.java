@@ -26,6 +26,7 @@ public class DriversLicense extends BaseCard {
     public DriversLicense() {
         super(ID, info); //Pass the required information to the BaseCard constructor.
         setMagic(MAGIC,UPG_MAGIC);
+        setExhaust(true);
     }
 
     @Override

@@ -3,17 +3,12 @@ package balatro.cards;
 import balatro.character.baseDeck;
 import balatro.util.CardStats;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class CardSharp extends BaseCard {
     public static final String ID = makeID(CardSharp.class.getSimpleName());

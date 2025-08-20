@@ -2,16 +2,12 @@ package balatro.cards;
 
 import balatro.character.baseDeck;
 import balatro.patches.LegendaryPatch;
-import balatro.powers.TribouletPower;
 import balatro.util.CardStats;
 import balatro.util.Data;
-import com.megacrit.cardcrawl.actions.GameActionManager;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class Yorick extends BaseCard {

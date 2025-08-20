@@ -109,6 +109,19 @@ public class Retcon extends BaseRelic implements ClickableRelic {
                         case THE_MARK:
                             blindTarget.addToBot(new ApplyPowerAction(blindTarget, blindTarget, new TheMarkPower(blindTarget)));
                             break;
+                        case THE_CLUB:
+                            blindTarget.addToBot(new ApplyPowerAction(blindTarget, blindTarget, new TheMarkPower(blindTarget)));
+                            break;
+                        case THE_GOAD:
+                            blindTarget.addToBot(new ApplyPowerAction(blindTarget, blindTarget, new TheMarkPower(blindTarget)));
+                            break;
+                        case THE_WINDOW:
+                            blindTarget.addToBot(new ApplyPowerAction(blindTarget, blindTarget, new TheMarkPower(blindTarget)));
+                            break;
+                        case THE_SERPENT:
+                            blindTarget.addToBot(new ApplyPowerAction(blindTarget, blindTarget, new TheMarkPower(blindTarget)));
+                            break;
+
                         default:
                             balatroMod.logger.info("blind doesnt exist: {}", newBlindIndex);
                             break;

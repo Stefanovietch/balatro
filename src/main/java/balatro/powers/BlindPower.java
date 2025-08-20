@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.random.Random;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 public abstract class BlindPower extends BasePower{
@@ -50,6 +49,10 @@ public abstract class BlindPower extends BasePower{
         THE_TOOTH,
         THE_FLINT,
         THE_MARK,
+        THE_CLUB,
+        THE_GOAD,
+        THE_SERPENT,
+        THE_WINDOW,
 
         AMBER_ACORN,
         VERDANT_LEAF,
@@ -61,8 +64,9 @@ public abstract class BlindPower extends BasePower{
         }
 
         private static final List<BlindType> TYPES = new ArrayList<>(Arrays.asList(
-                THE_ARM, THE_FISH, THE_HOOK, THE_HOUSE, THE_OX, THE_PSYCHIC, THE_WALL, THE_WHEEL, THE_WATER, THE_MANACLE,
-                THE_EYE, THE_MOUTH, THE_PLANT, THE_NEEDLE, THE_HEAD, THE_TOOTH, THE_FLINT, THE_MARK));
+                THE_ARM, THE_FISH, THE_HOOK, THE_HOUSE, THE_OX, THE_PSYCHIC, THE_WALL, THE_WHEEL,
+                THE_WATER, THE_MANACLE, THE_EYE, THE_MOUTH, THE_PLANT, THE_NEEDLE, THE_HEAD, THE_TOOTH,
+                THE_FLINT, THE_MARK, THE_CLUB, THE_GOAD, THE_SERPENT, THE_WINDOW));
 
         private static final List<BlindType> BOSS_TYPES = new ArrayList<>(Arrays.asList(
                 AMBER_ACORN,VERDANT_LEAF,VIOLET_VESSEL,CRIMSON_HEART,CERULEAN_BELL));

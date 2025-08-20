@@ -7,9 +7,6 @@ import com.evacipated.cardcrawl.modthespire.patcher.PatchingException;
 import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -27,15 +24,17 @@ public class BlindsDiscardPatches {
     public static class discardHook {
         @SpireInsertPatch(
                 rloc = 0,
-                localvars = {"duration","isDone"}
+                localvars = {"duration","isDone","endTurn"}
         )
-        public static void preventDiscard(@ByRef float[] duration, @ByRef boolean[] isDone) {
-            for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                for (AbstractPower p : m.powers) {
-                    if (p instanceof TheWaterPower) {
-                        duration[0] = 0;
-                        isDone[0] = true;
-                        break;
+        public static void preventDiscard(@ByRef float[] duration, @ByRef boolean[] isDone, boolean endTurn) {
+            if (!endTurn) {
+                for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                    for (AbstractPower p : m.powers) {
+                        if (p instanceof TheWaterPower) {
+                            duration[0] = 0;
+                            isDone[0] = true;
+                            break;
+                        }
                     }
                 }
             }

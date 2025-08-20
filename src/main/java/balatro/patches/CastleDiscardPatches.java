@@ -7,12 +7,8 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch2;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 import java.util.ArrayList;
-
-import static com.megacrit.cardcrawl.helpers.RelicLibrary.getRelic;
 
 public class CastleDiscardPatches {
     @SpirePatch2(clz = CardGroup.class, method = "moveToDiscardPile")

@@ -3,18 +3,10 @@ package balatro.cards;
 import balatro.actions.DNAAction;
 import balatro.character.baseDeck;
 import balatro.util.CardStats;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.unique.AddCardToDeckAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToHandEffect;
-
-import java.util.ArrayList;
-
-import static basemod.BaseMod.logger;
 
 public class DNA extends BaseCard {
     public static final String ID = makeID(DNA.class.getSimpleName());

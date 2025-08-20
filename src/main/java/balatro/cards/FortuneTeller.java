@@ -4,12 +4,10 @@ import balatro.character.baseDeck;
 import balatro.util.CardStats;
 import balatro.util.Data;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class FortuneTeller extends BaseCard {

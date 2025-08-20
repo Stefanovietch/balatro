@@ -1,19 +1,11 @@
 package balatro.cards;
 
-import balatro.actions.DNAAction;
 import balatro.actions.InvisibleJokerAction;
-import balatro.balatroMod;
 import balatro.character.baseDeck;
 import balatro.util.CardStats;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.GetAllInBattleInstances;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-
-import java.util.ArrayList;
-
-import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.cardRng;
 
 public class InvisibleJoker extends BaseCard {
     public static final String ID = makeID(InvisibleJoker.class.getSimpleName());

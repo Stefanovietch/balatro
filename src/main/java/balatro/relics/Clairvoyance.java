@@ -8,8 +8,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import java.util.ArrayList;
 
 import static balatro.balatroMod.makeID;
-import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.getColorlessRewardCards;
-import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.rollRarity;
 
 public class Clairvoyance extends BaseRelic{
     private static final String NAME = "Clairvoyance"; //The name will be used for determining the image file as well as the ID.

@@ -10,8 +10,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import static com.megacrit.cardcrawl.helpers.ImageMaster.*;
-
 public class Canio extends BaseCard {
     public static final String ID = makeID(Canio.class.getSimpleName());
     private static final CardStats info = new CardStats(

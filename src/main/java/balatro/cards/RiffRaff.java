@@ -9,10 +9,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import java.util.ArrayList;
-
-import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.aiRng;
-
 public class RiffRaff extends BaseCard {
     public static final String ID = makeID(RiffRaff.class.getSimpleName());
     private static final CardStats info = new CardStats(

@@ -1,7 +1,6 @@
 package balatro.relics;
 
 import balatro.character.baseDeck;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import static balatro.balatroMod.makeID;
 

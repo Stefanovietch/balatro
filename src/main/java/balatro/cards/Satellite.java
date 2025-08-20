@@ -2,10 +2,8 @@ package balatro.cards;
 
 import balatro.character.baseDeck;
 import balatro.util.CardStats;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainGoldAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -54,7 +52,7 @@ public class Satellite extends BaseCard {
             AbstractDungeon.effectsQueue.add(new UpgradeShineEffect(Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F));
             AbstractDungeon.topLevelEffectsQueue.add(new ShowCardBrieflyEffect(theCard.makeStatEquivalentCopy()));
         }
-        addToBot(new GainGoldAction(amountUpgraded * magicUpgrade));
+        addToBot(new GainGoldAction(amountUpgraded * magicNumber));
     }
 
     @Override

@@ -1,13 +1,9 @@
 package balatro.patches;
 
-import balatro.balatroMod;
-import balatro.character.baseDeck;
-import balatro.relics.YouGetWhatYouGet;
-import com.evacipated.cardcrawl.modthespire.lib.*;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.evacipated.cardcrawl.modthespire.lib.ByRef;
+import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePatch2;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import com.megacrit.cardcrawl.screens.charSelect.CharacterOption;
 
 import static balatro.util.GeneralUtils.hasRelic;
 import static com.megacrit.cardcrawl.helpers.RelicLibrary.getRelic;

@@ -2,10 +2,8 @@ package balatro.cards;
 
 import balatro.character.baseDeck;
 import balatro.util.CardStats;
-import balatro.balatroMod;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.LoseStrengthPower;
@@ -13,7 +11,6 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 import static java.lang.Integer.MAX_VALUE;
 

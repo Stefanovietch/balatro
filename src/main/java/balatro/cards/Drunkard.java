@@ -1,18 +1,11 @@
 package balatro.cards;
 
 import balatro.actions.DrunkardAction;
-import balatro.actions.MailInRebateAction;
 import balatro.character.baseDeck;
 import balatro.util.CardStats;
-import com.megacrit.cardcrawl.actions.common.DiscardAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.random.Random;
-
-import java.util.Arrays;
-import java.util.List;
 
 public class Drunkard extends BaseCard {
     public static final String ID = makeID(Drunkard.class.getSimpleName());

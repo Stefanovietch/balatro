@@ -1,12 +1,7 @@
 package balatro.relics;
 
-import balatro.balatroMod;
 import balatro.character.baseDeck;
-import basemod.abstracts.CustomSavable;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.RegenPower;
 
 import static balatro.balatroMod.makeID;
 

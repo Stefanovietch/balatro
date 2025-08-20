@@ -1,10 +1,7 @@
 package balatro.cards;
 
-import balatro.actions.DNAAction;
 import balatro.character.baseDeck;
 import balatro.util.CardStats;
-import basemod.devcommands.deck.DeckRemove;
-import com.megacrit.cardcrawl.actions.common.GainGoldAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;

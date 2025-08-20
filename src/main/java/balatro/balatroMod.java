@@ -1,6 +1,9 @@
 package balatro;
 
 import balatro.cards.*;
+import balatro.events.JackInTheBoxEvent;
+import balatro.events.SpectralMerchantEvent;
+import balatro.events.WeirdJokerEvent;
 import balatro.powers.*;
 import balatro.ui.GoldPerCombat;
 import balatro.relics.*;
@@ -9,6 +12,7 @@ import balatro.util.Data;
 import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.abstracts.CustomSavable;
+import basemod.eventUtil.AddEventParams;
 import basemod.interfaces.*;
 import balatro.util.GeneralUtils;
 import balatro.util.KeywordInfo;
@@ -30,11 +34,13 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.dungeons.Exordium;
+import com.megacrit.cardcrawl.dungeons.TheBeyond;
+import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
-import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.relics.*;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
@@ -46,6 +52,8 @@ import java.io.IOException;
 import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
+
+import static balatro.character.baseDeck.Enums.BASEDECK;
 
 @SpireInitializer
 public class balatroMod implements
@@ -134,7 +142,18 @@ public class balatroMod implements
         deckUI = new DeckSelectionUI();
         BaseMod.addTopPanelItem(new GoldPerCombat());
 
-        BaseMod.addPower(ThePsychicPower.class, ThePsychicPower.POWER_ID);
+        BaseMod.addEvent(new AddEventParams.Builder(SpectralMerchantEvent.ID, SpectralMerchantEvent.class)
+                .playerClass(BASEDECK)
+                .dungeonID(Exordium.ID)
+                .create());
+        BaseMod.addEvent(new AddEventParams.Builder(WeirdJokerEvent.ID, WeirdJokerEvent.class)
+                .playerClass(BASEDECK)
+                .dungeonID(TheCity.ID)
+                .create());
+        BaseMod.addEvent(new AddEventParams.Builder(JackInTheBoxEvent.ID, JackInTheBoxEvent.class)
+                .playerClass(BASEDECK)
+                .dungeonID(TheBeyond.ID)
+                .create());
     }
 
     /*----------Localization----------*/
@@ -263,7 +282,7 @@ public class balatroMod implements
     @Override
     public void receiveEditCharacters() {
         BaseMod.addCharacter(new baseDeck(),
-                BASEDECK_CHAR_SELECT_BUTTON, BASEDECK_CHAR_SELECT_PORTRAIT, baseDeck.Enums.BASEDECK);
+                BASEDECK_CHAR_SELECT_BUTTON, BASEDECK_CHAR_SELECT_PORTRAIT, BASEDECK);
     }
 
     @Override
@@ -369,6 +388,7 @@ public class balatroMod implements
         for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
             if(m.type == AbstractMonster.EnemyType.ELITE) {
                 BlindPower.BlindType newBlindIndex = BlindPower.BlindType.randomType();
+                newBlindIndex = BlindPower.BlindType.THE_WATER;
                 switch (newBlindIndex) {
                     case THE_HOOK:
                         m.addToBot(new ApplyPowerAction(m, m, new TheHookPower(m)));
@@ -422,6 +442,18 @@ public class balatroMod implements
                         m.addToBot(new ApplyPowerAction(m, m, new TheToothPower(m)));
                         break;
                     case THE_MARK:
+                        m.addToBot(new ApplyPowerAction(m, m, new TheMarkPower(m)));
+                        break;
+                    case THE_CLUB:
+                        m.addToBot(new ApplyPowerAction(m, m, new TheMarkPower(m)));
+                        break;
+                    case THE_GOAD:
+                        m.addToBot(new ApplyPowerAction(m, m, new TheMarkPower(m)));
+                        break;
+                    case THE_WINDOW:
+                        m.addToBot(new ApplyPowerAction(m, m, new TheMarkPower(m)));
+                        break;
+                    case THE_SERPENT:
                         m.addToBot(new ApplyPowerAction(m, m, new TheMarkPower(m)));
                         break;
                     default:

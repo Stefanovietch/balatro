@@ -4,14 +4,14 @@ import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.evacipated.cardcrawl.modthespire.patcher.PatchingException;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
 import javassist.CannotCompileException;
 import javassist.CtBehavior;
 
 import java.util.ArrayList;
 
 import static balatro.util.GeneralUtils.hasRelic;
-import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.*;
+import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.aiRng;
+import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.getColorlessCardFromPool;
 import static com.megacrit.cardcrawl.helpers.RelicLibrary.getRelic;
 
 public class AddColorlessCardToRewardsPatches {

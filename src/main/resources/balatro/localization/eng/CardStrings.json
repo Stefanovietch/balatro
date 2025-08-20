@@ -592,7 +592,7 @@
   },
   "${modID}:DriversLicense": {
     "NAME": "Driver's License",
-    "DESCRIPTION": "If your deck has at least 4 rare cards, gain !M! Strength and !M! Dexterity."
+    "DESCRIPTION": "If your deck has at least 4 rare cards, gain !M! Strength and !M! Dexterity. NL Exhaust."
   },
   "${modID}:Cartomancer": {
     "NAME": "Cartomancer",
@@ -633,6 +633,10 @@
   "${modID}:Perkeo": {
     "NAME": "Perkeo",
     "DESCRIPTION": "Gain an additional card reward in this combat's rewards. NL Exhaust."
+  },
+  "${modID}:Dilation": {
+    "NAME": "Dilation",
+    "DESCRIPTION": "When you draw this card, add a copy to your hand. NL Exhaust."
   },
 
   "${modID}:Blockade": {

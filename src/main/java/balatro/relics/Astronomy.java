@@ -1,20 +1,11 @@
 package balatro.relics;
 
 import balatro.character.baseDeck;
-import com.megacrit.cardcrawl.actions.common.ObtainPotionAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.PotionHelper;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
-import com.megacrit.cardcrawl.potions.ColorlessPotion;
-import com.megacrit.cardcrawl.potions.DuplicationPotion;
 import com.megacrit.cardcrawl.potions.PotionSlot;
-import com.megacrit.cardcrawl.rewards.RewardItem;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 import static balatro.balatroMod.makeID;
 

@@ -5,12 +5,10 @@ import balatro.util.CardStats;
 import com.megacrit.cardcrawl.actions.common.GainGoldAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.random.Random;
-
-import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.cardRng;
 
 public class GoldenTicket extends BaseCard {
     public static final String ID = makeID(GoldenTicket.class.getSimpleName());
@@ -33,10 +31,17 @@ public class GoldenTicket extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new MakeTempCardInHandAction(AbstractDungeon.rareCardPool.getRandomCard(cardRng),1));
+        CardGroup rareCards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+        for (AbstractCard rareCard : AbstractDungeon.rareCardPool.group) {
+            if (!rareCard.hasTag(CardTags.HEALING)) {
+                rareCards.addToRandomSpot(rareCard);
+            }
+        }
+        addToBot(new MakeTempCardInHandAction(rareCards.getRandomCard(true),1));
+
         int rareCardCount = 0;
         for (AbstractCard c : p.masterDeck.group) {
-            if (c.rarity == CardRarity.RARE && !c.hasTag(CardTags.HEALING)) {rareCardCount++;}
+            if (c.rarity == CardRarity.RARE) {rareCardCount++;}
         }
         addToBot(new GainGoldAction(magicNumber * rareCardCount));
     }

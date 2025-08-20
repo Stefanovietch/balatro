@@ -3,9 +3,7 @@ package balatro.cards;
 import balatro.actions.DrawAllCostAction;
 import balatro.character.baseDeck;
 import balatro.util.CardStats;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 

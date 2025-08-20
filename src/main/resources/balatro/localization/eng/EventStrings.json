@@ -17,5 +17,64 @@
       "[Leave]",
       "Select card to remove. (You can also stick extra text like this in here.)"
     ]
+  },
+  "${modID}:SpectralMerchantEvent": {
+    "NAME": "Spectral Merchant",
+    "DESCRIPTIONS": [
+      "You see a familiar figure, it seems to be the Merchant.",
+      "As you get closer, it suddenly turns around and a spectral shape flies at and through you. NL You are unharmed but it seems like you have lost something.",
+      "When it seemed to have calmed down it apologizes and offers you some reimbursement.",
+      "It apologizes again and says an awkward goodbye."
+    ],
+    "OPTIONS": [
+      "[Approach] ???",
+      "[Leave]",
+      "[Prepare] #rRemove #ra #rrandom #rcard #rfrom #ryour #rdeck.",
+      "[Grim] #gAdd #g1 #grandom #gRare #gcard #gto #gyour #gdeck.",
+      "[Familiar] #gAdd #g2 #grandom #gUncommon #gcards #gto #gyour #gdeck.",
+      "[Incantation] #gAdd #g3 #grandom #gCommon #gcards #gto #gyour #gdeck."
+    ]
+  },
+  "${modID}:WeirdJokerEvent": {
+    "NAME": "Weird Joker",
+    "DESCRIPTIONS": [
+      "As you turn a corner you spot a disheveled stall with worn out wares. NL As you approach a funny looking creature asks if you are up for a trade.",
+      "Ohohoh, hahaha, let's see what i got here. NL This or that, that or this, take your pick. NL Don't worry, don't worry, nothing has been tampered with.",
+      "Eheheh, thank you dearly."
+    ],
+    "OPTIONS": [
+      "[See the Merchandise]",
+      "[Wraith] #gAdd #ga #grandom #gRare #gcard #gto #gyour #gdeck. #rSet #ryour #rGold #rto #r0.",
+      "[Immolate] #gGain #g200 #gGold. #rRemove #r5 #rrandom #rcards #rfrom #ryour #rdeck.",
+      "[Black Hole] #gUpgrade #gall #gCards. #rCursed #r- #rDilation.",
+      "[Leave]"
+
+    ]
+  },
+  "${modID}:JackInTheBoxEvent": {
+    "NAME": "Jack in the Box",
+    "DESCRIPTIONS": [
+      "You come upon a strange box just large enough to fit you in. NL It even has a door with a sign on it that says: \"Unparalleled strength requires a sacrifice\"\n",
+      "The moment you close the door behind you, it feels like you are being drained while a wind up sounds starts playing.",
+      "Suddenly the feeling and the winding up stops and you here a click. A quiet voice whispers \"What is thy destiny?\".",
+      "When the words leave your mouth, the floor suddenly shoots up and launches you out the top of the box. NL During your flight a laughing voice continuously repeats \"Jack in the box\", but stops as soon as you finally land.",
+      "As you kick over the box an angry voice screams at you. A sudden spring shoots up from the box, hitting you. NL When recovering from the hit, you notice that some gold sprang out too."
+    ],
+    "OPTIONS": [
+      "[Step into the box]",
+      "[Locked] You lack a sufficient sacrifice.",
+      "[Kick the box over]",
+      "[Walk past the box]",
+      "[Get drained] #rLose #r30 #rMax #rHP. #rLose #r300 #rGold.",
+
+      "[Journey the Abyss] #gObtain #gNacho #gTong.",
+      "[Discover the Truth] #gObtain #gPalate.",
+      "[Become a Cryptid] #gCreate #g2 #gcopies #gof #gany #gcard #gin #gyour #gdeck.",
+
+      "[Get up and leave]",
+      "[Pick up Gold and leave] #rLose #r",
+      " #rHP, #ggain #g69 #gGold.",
+      "Select a card to duplicate"
+    ]
   }
 }

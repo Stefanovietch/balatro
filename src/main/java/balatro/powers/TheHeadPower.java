@@ -2,13 +2,9 @@ package balatro.powers;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.SlowPower;
-
-import java.util.HashMap;
-import java.util.Map;
 
 import static balatro.balatroMod.makeID;
 

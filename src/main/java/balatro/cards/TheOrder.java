@@ -10,9 +10,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
-import java.util.ArrayList;
-import java.util.Objects;
-
 public class TheOrder extends BaseCard {
     public static final String ID = makeID(TheOrder.class.getSimpleName());
     private static final CardStats info = new CardStats(

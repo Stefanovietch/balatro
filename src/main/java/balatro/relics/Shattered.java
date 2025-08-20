@@ -2,14 +2,8 @@ package balatro.relics;
 
 import balatro.character.baseDeck;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
-import jdk.jpackage.internal.Log;
 
-import java.util.Iterator;
-
-import static balatro.balatroMod.logger;
 import static balatro.balatroMod.makeID;
 
 public class Shattered extends BaseRelic{

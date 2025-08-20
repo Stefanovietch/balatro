@@ -1,9 +1,9 @@
 package balatro.relics;
 
-import basemod.abstracts.CustomRelic;
-import basemod.helpers.RelicType;
 import balatro.util.GeneralUtils;
 import balatro.util.TextureLoader;
+import basemod.abstracts.CustomRelic;
+import basemod.helpers.RelicType;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 

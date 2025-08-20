@@ -7,14 +7,11 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.random.Random;
 
 import java.util.Arrays;
 import java.util.List;
-
-import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.miscRng;
 
 public class MailInRebate extends BaseCard implements RandomType{
     public static final String ID = makeID(MailInRebate.class.getSimpleName());

@@ -1,14 +1,8 @@
 package balatro.relics;
 
-import balatro.balatroMod;
 import balatro.character.baseDeck;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.RelicLibrary;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import static balatro.balatroMod.makeID;
-import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.aiRng;
 
 public class HighStakes extends BaseRelic{
     private static final String NAME = "HighStakes"; //The name will be used for determining the image file as well as the ID.

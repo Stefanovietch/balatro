@@ -1,11 +1,7 @@
 package balatro.patches;
 
-import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.evacipated.cardcrawl.modthespire.patcher.PatchingException;
-import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.shop.ShopScreen;
 import com.megacrit.cardcrawl.shop.StoreRelic;
@@ -16,7 +12,6 @@ import java.util.ArrayList;
 
 import static balatro.util.GeneralUtils.hasRelic;
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.shopScreen;
-import static com.megacrit.cardcrawl.shop.ShopScreen.rollRelicTier;
 
 public class LiquidationPatches {
     @SpirePatch2(clz = ShopScreen.class, method = "init")

@@ -2,7 +2,6 @@ package balatro.cards;
 
 import balatro.character.baseDeck;
 import balatro.powers.AstronomerPower;
-import balatro.powers.CavendishPower;
 import balatro.util.CardStats;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;

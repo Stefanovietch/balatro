@@ -1,6 +1,5 @@
 package balatro.cards;
 
-import balatro.actions.DrawAllCostAction;
 import balatro.character.baseDeck;
 import balatro.util.CardStats;
 import com.megacrit.cardcrawl.actions.common.DiscardAction;
@@ -9,7 +8,6 @@ import com.megacrit.cardcrawl.actions.common.EmptyDeckShuffleAction;
 import com.megacrit.cardcrawl.actions.common.ShuffleAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class ChaosTheClown extends BaseCard {

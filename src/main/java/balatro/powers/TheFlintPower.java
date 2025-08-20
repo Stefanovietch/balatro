@@ -2,16 +2,12 @@ package balatro.powers;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Objects;
 
 import static balatro.balatroMod.makeID;
@@ -35,17 +31,17 @@ public class TheFlintPower extends BlindPower{
                 initialVulnerable = p.amount;
                 addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player,owner,"Vulnerable"));
             }
-            if (Objects.equals(p.ID, "Weak")) {
+            if (Objects.equals(p.ID, "Weakened")) {
                 initialWeak = p.amount;
                 addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player,owner,"Weakened"));
             }
         }
-        AbstractPower vulnerablePower = new VulnerablePower(AbstractDungeon.player,-1,true);
+        AbstractPower vulnerablePower = new VulnerablePower(AbstractDungeon.player,99,true);
         vulnerablePower.type = PowerType.BUFF;
-        addToBot(new ApplyPowerAction(AbstractDungeon.player,owner, vulnerablePower, -1));
-        AbstractPower weakPower = new WeakPower(AbstractDungeon.player,-1,true);
+        addToBot(new ApplyPowerAction(AbstractDungeon.player,owner, vulnerablePower, 99));
+        AbstractPower weakPower = new WeakPower(AbstractDungeon.player,99,true);
         weakPower.type = PowerType.BUFF;
-        addToBot(new ApplyPowerAction(AbstractDungeon.player,owner,weakPower, -1));
+        addToBot(new ApplyPowerAction(AbstractDungeon.player,owner,weakPower, 99));
     }
 
 

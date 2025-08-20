@@ -4,10 +4,9 @@ import balatro.character.baseDeck;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.potions.DuplicationPotion;
 import com.megacrit.cardcrawl.potions.PotionSlot;
+import com.megacrit.cardcrawl.vfx.ObtainPotionEffect;
 
 import static balatro.balatroMod.makeID;
-
-import com.megacrit.cardcrawl.vfx.ObtainPotionEffect;
 
 public class CrystalBall extends BaseRelic{
     private static final String NAME = "CrystalBall"; //The name will be used for determining the image file as well as the ID.

@@ -9,8 +9,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import java.util.Objects;
-
 public class TheTrio extends BaseCard {
     public static final String ID = makeID(TheTrio.class.getSimpleName());
     private static final CardStats info = new CardStats(

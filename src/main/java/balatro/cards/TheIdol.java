@@ -3,20 +3,14 @@ package balatro.cards;
 import balatro.actions.TheIdolAction;
 import balatro.character.baseDeck;
 import balatro.util.CardStats;
-
-import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
-import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.random.Random;
-import com.megacrit.cardcrawl.screens.MasterDeckViewScreen;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class TheIdol extends BaseCard implements RandomType{
     public static final String ID = makeID(TheIdol.class.getSimpleName());

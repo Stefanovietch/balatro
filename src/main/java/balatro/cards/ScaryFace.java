@@ -1,7 +1,6 @@
 package balatro.cards;
 
 import balatro.character.baseDeck;
-import balatro.powers.LoyaltyCardPower;
 import balatro.powers.ScaryFacePower;
 import balatro.util.CardStats;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
