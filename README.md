@@ -1,36 +1,5 @@
-# Basic Mod
-
-This is an empty Slay the Spire mod + a modding tutorial.
-
-This tutorial will help with setup and the basics of Slay the Spire modding, but it will not teach you Java. If you know nothing of Java or programming in general, you are strongly recommended to look up a free online course and do at least some of it. It is possible to do modding with almost no proper knowledge, but it will make things much more difficult.
-
----
-
-## Check the wiki to get started:
-
-https://github.com/Alchyr/BasicMod/wiki
-
----
-
-## Know what you're doing?
-
-You can still use this mod as a base, or you could use another template like https://github.com/DarkVexon/ProTemplate
-
-You can find more options in the pins of the #modding-technical channel in the Slay the Spire discord server.
-
----
-
-### Some HD Slay the Spire art assets (courtesy of Gremious, creator of DefaultMod):
-
-Includes:
-- Empty Relic Template feat. empty bottle
-- Empty Card Template
-- Color-Changable cardback
-- A couple of HD Monster vectors (Louse, Nob, Sentry, Sneaky Gremlin)
-- A coupe of HD items (J.A.X., A Coin)
-- 2 people silhouettes
-- A curse Background
-
-https://github.com/Gremious/StS-DefaultModBase#some-hd-slay-the-spire-art-assets
-
----
+A balatro themed mod!
+Just like in balatro there are 15 different decks to play with (with their own starting relic). They all share the same card pool of 140 cards, their rarity is the same as in balatro. That means there is a legendary rarity, which have a chance to replace any colorless rare card.
+Most terms in balatro are not easily relatible in slay the spire, but that doesn't mean I didn't try. For example, energy is hands, powers are face cards, potions are tarot cards and Gold is of course money. You can earn a lot of Gold in this mod, to prevent infinite gold and long battles I've implement a limit of 200 Gold per battle (which can be increased with a relic) to keep the game quick.
+Bosses and Elites have blind abilities to make it more challenging, as the average card is quite strong.
+I hope you'll enjoy the climb!
