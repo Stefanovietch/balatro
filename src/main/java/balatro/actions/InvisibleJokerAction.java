@@ -22,9 +22,6 @@ public class InvisibleJokerAction extends AbstractGameAction {
     private final AbstractPlayer p = AbstractDungeon.player;
     private boolean upgraded;
 
-
-    AbstractCard c;
-
     public InvisibleJokerAction(AbstractCard invisCard) {
         this.actionType = ActionType.CARD_MANIPULATION;
         this.duration = 0.1F;

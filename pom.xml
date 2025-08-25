@@ -3,7 +3,7 @@
 
     <properties>
         <modID>Balatro</modID>
-        <author>Me! (Or well, you. If you want to use \"quotes\" make sure you have slashes in front of them like this.)</author>
+        <author>Stefanovietch</author>
 
         <!-- Change the path for your system to match your Steam installation. -->
         <steam.windows>D:\SteamLibrary\steamapps</steam.windows>
@@ -24,8 +24,8 @@
     <!-- Avoid using \ in this description, as they can cause the description to fail to load. -->
     <!-- If you really want to use them, you'll need to "escape" them by putting another one in front, like \\ -->
     <description>
-        This is a description!\n
-        "This" is a second line of description.
+        Balatro themed mod!\n
+        Please let me know of any bugs. General feedback is appreciated.
     </description>
 
     <!--You shouldn't need to change anything below this point, but feel free to look at it.-->

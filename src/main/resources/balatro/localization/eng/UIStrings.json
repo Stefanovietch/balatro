@@ -22,91 +22,106 @@
   "${modID}:redDeck": {
     "TEXT": [
       "Red Deck",
-      "A good starting point."
+      "A good starting point.",
+      "red"
     ]
   },
   "${modID}:blueDeck": {
     "TEXT": [
       "Blue Deck",
-      "A simple way to play."
+      "A simple way to play.",
+      "blue"
     ]
   },
   "${modID}:yellowDeck": {
     "TEXT": [
       "Yellow Deck",
-      "For that extra money."
+      "For that extra money.",
+      "yellow"
     ]
   },
   "${modID}:greenDeck": {
     "TEXT": [
       "Green Deck",
-      "Making your own cash."
+      "Making your own cash.",
+      "green"
     ]
   },
   "${modID}:blackDeck": {
     "TEXT": [
       "Black Deck",
-      "More options, more ways to play."
+      "More options, more ways to play.",
+      "black"
     ]
   },
   "${modID}:magicDeck": {
     "TEXT": [
       "Magic Deck",
-      "Brewing up some magic."
+      "Brewing up some magic.",
+      "magical"
     ]
   },
   "${modID}:nebulaDeck": {
     "TEXT": [
       "Nebula Deck",
-      "Learn by playing, play by learning."
+      "Learn by playing, play by learning.",
+      "nebular"
     ]
   },
   "${modID}:ghostDeck": {
     "TEXT": [
       "Ghost Deck",
-      "Expect the unexpected."
+      "Expect the unexpected.",
+      "ghostly"
     ]
   },
   "${modID}:abandonedDeck": {
     "TEXT": [
       "Abandoned Deck",
-      "To gain power, you need to lose it first."
+      "To gain power, you need to lose it first.",
+      "abandoned"
     ]
   },
   "${modID}:checkeredDeck": {
     "TEXT": [
       "Checkered Deck",
-      "Check and mate with precision."
+      "Check and mate with precision.",
+      "checkered"
     ]
   },
   "${modID}:zodiacDeck": {
     "TEXT": [
       "Zodiac Deck",
-      "Spend money like you have stars."
+      "Spend money like there are stars.",
+      "zodiacal"
     ]
   },
   "${modID}:paintedDeck": {
     "TEXT": [
       "Painted Deck",
-      "Beauty is in the hands of an artist."
+      "Beauty is in the hands of an artist.",
+      "painted"
     ]
   },
   "${modID}:anaglyphDeck": {
     "TEXT": [
       "Anaglyph Deck",
-      "To see something twice, you need two eyes."
+      "To see something twice, you need two eyes.",
+      "anaglyphic"
     ]
   },
   "${modID}:plasmaDeck": {
     "TEXT": [
       "Plasma Deck",
-      "The fourth act is what that matters."
+      "The fourth act is what that matters.",
+      "plasmatic"
     ]
   },
   "${modID}:erraticDeck": {
     "TEXT": [
       "Erratic Deck",
-      "Don't look for a pattern, be the pattern."
+      "Don't look for a pattern, be the pattern.",
+      "erratic"
     ]
   },
 

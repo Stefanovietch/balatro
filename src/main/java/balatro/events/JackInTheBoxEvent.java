@@ -44,9 +44,7 @@ public class JackInTheBoxEvent extends PhasedEvent {
                         })
                 )
                 .addOption(new TextPhase.OptionInfo(OPTIONS[3])
-                        .setOptionResult((i)->{
-                            openMap();
-                        })
+                        .setOptionResult((i)-> openMap())
                 )
         );
 
@@ -107,9 +105,7 @@ public class JackInTheBoxEvent extends PhasedEvent {
 
         registerPhase("end", new TextPhase(DESCRIPTIONS[3])
                 .addOption(new TextPhase.OptionInfo(OPTIONS[8])
-                        .setOptionResult((i)->{
-                            openMap();
-                        })
+                        .setOptionResult((i)-> openMap())
                 )
         );
         transitionKey("start");

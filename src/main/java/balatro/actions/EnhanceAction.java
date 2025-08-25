@@ -18,14 +18,12 @@ public class EnhanceAction extends AbstractGameAction {
     private final UUID uuid;
     private final AbstractPlayer p = AbstractDungeon.player;
     private boolean upgraded;
-    private final AbstractCard card;
 
     public EnhanceAction(AbstractCard cardToEnhance) {
         this.actionType = ActionType.SPECIAL;
         this.duration = 0.1F;
         this.uuid = cardToEnhance.uuid;
         this.upgraded = cardToEnhance.upgraded;
-        this.card = cardToEnhance;
     }
     @Override
     public void update() {

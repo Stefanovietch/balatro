@@ -10,8 +10,6 @@ public class LoseGoldAction extends AbstractGameAction {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("DiscardAction");
 
     public static final String[] TEXT = uiStrings.TEXT;
-
-    private final AbstractPlayer p = AbstractDungeon.player;
     private boolean upgraded;
 
     public LoseGoldAction(int amount) {

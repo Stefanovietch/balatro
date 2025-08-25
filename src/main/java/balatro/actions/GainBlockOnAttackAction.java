@@ -13,7 +13,6 @@ public class GainBlockOnAttackAction extends AbstractGameAction {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("ExhaustAction");
 
     public static final String[] TEXT = uiStrings.TEXT;
-    private final AbstractPlayer p = AbstractDungeon.player;
 
     public GainBlockOnAttackAction(AbstractCreature target, DamageInfo info) {
         setValues(target, info);

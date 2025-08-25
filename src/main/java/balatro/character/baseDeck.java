@@ -1,5 +1,6 @@
 package balatro.character;
 
+import balatro.balatroMod;
 import balatro.cards.CleverJoker;
 import balatro.cards.JollyJoker;
 import balatro.cards.MadJoker;
@@ -18,12 +19,15 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
+import com.megacrit.cardcrawl.ui.panels.TopPanel;
 
 import java.util.ArrayList;
 
@@ -217,7 +221,12 @@ public class baseDeck extends CustomPlayer {
         this.shoulder2Img = ImageMaster.loadImage(characterPath("decks/" + deck + "/shoulder2.png"));
         this.corpseImg = ImageMaster.loadImage(characterPath("decks/" + deck + "/corpse.png"));
         this.animation = new SpriterAnimation(characterPath("decks/" + deck + "/animation/default.scml"));
-        this.name = deck;
-        this.title = deck;
+        String[] DECKSTRING = CardCrawlGame.languagePack.getUIString(balatroMod.makeID(deck)).TEXT;
+        String adjectiveName = DECKSTRING[2];
+        String fullName = "the " + DECKSTRING[0];;
+        this.name = NAMES[0] = fullName;
+        this.title = NAMES[1] = fullName;
+        AbstractDungeon.topPanel.setPlayerName();
+        TEXT[2] = "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~\"Join~ ~us~ ~"+ adjectiveName +"~ ~one,~ ~and~ ~feel~ ~the~ ~warmth~ ~of~ ~the~ ~Spire.\"~";
     }
 }

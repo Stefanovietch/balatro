@@ -16,10 +16,9 @@ public class GlassJokerAction extends AbstractGameAction {
 
     public static final String[] TEXT = uiStrings.TEXT;
 
-    private final AbstractPlayer p = AbstractDungeon.player;
     private boolean upgraded;
-    private AbstractCard sourceCard;
-    private DamageInfo info;
+    private final AbstractCard sourceCard;
+    private final DamageInfo info;
     public int[] damage;
 
     public GlassJokerAction(int[] amount, DamageInfo info, AbstractCard source) {

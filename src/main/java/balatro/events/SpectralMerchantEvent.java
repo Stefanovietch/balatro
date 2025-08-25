@@ -34,9 +34,7 @@ public class SpectralMerchantEvent extends PhasedEvent {
                         })
                 )
                 .addOption(new TextPhase.OptionInfo(OPTIONS[1])
-                        .setOptionResult((i)->{
-                                openMap();
-                        })
+                        .setOptionResult((i)-> openMap())
                 )
         );
 
@@ -84,9 +82,7 @@ public class SpectralMerchantEvent extends PhasedEvent {
 
         registerPhase("end", new TextPhase(DESCRIPTIONS[3])
                 .addOption(new TextPhase.OptionInfo(OPTIONS[1])
-                        .setOptionResult((i)->{
-                                openMap();
-                        })
+                        .setOptionResult((i)-> openMap())
                 )
         );
 

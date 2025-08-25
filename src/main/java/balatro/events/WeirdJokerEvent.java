@@ -86,17 +86,13 @@ public class WeirdJokerEvent extends PhasedEvent {
                         })
                 )
                 .addOption(new TextPhase.OptionInfo(OPTIONS[4])
-                        .setOptionResult((i)->{
-                            openMap();
-                        })
+                        .setOptionResult((i)-> openMap())
                 )
         );
 
         registerPhase("end", new TextPhase(DESCRIPTIONS[2])
                 .addOption(new TextPhase.OptionInfo(OPTIONS[4])
-                        .setOptionResult((i)->{
-                            openMap();
-                        })
+                        .setOptionResult((i)-> openMap())
                 )
         );
 

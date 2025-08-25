@@ -18,9 +18,6 @@ public class DNAAction extends AbstractGameAction {
     private final AbstractPlayer p = AbstractDungeon.player;
     private boolean upgraded;
 
-
-    AbstractCard c;
-
     public DNAAction(int DNAindex) {
         this.DNAindex = DNAindex;
         this.actionType = ActionType.CARD_MANIPULATION;

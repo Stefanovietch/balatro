@@ -18,13 +18,10 @@ public class SpareTrousersAction extends AbstractGameAction {
 
     public static final String[] TEXT = uiStrings.TEXT;
 
-
     private final DamageInfo info;
     private final UUID uuid;
     private final AbstractPlayer p = AbstractDungeon.player;
     private boolean upgraded;
-    private int cardValue;
-    AbstractCard c;
 
     public SpareTrousersAction(DamageInfo info, BaseCard card) {
         this.info = info;
