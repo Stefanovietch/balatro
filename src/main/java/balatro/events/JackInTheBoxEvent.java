@@ -1,25 +1,20 @@
 package balatro.events;
 
-import balatro.cards.Dilation;
 import balatro.relics.NachoTong;
 import balatro.relics.Palette;
 import basemod.abstracts.events.PhasedEvent;
 import basemod.abstracts.events.phases.TextPhase;
-import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
-import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 
+import static balatro.balatroMod.imagePath;
 import static balatro.balatroMod.makeID;
 
 public class JackInTheBoxEvent extends PhasedEvent {
@@ -30,7 +25,7 @@ public class JackInTheBoxEvent extends PhasedEvent {
     private static final String[] DESCRIPTIONS = eventStrings.DESCRIPTIONS;
     private static final String[] OPTIONS = eventStrings.OPTIONS;
 
-    private static final String IMG = "images/events/jackInTheBox.jpg";
+    private static final String IMG = imagePath("/events/jackinthebox1.jpg");
 
     public JackInTheBoxEvent() {
         super(ID, NAME, IMG);
@@ -38,11 +33,13 @@ public class JackInTheBoxEvent extends PhasedEvent {
         registerPhase("start", new TextPhase(DESCRIPTIONS[0])
                 .addOption(new TextPhase.OptionInfo(OPTIONS[0]).enabledCondition(() -> (AbstractDungeon.player.gold >= 300 && AbstractDungeon.player.maxHealth > 30), OPTIONS[1])
                         .setOptionResult((i)->{
+                            imageEventText.loadImage(imagePath("/events/jackinthebox2.jpg"));
                             transitionKey("theBox");
                         })
                 )
                 .addOption(new TextPhase.OptionInfo(OPTIONS[2])
                         .setOptionResult((i)->{
+                            imageEventText.loadImage(imagePath("/events/jackinthebox4.jpg"));
                             transitionKey("kick");
                         })
                 )
@@ -57,8 +54,8 @@ public class JackInTheBoxEvent extends PhasedEvent {
         registerPhase("theBox", new TextPhase(DESCRIPTIONS[1])
                 .addOption(new TextPhase.OptionInfo(OPTIONS[4])
                         .setOptionResult((i)->{
-                                AbstractDungeon.player.decreaseMaxHealth(30);
-                                AbstractDungeon.player.loseGold(300);
+                            AbstractDungeon.player.decreaseMaxHealth(30);
+                            AbstractDungeon.player.loseGold(300);
                             transitionKey("bigReward");
                         })
                 )
@@ -87,6 +84,7 @@ public class JackInTheBoxEvent extends PhasedEvent {
                         .setOptionResult((i)->{
                             AbstractRelic relic = new NachoTong();
                             AbstractDungeon.getCurrRoom().spawnRelicAndObtain(this.drawX,this.drawY,relic);
+                            imageEventText.loadImage(imagePath("/events/jackinthebox3.jpg"));
                             transitionKey("end");
                         })
                 )
@@ -94,12 +92,14 @@ public class JackInTheBoxEvent extends PhasedEvent {
                         .setOptionResult((i)->{
                             AbstractRelic relic = new Palette();
                             AbstractDungeon.getCurrRoom().spawnRelicAndObtain(this.drawX,this.drawY,relic);
+                            imageEventText.loadImage(imagePath("/events/jackinthebox3.jpg"));
                             transitionKey("end");
                         })
                 )
                 .addOption(new TextPhase.OptionInfo(OPTIONS[7])
                         .setOptionResult((i)->{
                             AbstractDungeon.gridSelectScreen.open(AbstractDungeon.player.masterDeck, 1, OPTIONS[11], false, false, false, false);
+                            imageEventText.loadImage(imagePath("/events/jackinthebox3.jpg"));
                             transitionKey("end");
                         })
                 )

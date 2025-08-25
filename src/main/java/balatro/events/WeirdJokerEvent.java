@@ -8,15 +8,13 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 
-import java.util.ArrayList;
-
+import static balatro.balatroMod.imagePath;
 import static balatro.balatroMod.makeID;
 
 public class WeirdJokerEvent extends PhasedEvent {
@@ -27,7 +25,7 @@ public class WeirdJokerEvent extends PhasedEvent {
     private static final String[] DESCRIPTIONS = eventStrings.DESCRIPTIONS;
     private static final String[] OPTIONS = eventStrings.OPTIONS;
 
-    private static final String IMG = "images/events/weirdJoker.jpg";
+    private static final String IMG = imagePath("/events/weirdjoker1.jpg");
 
     public WeirdJokerEvent() {
         super(ID, NAME, IMG);
@@ -35,6 +33,7 @@ public class WeirdJokerEvent extends PhasedEvent {
         registerPhase("start", new TextPhase(DESCRIPTIONS[0])
                 .addOption(new TextPhase.OptionInfo(OPTIONS[0])
                         .setOptionResult((i)->{
+                            imageEventText.loadImage(imagePath("/events/weirdjoker2.jpg"));
                             transitionKey("gainThat");
                         })
                 )
@@ -61,6 +60,7 @@ public class WeirdJokerEvent extends PhasedEvent {
                                 AbstractDungeon.effectList.add(new PurgeCardEffect(randomCard, MathUtils.random(0.1F, 0.9F) * Settings.WIDTH,MathUtils.random(0.2F, 0.8F) * Settings.HEIGHT));
                                 AbstractDungeon.player.masterDeck.removeCard(randomCard);
                             }
+                            transitionKey("end");
                         })
                 )
                 .addOption(new TextPhase.OptionInfo(OPTIONS[3], new Dilation())

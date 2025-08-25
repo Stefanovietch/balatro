@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 
+import static balatro.balatroMod.imagePath;
 import static balatro.balatroMod.makeID;
 
 public class SpectralMerchantEvent extends PhasedEvent {
@@ -20,7 +21,7 @@ public class SpectralMerchantEvent extends PhasedEvent {
     private static final String[] DESCRIPTIONS = eventStrings.DESCRIPTIONS;
     private static final String[] OPTIONS = eventStrings.OPTIONS;
 
-    private static final String IMG = "images/events/spectralMerchant.jpg";
+    private static final String IMG = imagePath("/events/spectralmerchant1.jpg");
 
     public SpectralMerchantEvent() {
         super(ID, NAME, IMG);
@@ -28,6 +29,7 @@ public class SpectralMerchantEvent extends PhasedEvent {
         registerPhase("start", new TextPhase(DESCRIPTIONS[0])
                 .addOption(new TextPhase.OptionInfo(OPTIONS[0])
                         .setOptionResult((i)->{
+                                imageEventText.loadImage(imagePath("/events/spectralmerchant2.jpg"));
                                 transitionKey("loseCard");
                         })
                 )
@@ -44,6 +46,7 @@ public class SpectralMerchantEvent extends PhasedEvent {
                                 AbstractCard randomCard = AbstractDungeon.player.masterDeck.getRandomCard(true);
                                 AbstractDungeon.effectList.add(new PurgeCardEffect(randomCard));
                                 AbstractDungeon.player.masterDeck.removeCard(randomCard);
+                                imageEventText.loadImage(imagePath("/events/spectralmerchant3.jpg"));
                                 transitionKey("gainCards");
                         })
                 )
@@ -66,7 +69,7 @@ public class SpectralMerchantEvent extends PhasedEvent {
                                 transitionKey("end");
                         })
                 )
-                .addOption(new TextPhase.OptionInfo(OPTIONS[4])
+                .addOption(new TextPhase.OptionInfo(OPTIONS[5])
                         .setOptionResult((i)->{
                                 AbstractCard commonCard = AbstractDungeon.srcCommonCardPool.getRandomCard(true);
                                 AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(commonCard, Settings.WIDTH / 4.0F, Settings.HEIGHT / 2.0F));

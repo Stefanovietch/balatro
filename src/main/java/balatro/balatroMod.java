@@ -388,7 +388,6 @@ public class balatroMod implements
         for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
             if(m.type == AbstractMonster.EnemyType.ELITE) {
                 BlindPower.BlindType newBlindIndex = BlindPower.BlindType.randomType();
-                newBlindIndex = BlindPower.BlindType.THE_WATER;
                 switch (newBlindIndex) {
                     case THE_HOOK:
                         m.addToBot(new ApplyPowerAction(m, m, new TheHookPower(m)));

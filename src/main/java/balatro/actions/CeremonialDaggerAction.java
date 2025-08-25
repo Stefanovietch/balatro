@@ -16,9 +16,6 @@ import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 import java.util.Objects;
 import java.util.UUID;
-import java.util.concurrent.atomic.AtomicInteger;
-
-import static basemod.BaseMod.logger;
 
 public class CeremonialDaggerAction extends AbstractGameAction {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("ExhaustAction");
