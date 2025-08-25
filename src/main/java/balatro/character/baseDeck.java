@@ -25,9 +25,7 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
-import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
-import com.megacrit.cardcrawl.ui.panels.TopPanel;
 
 import java.util.ArrayList;
 
@@ -223,7 +221,7 @@ public class baseDeck extends CustomPlayer {
         this.animation = new SpriterAnimation(characterPath("decks/" + deck + "/animation/default.scml"));
         String[] DECKSTRING = CardCrawlGame.languagePack.getUIString(balatroMod.makeID(deck)).TEXT;
         String adjectiveName = DECKSTRING[2];
-        String fullName = "the " + DECKSTRING[0];;
+        String fullName = "the " + DECKSTRING[0];
         this.name = NAMES[0] = fullName;
         this.title = NAMES[1] = fullName;
         AbstractDungeon.topPanel.setPlayerName();
