@@ -9,8 +9,7 @@ import balatro.ui.GoldPerCombat;
 import balatro.relics.*;
 import balatro.ui.DeckSelectionUI;
 import balatro.util.Data;
-import basemod.AutoAdd;
-import basemod.BaseMod;
+import basemod.*;
 import basemod.abstracts.CustomSavable;
 import basemod.eventUtil.AddEventParams;
 import basemod.interfaces.*;
@@ -37,6 +36,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheBeyond;
 import com.megacrit.cardcrawl.dungeons.TheCity;
+import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -101,6 +101,11 @@ public class balatroMod implements
     public static final String SELECTED_DECK = "selectedDeck";
     public static String selectedDeck = "redDeck";
 
+    public static final String COMBAT_GOLD_LIMIT = "combatGoldLimit";
+    public static boolean combatGoldLimit = true;
+    public static final String BLINDS = "blinds";
+    public static boolean blinds = true;
+
     public static DeckSelectionUI deckUI;
 
     //This will be called by ModTheSpire because of the @SpireInitializer annotation at the top of the class.
@@ -111,36 +116,35 @@ public class balatroMod implements
                 BASEDECK_BG_ATTACK, BASEDECK_BG_SKILL, BASEDECK_BG_POWER, BASEDECK_ENERGY_ORB,
                 BASEDECK_BG_ATTACK_P, BASEDECK_BG_SKILL_P, BASEDECK_BG_POWER_P, BASEDECK_ENERGY_ORB_P,
                 BASEDECK_SMALL_ORB);
-
-        Properties balatroDefaultSettings = new Properties();
-
-        balatroDefaultSettings.setProperty(SELECTED_DECK_INDEX, Integer.toString(selectedDeckIndex));
-        balatroDefaultSettings.setProperty(SELECTED_DECK, selectedDeck);
-
-        try {
-            balatroConfig = new SpireConfig("balatroMod", "balatroModConfig", balatroDefaultSettings);
-            selectedDeckIndex = balatroConfig.getInt(SELECTED_DECK_INDEX);
-            selectedDeck = balatroConfig.getString(SELECTED_DECK);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     public balatroMod() {
         BaseMod.subscribe(this); //This will make BaseMod trigger all the subscribers at their appropriate times.
         logger.info(modID + " subscribed to BaseMod.");
+
+        Properties balatroDefaultSettings = new Properties();
+
+        balatroDefaultSettings.setProperty(SELECTED_DECK_INDEX, Integer.toString(selectedDeckIndex));
+        balatroDefaultSettings.setProperty(SELECTED_DECK, selectedDeck);
+        balatroDefaultSettings.setProperty(COMBAT_GOLD_LIMIT, String.valueOf(combatGoldLimit));
+        balatroDefaultSettings.setProperty(BLINDS, String.valueOf(blinds));
+
+        try {
+            balatroConfig = new SpireConfig("balatroMod", "balatroModConfig", balatroDefaultSettings);
+            selectedDeckIndex = balatroConfig.getInt(SELECTED_DECK_INDEX);
+            selectedDeck = balatroConfig.getString(SELECTED_DECK);
+            combatGoldLimit = balatroConfig.getBool(COMBAT_GOLD_LIMIT);
+            blinds = balatroConfig.getBool(BLINDS);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     public void receivePostInitialize() {
-        //This loads the image used as an icon in the in-game mods menu.
-        Texture badgeTexture = TextureLoader.getTexture(imagePath("badge.png"));
-        //Set up the mod information displayed in the in-game mods menu.
-        //The information used is taken from your pom.xml file.
-        BaseMod.registerModBadge(badgeTexture, info.Name, GeneralUtils.arrToString(info.Authors), info.Description, null);
-
         deckUI = new DeckSelectionUI();
-        BaseMod.addTopPanelItem(new GoldPerCombat());
+        GoldPerCombat goldPerCombatPanel = new GoldPerCombat();
+        if(combatGoldLimit) {BaseMod.addTopPanelItem(goldPerCombatPanel);}
 
         BaseMod.addEvent(new AddEventParams.Builder(SpectralMerchantEvent.ID, SpectralMerchantEvent.class)
                 .playerClass(BASEDECK)
@@ -154,6 +158,41 @@ public class balatroMod implements
                 .playerClass(BASEDECK)
                 .dungeonID(TheBeyond.ID)
                 .create());
+
+        ModPanel settingsPanel = new ModPanel();
+
+        ModLabeledToggleButton enableCombatGoldLimit = new ModLabeledToggleButton("Combat Gold Limit", "Limits the amount of gold earned in combat.", 350.0F, 750.0f, Settings.CREAM_COLOR, FontHelper.charDescFont, combatGoldLimit, settingsPanel, (label) -> {
+        }, (button) -> {
+            combatGoldLimit = button.enabled;
+            if(combatGoldLimit) {
+                BaseMod.addTopPanelItem(goldPerCombatPanel);
+            } else {
+                BaseMod.removeTopPanelItem(goldPerCombatPanel);
+            }
+            balatroConfig.setBool(COMBAT_GOLD_LIMIT, combatGoldLimit);
+            try {
+                balatroConfig.save();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+        settingsPanel.addUIElement(enableCombatGoldLimit);
+
+        ModLabeledToggleButton enableBlinds = new ModLabeledToggleButton("Boss/Elite Blinds", "Enables Boss/Elite blind abilities.", 350.0F, 550.0f, Settings.CREAM_COLOR, FontHelper.charDescFont, blinds, settingsPanel, (label) -> {
+        }, (button) -> {
+            blinds = button.enabled;
+            balatroConfig.setBool(BLINDS, blinds);
+            try {
+                balatroConfig.save();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+        settingsPanel.addUIElement(enableBlinds);
+
+        Texture badgeTexture = TextureLoader.getTexture(imagePath("badge.png"));
+        BaseMod.registerModBadge(badgeTexture, info.Name, GeneralUtils.arrToString(info.Authors), info.Description, settingsPanel);
+
     }
 
     /*----------Localization----------*/
@@ -338,6 +377,7 @@ public class balatroMod implements
             AbstractDungeon.relicsToRemoveOnStart.add(StrikeDummy.ID);
             AbstractDungeon.relicsToRemoveOnStart.add(QuestionCard.ID);
             AbstractDungeon.relicsToRemoveOnStart.add(MembershipCard.ID);
+            if (!blinds) {AbstractDungeon.relicsToRemoveOnStart.add(Retcon.ID);}
 
             AbstractRelic r = RelicLibrary.getRelic(relicID).makeCopy();
             r.instantObtain(AbstractDungeon.player, 0, true);
@@ -384,106 +424,107 @@ public class balatroMod implements
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         Data.resetBattleData();
-
-        for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            if(m.type == AbstractMonster.EnemyType.ELITE) {
-                BlindPower.BlindType newBlindIndex = BlindPower.BlindType.randomType();
-                switch (newBlindIndex) {
-                    case THE_HOOK:
-                        m.addToBot(new ApplyPowerAction(m, m, new TheHookPower(m)));
-                        break;
-                    case THE_OX:
-                        m.addToBot(new ApplyPowerAction(m, m, new TheOxPower(m)));
-                        break;
-                    case THE_HOUSE:
-                        m.addToBot(new ApplyPowerAction(m, m, new TheHousePower(m)));
-                        break;
-                    case THE_WALL:
-                        m.addToBot(new ApplyPowerAction(m, m, new TheWallPower(m)));
-                        break;
-                    case THE_WHEEL:
-                        m.addToBot(new ApplyPowerAction(m, m, new TheWheelPower(m)));
-                        break;
-                    case THE_ARM:
-                        m.addToBot(new ApplyPowerAction(m, m, new TheArmPower(m)));
-                        break;
-                    case THE_PSYCHIC:
-                        m.addToBot(new ApplyPowerAction(m, m, new ThePsychicPower(m)));
-                        break;
-                    case THE_FISH:
-                        m.addToBot(new ApplyPowerAction(m, m, new TheFishPower(m)));
-                        break;
-                    case THE_WATER:
-                        m.addToBot(new ApplyPowerAction(m, m, new TheWaterPower(m)));
-                        break;
-                    case THE_MANACLE:
-                        m.addToBot(new ApplyPowerAction(m, m, new TheManaclePower(m)));
-                        break;
-                    case THE_EYE:
-                        m.addToBot(new ApplyPowerAction(m, m, new TheEyePower(m)));
-                        break;
-                    case THE_MOUTH:
-                        m.addToBot(new ApplyPowerAction(m, m, new TheMouthPower(m)));
-                        break;
-                    case THE_PLANT:
-                        m.addToBot(new ApplyPowerAction(m, m, new ThePlantPower(m)));
-                        break;
-                    case THE_NEEDLE:
-                        m.addToBot(new ApplyPowerAction(m, m, new TheNeedlePower(m)));
-                        break;
-                    case THE_HEAD:
-                        m.addToBot(new ApplyPowerAction(m, m, new TheHeadPower(m)));
-                        break;
-                    case THE_FLINT:
-                        m.addToBot(new ApplyPowerAction(m, m, new TheFlintPower(m)));
-                        break;
-                    case THE_TOOTH:
-                        m.addToBot(new ApplyPowerAction(m, m, new TheToothPower(m)));
-                        break;
-                    case THE_MARK:
-                        m.addToBot(new ApplyPowerAction(m, m, new TheMarkPower(m)));
-                        break;
-                    case THE_CLUB:
-                        m.addToBot(new ApplyPowerAction(m, m, new TheMarkPower(m)));
-                        break;
-                    case THE_GOAD:
-                        m.addToBot(new ApplyPowerAction(m, m, new TheMarkPower(m)));
-                        break;
-                    case THE_WINDOW:
-                        m.addToBot(new ApplyPowerAction(m, m, new TheMarkPower(m)));
-                        break;
-                    case THE_SERPENT:
-                        m.addToBot(new ApplyPowerAction(m, m, new TheMarkPower(m)));
-                        break;
-                    default:
-                        balatroMod.logger.info("blind doesnt exist: {}", newBlindIndex);
-                        break;
+        if (blinds) {
+            for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                if (m.type == AbstractMonster.EnemyType.ELITE) {
+                    BlindPower.BlindType newBlindIndex = BlindPower.BlindType.randomType();
+                    switch (newBlindIndex) {
+                        case THE_HOOK:
+                            m.addToBot(new ApplyPowerAction(m, m, new TheHookPower(m)));
+                            break;
+                        case THE_OX:
+                            m.addToBot(new ApplyPowerAction(m, m, new TheOxPower(m)));
+                            break;
+                        case THE_HOUSE:
+                            m.addToBot(new ApplyPowerAction(m, m, new TheHousePower(m)));
+                            break;
+                        case THE_WALL:
+                            m.addToBot(new ApplyPowerAction(m, m, new TheWallPower(m)));
+                            break;
+                        case THE_WHEEL:
+                            m.addToBot(new ApplyPowerAction(m, m, new TheWheelPower(m)));
+                            break;
+                        case THE_ARM:
+                            m.addToBot(new ApplyPowerAction(m, m, new TheArmPower(m)));
+                            break;
+                        case THE_PSYCHIC:
+                            m.addToBot(new ApplyPowerAction(m, m, new ThePsychicPower(m)));
+                            break;
+                        case THE_FISH:
+                            m.addToBot(new ApplyPowerAction(m, m, new TheFishPower(m)));
+                            break;
+                        case THE_WATER:
+                            m.addToBot(new ApplyPowerAction(m, m, new TheWaterPower(m)));
+                            break;
+                        case THE_MANACLE:
+                            m.addToBot(new ApplyPowerAction(m, m, new TheManaclePower(m)));
+                            break;
+                        case THE_EYE:
+                            m.addToBot(new ApplyPowerAction(m, m, new TheEyePower(m)));
+                            break;
+                        case THE_MOUTH:
+                            m.addToBot(new ApplyPowerAction(m, m, new TheMouthPower(m)));
+                            break;
+                        case THE_PLANT:
+                            m.addToBot(new ApplyPowerAction(m, m, new ThePlantPower(m)));
+                            break;
+                        case THE_NEEDLE:
+                            m.addToBot(new ApplyPowerAction(m, m, new TheNeedlePower(m)));
+                            break;
+                        case THE_HEAD:
+                            m.addToBot(new ApplyPowerAction(m, m, new TheHeadPower(m)));
+                            break;
+                        case THE_FLINT:
+                            m.addToBot(new ApplyPowerAction(m, m, new TheFlintPower(m)));
+                            break;
+                        case THE_TOOTH:
+                            m.addToBot(new ApplyPowerAction(m, m, new TheToothPower(m)));
+                            break;
+                        case THE_MARK:
+                            m.addToBot(new ApplyPowerAction(m, m, new TheMarkPower(m)));
+                            break;
+                        case THE_CLUB:
+                            m.addToBot(new ApplyPowerAction(m, m, new TheMarkPower(m)));
+                            break;
+                        case THE_GOAD:
+                            m.addToBot(new ApplyPowerAction(m, m, new TheMarkPower(m)));
+                            break;
+                        case THE_WINDOW:
+                            m.addToBot(new ApplyPowerAction(m, m, new TheMarkPower(m)));
+                            break;
+                        case THE_SERPENT:
+                            m.addToBot(new ApplyPowerAction(m, m, new TheMarkPower(m)));
+                            break;
+                        default:
+                            balatroMod.logger.info("blind doesnt exist: {}", newBlindIndex);
+                            break;
+                    }
+                    break;
                 }
-                break;
-            }
-            if(m.type == AbstractMonster.EnemyType.BOSS) {
-                BlindPower.BlindType newBlindIndex = BlindPower.BlindType.randomBossType();
-                switch (newBlindIndex) {
-                    case AMBER_ACORN:
-                        m.addToBot(new ApplyPowerAction(m, m, new AmberAcornPower(m)));
-                        break;
-                    case VERDANT_LEAF:
-                        m.addToBot(new ApplyPowerAction(m, m, new VerdantLeafPower(m)));
-                        break;
-                    case VIOLET_VESSEL:
-                        m.addToBot(new ApplyPowerAction(m, m, new VioletVesselPower(m)));
-                        break;
-                    case CRIMSON_HEART:
-                        m.addToBot(new ApplyPowerAction(m, m, new CrimsonHeartPower(m)));
-                        break;
-                    case CERULEAN_BELL:
-                        m.addToBot(new ApplyPowerAction(m, m, new CeruleanBellPower(m)));
-                        break;
-                    default:
-                        balatroMod.logger.info("boss blind doesnt exist: {}", newBlindIndex);
-                        break;
+                if (m.type == AbstractMonster.EnemyType.BOSS) {
+                    BlindPower.BlindType newBlindIndex = BlindPower.BlindType.randomBossType();
+                    switch (newBlindIndex) {
+                        case AMBER_ACORN:
+                            m.addToBot(new ApplyPowerAction(m, m, new AmberAcornPower(m)));
+                            break;
+                        case VERDANT_LEAF:
+                            m.addToBot(new ApplyPowerAction(m, m, new VerdantLeafPower(m)));
+                            break;
+                        case VIOLET_VESSEL:
+                            m.addToBot(new ApplyPowerAction(m, m, new VioletVesselPower(m)));
+                            break;
+                        case CRIMSON_HEART:
+                            m.addToBot(new ApplyPowerAction(m, m, new CrimsonHeartPower(m)));
+                            break;
+                        case CERULEAN_BELL:
+                            m.addToBot(new ApplyPowerAction(m, m, new CeruleanBellPower(m)));
+                            break;
+                        default:
+                            balatroMod.logger.info("boss blind doesnt exist: {}", newBlindIndex);
+                            break;
+                    }
+                    break;
                 }
-                break;
             }
         }
     }

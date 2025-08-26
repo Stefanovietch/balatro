@@ -130,5 +130,10 @@
       "Combat gold earned.",
       "Maximum amount of gold to be earned each combat."
     ]
+  },
+  "${modID}:balatroConfig": {
+    "TEXT_DICT": {
+      "This" : "test"
+    }
   }
 }
