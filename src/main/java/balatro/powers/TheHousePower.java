@@ -13,6 +13,7 @@ import static balatro.balatroMod.makeID;
 public class TheHousePower extends BlindPower{
     public static final String POWER_ID = makeID("TheHouse");
     public Map<AbstractCard,Integer> houseCards = new HashMap<>();
+    public int drawSize = AbstractDungeon.player.masterHandSize;
 
     public TheHousePower(AbstractCreature owner) {
         super(POWER_ID, owner,BlindType.THE_HOUSE);
@@ -34,6 +35,19 @@ public class TheHousePower extends BlindPower{
         }
     }
 
+    @Override
+    public void onDrawCard(AbstractCard card) {
+        if(drawSize > 0) {
+            drawSize--;
+            if (card.cost >= 0) {
+                int cost = card.cost;
+                houseCards.put(card, cost);
+                card.costForTurn = 3;
+                card.isCostModified = true;
+            }
+        }
+    }
+
 
     public void onRemove() {
         for (Map.Entry<AbstractCard, Integer> entry : houseCards.entrySet()) {
@@ -41,26 +55,6 @@ public class TheHousePower extends BlindPower{
             entry.getKey().isCostModified = false;
         }
         houseCards.clear();
-    }
-
-    @Override
-    public void atStartOfTurnPostDraw() {
-        super.atStartOfTurnPostDraw();
-        addToBot(new AbstractGameAction() {
-            @Override
-            public void update() {
-                if (houseCards.isEmpty()) {
-                    int cost;
-                    for (AbstractCard c : AbstractDungeon.player.hand.group) {
-                        if (c.cost >= 0) {
-                            cost = c.cost;
-                            houseCards.put(c, cost);
-                            c.costForTurn = 3;
-                        }
-                    }
-                }
-            }
-        });
     }
 
     public void updateDescription() {

@@ -156,7 +156,7 @@
   },
   "${modID}:SpaceJoker": {
     "NAME": "Space Joker",
-    "DESCRIPTION": "Draw !M! card. NL !${modID}:probability! in !${modID}:chance! ${modID}:Chance to Upgrade cards in your hand."
+    "DESCRIPTION": "Draw !M! cards. NL !${modID}:probability! in !${modID}:chance! ${modID}:Chance to Upgrade cards in your hand."
   },
   "${modID}:Egg": {
     "NAME": "Egg",
@@ -454,7 +454,7 @@
   },
   "${modID}:Troubadour": {
     "NAME": "Troubadour",
-    "DESCRIPTION": "Draw 2 cards. NL Next turn lose [E]."
+    "DESCRIPTION": "Draw !M! cards. NL Next turn lose [E]."
   },
   "${modID}:Certificate": {
     "NAME": "Certificate",
@@ -528,10 +528,12 @@
   },
   "${modID}:TheIdol": {
     "NAME": "The Idol",
-    "DESCRIPTION": "Retain. NL Draw a cost [1,2,3] [Skill/Attack/Power]. It costs 0 this turn. Changes at the end of each turn.",
+    "DESCRIPTION": "Draw a cost [1,2,3] [Skill/Attack/Power]. It costs 0 this turn. Changes at the end of each turn.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Draw a cost [1,2,3] [Skill/Attack/Power]. It costs 0 this turn. Changes at the end of each turn.",
     "EXTENDED_DESCRIPTION": [
-      "Retain. NL Draw a cost ",
-      ". It costs 0 this turn. Changes at the end of each turn."
+      "Draw a cost ",
+      ". It costs 0 this turn. Changes at the end of each turn.",
+      "Retain. NL "
       ]
   },
   "${modID}:SeeingDouble": {

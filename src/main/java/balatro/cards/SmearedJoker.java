@@ -19,6 +19,7 @@ public class SmearedJoker extends BaseCard {
 
     public SmearedJoker() {
         super(ID, info); //Pass the required information to the BaseCard constructor.
+        setCostUpgrade(0);
     }
 
     @Override

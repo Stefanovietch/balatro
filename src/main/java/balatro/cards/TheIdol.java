@@ -28,7 +28,7 @@ public class TheIdol extends BaseCard implements RandomType{
 
     public TheIdol() {
         super(ID, info); //Pass the required information to the BaseCard constructor.
-        setSelfRetain(true);
+        setSelfRetain(false,true);
         setRandomType();
     }
 
@@ -50,7 +50,11 @@ public class TheIdol extends BaseCard implements RandomType{
 
     @Override
     public void setRandomType() {
-        this.rawDescription = cardStrings.DESCRIPTION;
+        if (upgraded) {
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+        } else {
+            this.rawDescription = cardStrings.DESCRIPTION;
+        }
         if (CardCrawlGame.isInARun()) {
             if (!AbstractDungeon.player.drawPile.isEmpty()) {
                 ArrayList<CardType> availableCardTypes = new ArrayList<>();
@@ -73,11 +77,14 @@ public class TheIdol extends BaseCard implements RandomType{
                     } else {
                         typeString = " Power ";
                     }
-                    this.rawDescription = cardStrings.EXTENDED_DESCRIPTION[0] + cardCost + typeString + cardStrings.EXTENDED_DESCRIPTION[1];
+
+                    if (upgraded) {
+                        this.rawDescription = cardStrings.EXTENDED_DESCRIPTION[2] + cardStrings.EXTENDED_DESCRIPTION[0] + cardCost + typeString + cardStrings.EXTENDED_DESCRIPTION[1];
+                    } else {
+                        this.rawDescription = cardStrings.EXTENDED_DESCRIPTION[0] + cardCost + typeString + cardStrings.EXTENDED_DESCRIPTION[1];
+                    }
                 }
             }
-        } else {
-            this.rawDescription = cardStrings.DESCRIPTION;
         }
         initializeDescription();
     }

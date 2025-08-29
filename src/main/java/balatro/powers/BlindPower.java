@@ -8,6 +8,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static com.megacrit.cardcrawl.core.Settings.seed;
+import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.aiRng;
+
 public abstract class BlindPower extends BasePower{
     BlindType blindType;
 
@@ -71,14 +74,12 @@ public abstract class BlindPower extends BasePower{
         private static final List<BlindType> BOSS_TYPES = new ArrayList<>(Arrays.asList(
                 AMBER_ACORN,VERDANT_LEAF,VIOLET_VESSEL,CRIMSON_HEART,CERULEAN_BELL));
 
-        private static final Random RANDOM = new Random();
-
         public static BlindType randomType() {
-            return TYPES.get(RANDOM.random(TYPES.size()-1));
+            return TYPES.get(aiRng.random(TYPES.size()-1));
         }
 
         public static BlindType randomBossType() {
-            return BOSS_TYPES.get(RANDOM.random(BOSS_TYPES.size()-1));
+            return BOSS_TYPES.get(aiRng.random(BOSS_TYPES.size()-1));
         }
     }
 }

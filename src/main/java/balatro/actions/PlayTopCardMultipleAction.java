@@ -56,12 +56,11 @@ public class PlayTopCardMultipleAction extends AbstractGameAction {
                 card.applyPowers();
                 for (int i = 0; i < amount - 1; i++) {
                     AbstractCard cardCopy = card.makeSameInstanceOf();
-                    this.addToTop(new NewQueueCardAction(
-                            cardCopy, (AbstractDungeon.getCurrRoom()).monsters.getRandomMonster(null, true, AbstractDungeon.cardRandomRng), false, true));
+                    cardCopy.purgeOnUse = true;
+                    this.addToTop(new NewQueueCardAction(cardCopy, (AbstractDungeon.getCurrRoom()).monsters.getRandomMonster(null, true, AbstractDungeon.cardRandomRng), false, true));
                     this.addToTop(new UnlimboAction(cardCopy));
                 }
-                this.addToTop(new NewQueueCardAction(card,
-                        (AbstractDungeon.getCurrRoom()).monsters.getRandomMonster(null, true, AbstractDungeon.cardRandomRng), false, true));
+                this.addToTop(new NewQueueCardAction(card, (AbstractDungeon.getCurrRoom()).monsters.getRandomMonster(null, true, AbstractDungeon.cardRandomRng), false, true));
                 this.addToTop(new UnlimboAction(card));
             }
         }

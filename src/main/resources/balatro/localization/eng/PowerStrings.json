@@ -202,7 +202,7 @@
   "${modID}:TheFish": {
     "NAME": "The Fish",
     "DESCRIPTIONS": [
-      "Cards drawn by cards cost #b3 for that turn."
+      "Cards drawn during your turn cost #b3 for that turn."
     ]
   },
   "${modID}:ThePsychic": {

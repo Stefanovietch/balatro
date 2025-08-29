@@ -2,6 +2,7 @@ package balatro.relics;
 
 import balatro.character.baseDeck;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.ShopRoom;
 
 import static balatro.balatroMod.makeID;
@@ -19,8 +20,19 @@ public class OverstockPlus extends BaseRelic{
     @Override
     public void onEquip() {
         super.onEquip();
-        if (AbstractDungeon.getCurrRoom() instanceof ShopRoom) {
-            AbstractDungeon.getCurrRoom().update();
+        if (AbstractDungeon.getCurrRoom() instanceof com.megacrit.cardcrawl.rooms.ShopRoom) {
+            flash();
+            this.pulse = true;
+            AbstractDungeon.shopScreen.update();
+        }
+    }
+
+    public void onEnterRoom(AbstractRoom room) {
+        if (room instanceof com.megacrit.cardcrawl.rooms.ShopRoom) {
+            flash();
+            this.pulse = true;
+        } else {
+            this.pulse = false;
         }
     }
 

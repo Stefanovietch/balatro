@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.helpers.GetAllInBattleInstances;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import java.util.ArrayList;
 import java.util.UUID;
 
 public class SpareTrousersAction extends AbstractGameAction {
@@ -33,9 +34,15 @@ public class SpareTrousersAction extends AbstractGameAction {
     }
     @Override
     public void update() {
+        ArrayList<AbstractMonster> availableTargets = new ArrayList<>();
+        for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+            if (!monster.isDead || !monster.isDying) {
+                availableTargets.add(monster);
+            }
+        }
         int fatalHits = 0;
-        if (AbstractDungeon.getMonsters().monsters.size() <= 2) {
-            for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
+        if (availableTargets.size() <= 2) {
+            for (AbstractMonster m : availableTargets) {
                 m.damage(this.info);
                 if ((m.isDying || m.currentHealth <= 0) && !m.halfDead &&
                         !m.hasPower("Minion")) {

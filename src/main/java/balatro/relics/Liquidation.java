@@ -1,7 +1,9 @@
 package balatro.relics;
 
 import balatro.character.baseDeck;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.shop.ShopScreen;
 
 import static balatro.balatroMod.makeID;
 
@@ -13,6 +15,16 @@ public class Liquidation extends BaseRelic{
 
     public Liquidation() {
         super(ID, NAME, baseDeck.Enums.CARD_COLOR, RARITY, SOUND);
+    }
+
+    @Override
+    public void onEquip() {
+        super.onEquip();
+        if (AbstractDungeon.getCurrRoom() instanceof com.megacrit.cardcrawl.rooms.ShopRoom) {
+            flash();
+            this.pulse = true;
+            AbstractDungeon.shopScreen.update();
+        }
     }
 
     public void onEnterRoom(AbstractRoom room) {
