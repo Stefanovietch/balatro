@@ -1,7 +1,9 @@
 package balatro.cards;
 
+import balatro.balatroMod;
 import balatro.character.baseDeck;
 import balatro.util.CardStats;
+import balatro.util.Data;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -39,7 +41,7 @@ public class Erosion extends BaseCard {
     @Override
     public void applyPowers() {
         super.applyPowers();
-        magicNumber = CardHelper.removedCards.size();
+        magicNumber = Data.getRemovedCards();
         if (magicNumber > 0) {
             this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
             isMagicNumberModified = true;

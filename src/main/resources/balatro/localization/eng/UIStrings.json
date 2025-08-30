@@ -1,24 +1,4 @@
 {
-  "${modID}:Example": {
-    "TEXT": [
-      "This is",
-      "an array of Strings."
-    ],
-    "EXTRA_TEXT": [
-      "This is another",
-      "array of Strings."
-    ],
-    "TEXT_DICT": {
-      "This": "Contains pairs of Strings, used to get values based on keys.",
-      "This is a key": "This is a value."
-    }
-  },
-  "${modID}:deckselectionUI": {
-    "TEXT": [
-      "This is",
-      "an array of Strings."
-    ]
-  },
   "${modID}:redDeck": {
     "TEXT": [
       "Red Deck",
@@ -130,10 +110,5 @@
       "Combat gold earned.",
       "Maximum amount of gold to be earned each combat."
     ]
-  },
-  "${modID}:balatroConfig": {
-    "TEXT_DICT": {
-      "This" : "test"
-    }
   }
 }

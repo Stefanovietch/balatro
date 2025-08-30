@@ -3,6 +3,7 @@ package balatro.cards;
 import balatro.actions.GlassJokerAction;
 import balatro.character.baseDeck;
 import balatro.util.CardStats;
+import balatro.util.Data;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -35,7 +36,7 @@ public class GlassJoker extends BaseCard {
     @Override
     public void applyPowers() {
         super.applyPowers();
-        damage *= (int) (1F + 0.75F * CardHelper.removedCards.size());
+        damage *= (int) (1F + 0.75F * Data.getRemovedCards());
         isDamageModified = true;
     }
 

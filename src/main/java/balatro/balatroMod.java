@@ -423,6 +423,7 @@ public class balatroMod implements
 
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
+        Data.saveBattleData();
         Data.resetBattleData();
         if (blinds) {
             for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {

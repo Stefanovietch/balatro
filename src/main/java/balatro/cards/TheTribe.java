@@ -19,8 +19,8 @@ public class TheTribe extends BaseCard {
             1 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
 
-    private static final int DAMAGE = 13;
-    private static final int UPG_DAMAGE = 5;
+    private static final int DAMAGE = 9;
+    private static final int UPG_DAMAGE = 3;
 
     public TheTribe() {
         super(ID, info); //Pass the required information to the BaseCard constructor.

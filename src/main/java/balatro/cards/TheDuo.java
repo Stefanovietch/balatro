@@ -19,7 +19,7 @@ public class TheDuo extends BaseCard {
             1 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
 
-    private static final int DAMAGE = 11;
+    private static final int DAMAGE = 9;
     private static final int UPG_DAMAGE = 3;
 
     public TheDuo() {

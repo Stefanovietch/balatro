@@ -25,6 +25,7 @@ public class GoldenJoker extends BaseCard {
         setMagic(GOLD,UPG_GOLD);
         setEthereal(true);
         setExhaust(true);
+        hasTag(CardTags.HEALING);
     }
 
     @Override

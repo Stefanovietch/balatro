@@ -1,14 +1,4 @@
 {
-  "${modID}:ExampleCard": {
-    "NAME": "Name",
-    "DESCRIPTION": "Description.",
-    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
-    "EXTENDED_DESCRIPTION": [
-      "You can put more text in here.",
-      "If you need to use it for stuff.",
-      "Blizzard is a good example for this."
-    ]
-  },
   "${modID}:JollyJoker": {
     "NAME": "Jolly Joker",
     "DESCRIPTION": "Deal !D! damage."
@@ -254,8 +244,8 @@
   },
   "${modID}:Vampire": {
     "NAME": "Vampire",
-    "DESCRIPTION": "Enemy loses X Strength. NL Gain X Strength.",
-    "UPGRADE_DESCRIPTION": "Enemy loses X+1 Strength. NL Gain X+1 Strength."
+    "DESCRIPTION": "Enemy loses X Strength. NL Gain X Strength. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Enemy loses X+1 Strength. NL Gain X+1 Strength. Exhaust."
   },
   "${modID}:Shortcut": {
     "NAME": "Shortcut",
@@ -314,7 +304,7 @@
     "NAME": "Erosion",
     "DESCRIPTION": "Deal !D! damage, repeat for each card removed this run.",
     "EXTENDED_DESCRIPTION":[
-      "NL (!M! cards removed)"
+      " NL (!M! cards removed)"
     ]
   },
   "${modID}:ReservedParking": {
@@ -478,7 +468,7 @@
   },
   "${modID}:RoughGem": {
     "NAME": "Rough Gem",
-    "DESCRIPTION": "Gain !B! Block. NL Gain Gain 2 Gold for each !M! Block you have. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block. NL Gain 2 Gold for each !M! Block you have. NL Exhaust."
   },
   "${modID}:Bloodstone": {
     "NAME": "Bloodstone",

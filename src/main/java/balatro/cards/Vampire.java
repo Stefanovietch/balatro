@@ -21,6 +21,7 @@ public class Vampire extends BaseCard {
 
     public Vampire() {
         super(ID, info); //Pass the required information to the BaseCard constructor.
+        setExhaust(true);
     }
 
     @Override

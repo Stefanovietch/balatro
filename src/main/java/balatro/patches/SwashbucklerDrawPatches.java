@@ -48,7 +48,5 @@ public class SwashbucklerDrawPatches {
                 return LineFinder.findInOrder(ctMethodToPatch, new ArrayList<Matcher>(), finalMatcher);
             }
         }
-
-
     }
 }

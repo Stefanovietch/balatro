@@ -1,0 +1,224 @@
+{
+  "${modID}:LowStakes": {
+    "NAME": "低赌注",
+    "FLAVOR": "这个听起来很熟悉。",
+    "DESCRIPTIONS": [
+      "在每场战斗开始时，弃掉任意数量的牌，然后抽取相同数量的牌。"
+    ]
+  },
+  "${modID}:HeadsUp": {
+    "NAME": "注意",
+    "FLAVOR": "失败者才认输。",
+    "DESCRIPTIONS": [
+      "在你的回合开始时获得 [E]。"
+    ]
+  },
+  "${modID}:NestEgg": {
+    "NAME": "储备金",
+    "FLAVOR": "路上的一些额外现金。",
+    "DESCRIPTIONS": [
+      "在游戏开始时获得 #b300 #y金币。"
+    ]
+  },
+  "${modID}:YouGetWhatYouGet": {
+    "NAME": "有什么选什么",
+    "FLAVOR": "没有免费的施舍。",
+    "DESCRIPTIONS": [
+      "在回合结束时，根据手中的每张牌获得 #b2 #y金币。在战斗奖励中不获得 #y金币。"
+    ]
+  },
+  "${modID}:Royale": {
+    "NAME": "皇家",
+    "FLAVOR": "这是你想要的奖励吗？",
+    "DESCRIPTIONS": [
+      "在卡牌奖励界面，你有 #b2 张额外的卡牌可供选择。在你的回合开始时失去 [E]。"
+    ]
+  },
+  "${modID}:CrystalBall": {
+    "NAME": "水晶球",
+    "FLAVOR": "每个人都需要一点魔法。",
+    "DESCRIPTIONS": [
+      "获得一个额外的 #y药水槽和 #b2 #y复制 #y药水。"
+    ]
+  },
+  "${modID}:Astronomy": {
+    "NAME": "天文学",
+    "FLAVOR": "你最终会用贴纸给所有东西评分。",
+    "DESCRIPTIONS": [
+      "在你打出一张牌后，在本场战斗中 #y升级 它。失去一个 #y药水槽。"
+    ]
+  },
+  "${modID}:Clairvoyance": {
+    "NAME": "未卜先知",
+    "FLAVOR": "不要变得像鬼一样灰暗。",
+    "DESCRIPTIONS": [
+      "战斗奖励现在可以包含 #y无色 卡牌。在游戏开始时选择一张 #y稀有 #y无色 卡牌。"
+    ]
+  },
+  "${modID}:Flushed": {
+    "NAME": "同花",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "如果你在本回合没有打出任何 #y能力 牌，则在下回合获得额外的 [E]。"
+    ]
+  },
+  "${modID}:Retrograde": {
+    "NAME": "逆行",
+    "FLAVOR": "快速检查一切是否准备就绪。",
+    "DESCRIPTIONS": [
+      "#y升级 你一半的牌组。"
+    ]
+  },
+  "${modID}:ROI": {
+    "NAME": "投资回报率",
+    "FLAVOR": "将商店提升到新的高度。",
+    "DESCRIPTIONS": [
+      "商店中的卡牌已 #y升级。商店中的 #y药水至少是 #y罕见 的。保证商店中有一张 #y稀有 卡牌。"
+    ]
+  },
+  "${modID}:BigHands": {
+    "NAME": "大手",
+    "FLAVOR": "相信命运之手。",
+    "DESCRIPTIONS": [
+      "每回合抽取 #b2 张额外的卡牌。在卡牌奖励界面，你选择的卡牌数量减少 #b1 张。"
+    ]
+  },
+  "${modID}:HighStakes": {
+    "NAME": "高赌注",
+    "FLAVOR": "不太能看到双倍。",
+    "DESCRIPTIONS": [
+      "在选择 Boss 圣物后，获得另一个随机 Boss 圣物。"
+    ]
+  },
+  "${modID}:RuleBender": {
+    "NAME": "规则篡改者",
+    "FLAVOR": "这将如何平衡？",
+    "DESCRIPTIONS": [
+      "每当打出一张 #y攻击 牌时，获得一半的伤害作为 #y格挡。#b所有 敌人的生命值都翻倍。"
+    ]
+  },
+  "${modID}:Shattered": {
+    "NAME": "破碎",
+    "FLAVOR": "它坏了。",
+    "DESCRIPTIONS": [
+      "从 #b20 张牌的随机牌组开始。",
+      "你破碎的牌组。"
+    ]
+  },
+
+
+  "${modID}:OverstockPlus": {
+    "NAME": "库存过剩加强版",
+    "FLAVOR": "不要太贪心。",
+    "DESCRIPTIONS": [
+      "未来的商店有三个额外的圣物。"
+    ]
+  },
+  "${modID}:Liquidation": {
+    "NAME": "清算",
+    "FLAVOR": "不要太贪心。",
+    "DESCRIPTIONS": [
+      "所有产品 #b50% 折扣！"
+    ]
+  },
+  "${modID}:GlowUp": {
+    "NAME": "焕彩",
+    "FLAVOR": "不要太贪心。",
+    "DESCRIPTIONS": [
+      "向你的牌组中添加一张随机的 #y传奇 卡牌。"
+    ]
+  },
+  "${modID}:RerollGlut": {
+    "NAME": "重掷加強版",
+    "FLAVOR": "不要太贪心。",
+    "DESCRIPTIONS": [
+      "点击以重新滚动商店中的卡牌，每次滚动花费 #b50 #y金币。"
+    ]
+  },
+  "${modID}:OmenGlobe": {
+    "NAME": "预兆球",
+    "FLAVOR": "不要太贪心。",
+    "DESCRIPTIONS": [
+      "每当你在战斗中使用药水时，获得一张随机的 #y无色 卡牌。"
+    ]
+  },
+  "${modID}:Observatory": {
+    "NAME": "天文台",
+    "FLAVOR": "不要太贪心。",
+    "DESCRIPTIONS": [
+      "升级 #b4 张卡牌。",
+      "选择 4 张卡牌进行"
+    ]
+  },
+  "${modID}:NachoTong": {
+    "NAME": "玉米片夹",
+    "FLAVOR": "不要太贪心。",
+    "DESCRIPTIONS": [
+      "在每回合开始时获得 [E]。"
+    ]
+  },
+  "${modID}:Recyclomancy": {
+    "NAME": "回收魔法",
+    "FLAVOR": "不要太贪心。",
+    "DESCRIPTIONS": [
+      "每当你手动丢弃 #b7 张卡牌时，获得 #b1 #y力量。"
+    ]
+  },
+  "${modID}:TarotTycoon": {
+    "NAME": "塔罗大亨",
+    "FLAVOR": "不要太贪心。",
+    "DESCRIPTIONS": [
+      "每当你获得一瓶药水时，获得 #b2 最大生命值。"
+    ]
+  },
+  "${modID}:PlanetTycoon": {
+    "NAME": "星球大亨",
+    "FLAVOR": "不要太贪心。",
+    "DESCRIPTIONS": [
+      "每当你向你的牌组中添加一张 #y普通 卡牌时，它会被 #y升级。"
+    ]
+  },
+  "${modID}:MoneyTree": {
+    "NAME": "摇钱树",
+    "FLAVOR": "当他们说钱不会长在树上时，你相信他们吗？",
+    "DESCRIPTIONS": [
+      "将最大战斗金币增加到 #b400。"
+    ]
+  },
+  "${modID}:Antimatter": {
+    "NAME": "反物质",
+    "FLAVOR": "也许这个看起来比那个更好。",
+    "DESCRIPTIONS": [
+      "未来的卡牌奖励有 #b1 张额外的卡牌可供选择。"
+    ]
+  },
+  "${modID}:Illusion": {
+    "NAME": "幻象",
+    "FLAVOR": "不要太贪心。",
+    "DESCRIPTIONS": [
+      "选择一张 #y普通、#y罕见 和 #y稀有 卡牌并添加到你的牌组中。",
+      "魔法！"
+    ]
+  },
+  "${modID}:Petroglyph": {
+    "NAME": "岩画",
+    "FLAVOR": "不要太贪心。",
+    "DESCRIPTIONS": [
+      "将所有敌人的最大生命值降低 #b10%。"
+    ]
+  },
+  "${modID}:Retcon": {
+    "NAME": "重构",
+    "FLAVOR": "不要太贪心。",
+    "DESCRIPTIONS": [
+      "点击以重新滚动一个盲注，每次滚动花费 #b50 #y金币。（仅在打出卡牌之前的第一个回合可用）"
+    ]
+  },
+  "${modID}:Palette": {
+    "NAME": "调色板",
+    "FLAVOR": "不要太贪心。",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，抽取 #b1 张额外的卡牌。"
+    ]
+  }
+}

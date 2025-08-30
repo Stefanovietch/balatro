@@ -1,0 +1,651 @@
+{
+  "${modID}:ExampleCard": {
+    "NAME": "名称",
+    "DESCRIPTION": "描述。",
+    "UPGRADE_DESCRIPTION": "如果卡牌升级，将自动使用此描述。如果不需要，请删除。",
+    "EXTENDED_DESCRIPTION": [
+      "你可以在这里添加更多文本。",
+      "如果你需要用它来做其他事情。",
+      "暴雪是一个很好的例子。"
+    ]
+  },
+  "${modID}:JollyJoker": {
+    "NAME": "开心小丑",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "${modID}:SlyJoker": {
+    "NAME": "奸诈小丑",
+    "DESCRIPTION": "获得 !B! 点格挡。"
+  },
+  "${modID}:MadJoker": {
+    "NAME": "疯狂小丑",
+    "DESCRIPTION": "如果本回合最后一张打出的牌是攻击牌，则造成 !D! 点伤害。"
+  },
+  "${modID}:CleverJoker": {
+    "NAME": "聪敏小丑",
+    "DESCRIPTION": "如果本回合最后一张打出的牌是技能牌，则获得 !B! 点格挡。"
+  },
+  "${modID}:HalfJoker": {
+    "NAME": "半张小丑",
+    "DESCRIPTION": "如果你的手牌中有 3 张或更少的牌，则造成 !D! 点伤害。"
+  },
+  "${modID}:JokerStencil": {
+    "NAME": "模具小丑",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 每有一个空手牌位，伤害增加 +100%。"
+  },
+  "${modID}:FourFingers": {
+    "NAME": "四指",
+    "DESCRIPTION": "对一个随机敌人造成 1、2、3 和 4 点伤害。",
+    "UPGRADE_DESCRIPTION": "对一个敌人造成 1、2、3 和 4 点伤害。"
+  },
+  "${modID}:Mime": {
+    "NAME": "哑剧演员",
+    "DESCRIPTION": "随机打出并消耗你手中的所有牌。"
+  },
+  "${modID}:CreditCard": {
+    "NAME": "信用卡",
+    "DESCRIPTION": "获得 !M! 金币。 NL 抽 1 张牌。 NL 消耗。"
+  },
+  "${modID}:CeremonialDagger": {
+    "NAME": "仪式匕首",
+    "DESCRIPTION": "造成 !D! 点伤害。消耗一张随机牌，并永久增加此牌伤害，数值为消耗牌费用的两倍。 NL 消耗。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。消耗一张牌，并永久增加此牌伤害，数值为消耗牌费用的两倍。 NL 消耗。"
+  },
+  "${modID}:MarbleJoker": {
+    "NAME": "大理石小丑",
+    "DESCRIPTION": "将一张安全牌加入你的手牌。 NL 抽 1 张牌。",
+    "UPGRADE_DESCRIPTION": "将一张安全+牌加入你的手牌。 NL 抽 1 张牌。"
+  },
+  "${modID}:Banner": {
+    "NAME": "旗帜",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 数值会因弃牌堆中的牌而减少。"
+  },
+  "${modID}:MysticSummit": {
+    "NAME": "神秘之峰",
+    "DESCRIPTION": "如果你的弃牌堆中没有牌，则造成 !D! 点伤害。 NL 消耗。"
+  },
+  "${modID}:LoyaltyCard": {
+    "NAME": "积分卡",
+    "DESCRIPTION": "虚无。 NL 每第 6 张牌造成四倍伤害。",
+    "UPGRADE_DESCRIPTION": "每第 6 张牌造成四倍伤害。"
+  },
+  "${modID}:EBall": {
+    "NAME": "八号球",
+    "DESCRIPTION": "敌人本回合失去 8 点力量。 NL !${modID}:probability! 的 !${modID}:chance! 几率 获得一张随机药水。 NL 消耗。"
+  },
+  "${modID}:Misprint": {
+    "NAME": "印错小丑",
+    "DESCRIPTION": "造成 1 到 !D! 点之间的伤害。"
+  },
+  "${modID}:Dusk": {
+    "NAME": "黄昏",
+    "DESCRIPTION": "如果这是你手中的最后一张牌，则重播本回合打出的所有牌。"
+  },
+  "${modID}:RaisedFist": {
+    "NAME": "致胜之拳",
+    "DESCRIPTION": "获得临时力量，数值为你手中费用最低的牌的两倍。",
+    "UPGRADE_DESCRIPTION": "保留。 NL 获得临时力量，数值为你手中费用最低的牌的两倍。"
+  },
+  "${modID}:ChaosTheClown": {
+    "NAME": "混沌小丑",
+    "DESCRIPTION": "弃掉你的手牌。 NL 将你的弃牌堆洗入抽牌堆。 NL 抽相同数量的牌。 NL 消耗。",
+    "UPGRADE_DESCRIPTION": "弃掉你的手牌。 NL 将你的弃牌堆洗入抽牌堆。 NL 抽相同数量的牌。"
+  },
+  "${modID}:Fibonacci": {
+    "NAME": "斐波那契",
+    "DESCRIPTION": "造成等于本回合斐波那契数的伤害（回合 !${modID}:turn!: !${modID}:fibonacci_damage! 点伤害）。 NL 消耗。",
+    "UPGRADE_DESCRIPTION": "造成等于本回合斐波那契数的伤害（回合 !${modID}:turn!: !${modID}:fibonacci_damage! 点伤害）。"
+  },
+  "${modID}:SteelJoker": {
+    "NAME": "钢铁小丑",
+    "DESCRIPTION": "虚无。 NL 获得相当于你牌组中升级牌数量的镀层护甲。 NL 消耗。",
+    "UPGRADE_DESCRIPTION": "获得相当于你牌组中升级牌数量的镀层护甲。 NL 消耗。"
+  },
+  "${modID}:ScaryFace": {
+    "NAME": "恐怖面孔",
+    "DESCRIPTION": "每当你打出一张能力牌时，获得 !M! 点格挡。"
+  },
+  "${modID}:AbstractJoker": {
+    "NAME": "抽象小丑",
+    "DESCRIPTION": "每张手牌造成 !D! 点伤害。"
+  },
+  "${modID}:DelayedGratification": {
+    "NAME": "延迟满足",
+    "DESCRIPTION": "无法使用。 NL 如果你本回合没有弃牌，则在本回合结束时获得 !M! 金币。"
+  },
+  "${modID}:Hack": {
+    "NAME": "烂脱口秀演员",
+    "DESCRIPTION": "将你抽牌堆中所有费用为 0 的牌放入你的手牌。"
+  },
+  "${modID}:Pareidolia": {
+    "NAME": "幻视",
+    "DESCRIPTION": "所有卡牌都被视为能力牌。",
+    "UPGRADE_DESCRIPTION": "固有。 NL 所有卡牌都被视为能力牌。"
+  },
+  "${modID}:GrosMichel": {
+    "NAME": "大麦克香蕉",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL !${modID}:probability! 的 !${modID}:chance! 几率 从牌组中移除。"
+  },
+  "${modID}:EvenSteven": {
+    "NAME": "偶数史蒂文",
+    "DESCRIPTION": "每打出一张偶数费用的牌，造成 !D! 点伤害。"
+  },
+  "${modID}:OddTodd": {
+    "NAME": "奇数托德",
+    "DESCRIPTION": "每打出一张奇数费用的牌，获得 !B! 点格挡。"
+  },
+  "${modID}:Scholar": {
+    "NAME": "学者",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 造成 !D! 点伤害。 NL 抽 1 张牌。"
+  },
+  "${modID}:BusinessCard": {
+    "NAME": "名片",
+    "DESCRIPTION": "每当你使用一张能力牌时，你有 !${modID}:probability! 的 !${modID}:chance! 几率 获得 !M! 金币。"
+  },
+  "${modID}:Supernova": {
+    "NAME": "超新星",
+    "DESCRIPTION": "施加 X 层虚弱。 NL 获得 X 层再生。 NL 消耗。",
+    "UPGRADE_DESCRIPTION": "施加 X+1 层虚弱。 NL 获得 X+1 层再生。 NL 消耗。"
+  },
+  "${modID}:RideTheBus": {
+    "NAME": "搭乘巴士",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 每回合中每使用一张非能力牌，伤害增加 !M!。"
+  },
+  "${modID}:SpaceJoker": {
+    "NAME": "太空小丑",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 有 !${modID}:probability! 的 !${modID}:chance! 几率 升级你手中的牌。"
+  },
+  "${modID}:Egg": {
+    "NAME": "鸡蛋",
+    "DESCRIPTION": "如果你没有受到伤害，回合结束时获得 !M! 金币。"
+  },
+  "${modID}:Burglar": {
+    "NAME": "窃贼",
+    "DESCRIPTION": "抽 3 张牌。 NL 消耗。",
+    "UPGRADE_DESCRIPTION": "固有。 NL 抽 3 张牌。 NL 消耗。"
+  },
+  "${modID}:Blackboard": {
+    "NAME": "黑板",
+    "DESCRIPTION": "获得 !M! 点力量。 NL 在本回合结束时失去 !M! 点力量。 NL 如果你手中的所有牌都是罕见牌，则三倍力量。"
+  },
+  "${modID}:Runner": {
+    "NAME": "跑步选手",
+    "DESCRIPTION": "获得 !B! 格挡。如果你持有消耗为 0、1 和 2 的牌，则永久增加此牌的 !M! 格挡。"
+  },
+  "${modID}:IceCream": {
+    "NAME": "冰淇淋",
+    "DESCRIPTION": "获得 !B! 格挡。 NL 每回合中每使用一张牌，格挡减少 1。"
+  },
+  "${modID}:DNA": {
+    "NAME": "DNA",
+    "DESCRIPTION": "此牌转化为本回合使用的最后一张牌的永久复制品。",
+    "UPGRADE_DESCRIPTION": "保留。 NL 此牌转化为本回合使用的最后一张牌的永久复制品。"
+  },
+  "${modID}:Splash": {
+    "NAME": "飞溅",
+    "DESCRIPTION": "净化 !M! 个随机减益效果。 NL 消耗。",
+    "UPGRADE_DESCRIPTION": "净化 !M! 个随机减益效果。 NL 消耗。"
+  },
+  "${modID}:BlueJoker": {
+    "NAME": "蓝色小丑",
+    "DESCRIPTION": "获得等于你的抽牌堆中牌数的格挡。",
+    "UPGRADE_DESCRIPTION": "获得等于你的抽牌堆中牌数 + 4 的格挡。"
+  },
+  "${modID}:SixthSense": {
+    "NAME": "第六感",
+    "DESCRIPTION": "无法使用。固有。 NL 当此牌在你的手中时，使用的第一张牌将从你的牌组中移除，并增加一张无色牌作为战斗奖励。",
+    "UPGRADE_DESCRIPTION": "无法使用。 NL 当此牌在你的手中时，使用的第一张牌将从你的牌组中移除，并增加一张无色牌作为战斗奖励。"
+  },
+  "${modID}:Constellation": {
+    "NAME": "星座",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 每回合中每使用一张升级过的牌，伤害增加 +10%。"
+  },
+  "${modID}:Hiker": {
+    "NAME": "徒步者",
+    "DESCRIPTION": "获得 !M! 点敏捷。"
+  },
+  "${modID}:FacelessJoker": {
+    "NAME": "无面小丑",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 弃 2 张牌。 NL 如果你弃掉 2 张能力牌，则获得 50 金币。"
+  },
+  "${modID}:GreenJoker": {
+    "NAME": "绿色小丑",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合伤害增加 !M!。 NL 弃牌时，本回合伤害减少 !M!。"
+  },
+  "${modID}:Superposition": {
+    "NAME": "叠加态",
+    "DESCRIPTION": "如果你持有消耗为 0、1、2 和 3 的牌，则获得一个随机药水。 NL 消耗。"
+  },
+  "${modID}:ToDoList": {
+    "NAME": "待办清单",
+    "DESCRIPTION": "每当使用 NL [技能牌/攻击/力牌] 时，获得 !M! 金币。每回合结束时更改。"
+  },
+  "${modID}:Cavendish": {
+    "NAME": "卡文迪什",
+    "DESCRIPTION": "虚无。 NL 你的下一次攻击造成三倍伤害。 NL 有 !${modID}:probability! 的 !${modID}:chance! 几率 从牌组中移除。",
+    "UPGRADE_DESCRIPTION": "你的下一次攻击造成三倍伤害。 NL 有 !${modID}:probability! 的 !${modID}:chance! 几率 从牌组中移除。"
+  },
+  "${modID}:CardSharp": {
+    "NAME": "老千小丑",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 如果你本回合使用了一张消耗为 3 的攻击牌，则造成三倍伤害。"
+  },
+  "${modID}:RedCard": {
+    "NAME": "红牌",
+    "DESCRIPTION": "无法使用。 NL 弃牌时，对所有敌人施加 !M! 层易伤。"
+  },
+  "${modID}:Madness": {
+    "NAME": "疯狂",
+    "DESCRIPTION": "固有。 NL 消耗一张随机牌并获得 !M! 点力量。 NL 消耗。"
+  },
+  "${modID}:SquareJoker": {
+    "NAME": "方形小丑",
+    "DESCRIPTION": "获得 !B! 格挡。 NL 如果你本回合恰好使用了 4 张牌，则永久增加此牌的 !M! 格挡。"
+  },
+  "${modID}:Seance": {
+    "NAME": "通灵",
+    "DESCRIPTION": "如果你手中的每张牌都是技能牌，则将 !M! 张随机无色技能牌添加到你的手中。"
+  },
+  "${modID}:RiffRaff": {
+    "NAME": "乌合之众",
+    "DESCRIPTION": "将 !M! 张随机普通牌添加到你的手中，它们在本回合消耗为 0。"
+  },
+  "${modID}:Vampire": {
+    "NAME": "吸血鬼",
+    "DESCRIPTION": "敌人失去 X 点力量。 NL 获得 X 点力量。 NL 消耗。",
+    "UPGRADE_DESCRIPTION": "敌人失去 X+1 点力量。 NL 获得 X+1 点力量。消耗。"
+  },
+  "${modID}:Shortcut": {
+    "NAME": "捷径",
+    "DESCRIPTION": "将一张来自弃牌堆的牌返回到你的手中，它的消耗减少 !M!。 NL 消耗。"
+  },
+  "${modID}:Hologram": {
+    "NAME": "全息影像",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 每回合添加到你牌组的每张牌，伤害增加 +25%。"
+  },
+  "${modID}:Vagabond": {
+    "NAME": "流浪者",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 如果你拥有的金币少于 100，获得一瓶随机药水。 NL 消耗。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 如果你拥有的金币少于 100，获得一瓶随机药水。 NL 消耗。"
+  },
+  "${modID}:Baron": {
+    "NAME": "男爵",
+    "DESCRIPTION": "造成 !D! 点伤害，你手牌中的每张攻击牌，伤害增加 1.5 倍。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害，你手牌中的每张攻击牌，伤害增加 1.5 倍。"
+  },
+  "${modID}:Cloud9": {
+    "NAME": "9霄云外",
+    "DESCRIPTION": "下回合，获得 [E] [E] [E]。 NL 你牌组中每张消耗 3 的牌，获得 3 金币。 NL 消耗。",
+    "UPGRADE_DESCRIPTION": "下回合，获得 [E] [E] [E]。 NL 你牌组中每张消耗 3 的牌，获得 3 金币。"
+  },
+  "${modID}:Rocket": {
+    "NAME": "火箭",
+    "DESCRIPTION": "所有敌人本回合失去 !M! 点力量。 NL 获得等于当前楼层的金币。 NL 消耗。"
+  },
+  "${modID}:Obelisk": {
+    "NAME": "方尖石塔",
+    "DESCRIPTION": "选择两次: NL 获得 !B! 格挡，对所有敌人造成 !D! 点伤害，或永久增加 2 点格挡和 1 点伤害。 NL 消耗。",
+    "UPGRADE_DESCRIPTION": "选择两次: NL 获得 !B! 格挡，对所有敌人造成 !D! 点伤害，或永久增加 2 点格挡和 1 点伤害。 NL 消耗。"
+  },
+  "${modID}:MidasMask": {
+    "NAME": "迈达斯面具",
+    "DESCRIPTION": "无法使用。 NL 当进入你的手牌时，抽一张牌。 NL 每次打出一张牌时，获得 !M! 金币。"
+  },
+  "${modID}:Luchador": {
+    "NAME": "摔跤手",
+    "DESCRIPTION": "敌人失去 !M! 点力量。 NL 打出后从牌组中移除。"
+  },
+  "${modID}:Photograph": {
+    "NAME": "照片",
+    "DESCRIPTION": "你下一张能力牌将被打出两次。"
+  },
+  "${modID}:GiftCard": {
+    "NAME": "礼品卡",
+    "DESCRIPTION": "获得 !M! 人造物。 NL 在本次战斗奖励中获得更多金币并增加卡牌稀有度。 NL 消耗。"
+  },
+  "${modID}:TurtleBean": {
+    "NAME": "黑龟豆",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 本次战斗中，此牌的抽牌数减少 1。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 本次战斗中，此牌的抽牌数减少 1。不能低于 1。"
+  },
+  "${modID}:Erosion": {
+    "NAME": "侵蚀",
+    "DESCRIPTION": "造成 !D! 点伤害，本次游戏中移除的每张牌重复一次。",
+    "EXTENDED_DESCRIPTION": [
+      " NL (移除了 !M! 张牌)"
+    ]
+  },
+  "${modID}:ReservedParking": {
+    "NAME": "私人车位",
+    "DESCRIPTION": "将 !M! 张随机能力牌从你的抽牌堆放入你的手牌，有 !${modID}:probability! 的 !${modID}:chance! 几率 每张手牌中的能力牌获得 10 金币。",
+    "UPGRADE_DESCRIPTION": "将 !M! 张随机能力牌从你的抽牌堆放入你的手牌，有 !${modID}:probability! 的 !${modID}:chance! 几率 每张手牌中的能力牌获得 10 金币。"
+  },
+  "${modID}:MailInRebate": {
+    "NAME": "邮件回扣",
+    "DESCRIPTION": "弃掉 1 张牌。如果是 [技能牌/攻击/力牌]，获得 10 金币。每回合结束时改变。 NL 抽 !M! 张牌。",
+    "EXTENDED_DESCRIPTION": [
+      "弃掉 1 张牌。如果是",
+      "，获得 10 金币。每回合结束时改变。 NL 抽 !M! 张牌。"
+    ]
+  },
+  "${modID}:ToTheMoon": {
+    "NAME": "冲向月球",
+    "DESCRIPTION": "获得 !M! 层金属化。 NL 你拥有的每 10 金币，获得 1 金币。 NL 消耗。"
+  },
+  "${modID}:Hallucination": {
+    "NAME": "幻觉",
+    "DESCRIPTION": "施加 !M! 虚弱。 NL 有 !${modID}:probability! 的 !${modID}:chance! 几率 在此次战斗奖励中添加一瓶随机药水。NL 消耗。"
+  },
+  "${modID}:FortuneTeller": {
+    "NAME": "占卜师",
+    "DESCRIPTION": "本次游戏中使用的每瓶药水，对一个随机敌人造成 !D! 点伤害。",
+    "EXTENDED_DESCRIPTION": [
+      " NL (使用了 !M! 瓶药水。)"
+    ]
+  },
+  "${modID}:Juggler": {
+    "NAME": "杂耍师",
+    "DESCRIPTION": "在你的回合开始时，额外抽 1 张牌。",
+    "UPGRADE_DESCRIPTION": "固有。 NL 在你的回合开始时，额外抽 1 张牌。"
+  },
+  "${modID}:Drunkard": {
+    "NAME": "醉汉",
+    "DESCRIPTION": "弃掉任意数量的牌，然后抽相同数量的牌。"
+  },
+  "${modID}:StoneJoker": {
+    "NAME": "石头小丑",
+    "DESCRIPTION": "你手牌、抽牌堆、弃牌堆和消耗堆中每有一张安全牌，获得 !B! 格挡。"
+  },
+  "${modID}:GoldenJoker": {
+    "NAME": "黄金小丑",
+    "DESCRIPTION": "虚无。 NL 获得 !M! 金币。 NL 消耗。"
+  },
+  "${modID}:LuckyCat": {
+    "NAME": "招财猫",
+    "DESCRIPTION": "在你的回合开始时，有 !${modID}:probability! 的 !${modID}:chance! 几率 获得 !M! 格挡，并且有 !${modID}:probability! 的 !${modID}:chance! 几率 对所有敌人造成 !M! 点伤害。"
+  },
+  "${modID}:BaseballCard": {
+    "NAME": "棒球卡",
+    "DESCRIPTION": "所有罕见牌的伤害提高 x1.5。"
+  },
+  "${modID}:Bull": {
+    "NAME": "斗牛",
+    "DESCRIPTION": "你拥有的每 !M! 金币，获得 1 格挡。"
+  },
+  "${modID}:DietCola": {
+    "NAME": "零糖可乐",
+    "DESCRIPTION": "消耗。 NL 从牌组中移除时，获得一个随机普通遗物。",
+    "UPGRADE_DESCRIPTION": "虚无。 NL 消耗。 NL 从牌组中移除时，获得一个随机普通遗物。"
+  },
+  "${modID}:TradingCard": {
+    "NAME": "交易卡",
+    "DESCRIPTION": "在你的回合开始时，消耗 1 张牌并获得 !M! 金币。"
+  },
+  "${modID}:FlashCard": {
+    "NAME": "闪示卡",
+    "DESCRIPTION": "预见 !M! 。 NL 抽1张牌。"
+  },
+  "${modID}:Popcorn": {
+    "NAME": "爆米花",
+    "DESCRIPTION": "造成 !D! 点伤害，每回合后减少 !M! 。"
+  },
+  "${modID}:SpareTrousers": {
+    "NAME": "备用裤子",
+    "DESCRIPTION": "对两个随机敌人造成 !D! 点伤害。如果两者都是致命的，则永久增加 !M! 。"
+  },
+  "${modID}:AncientJoker": {
+    "NAME": "古老小丑",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每打出一张 [技能牌/攻击/力牌] 牌，伤害增加x1.5。每回合结束时改变。",
+    "EXTENDED_DESCRIPTION": [
+      "造成 !D! 点伤害。 NL 每打出一张",
+      "牌，伤害增加x1.5。每回合结束时改变。"
+    ]
+  },
+  "${modID}:Ramen": {
+    "NAME": "拉面",
+    "DESCRIPTION": "造成 !D! 点伤害两次。手牌中每打出一张牌，伤害减少1。"
+  },
+  "${modID}:WalkieTalkie": {
+    "NAME": "对讲机",
+    "DESCRIPTION": "当打出一张消耗1的牌时，获得 !M! 格挡，并对一个随机敌人造成 !M! 点伤害。"
+  },
+  "${modID}:Seltzer": {
+    "NAME": "苏打水",
+    "DESCRIPTION": "重播接下来的 !M! 张牌。"
+  },
+  "${modID}:Castle": {
+    "NAME": "城堡",
+    "DESCRIPTION": "保留。 NL 获得 !B! 格挡。 NL 当丢弃[技能牌/攻击/力牌]牌时，本次战斗增加 !M! 。每回合结束时改变。",
+    "EXTENDED_DESCRIPTION": [
+      "保留。 NL 获得 !B! 格挡。 NL 当丢弃",
+      "时，本次战斗增加 !M! 。每回合结束时改变。"
+    ]
+  },
+  "${modID}:SmileyFace": {
+    "NAME": "微笑表情",
+    "DESCRIPTION": "本场战斗中，每打出一张能力牌，造成 !D! 点伤害。"
+  },
+  "${modID}:Campfire": {
+    "NAME": "篝火",
+    "DESCRIPTION": "获得 !M! 力量。 NL 本幕中每访问一个休息点，力量增加1。 NL 耗尽。"
+  },
+  "${modID}:GoldenTicket": {
+    "NAME": "黄金门票",
+    "DESCRIPTION": "将一张随机稀有牌添加到你的手中。 NL 你的牌组中每有一张稀有牌，获得 !M! 金币。 NL 耗尽。"
+  },
+  "${modID}:MrBones": {
+    "NAME": "骷髅先生",
+    "DESCRIPTION": "虚无。 NL 受到致命伤害时，以25%的生命值复活，然后从你的牌组中移除。",
+    "UPGRADE_DESCRIPTION": "受到致命伤害时，以25%的生命值复活，然后从你的牌组中移除。"
+  },
+  "${modID}:Acrobat": {
+    "NAME": "杂技演员",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果这是你手中的最后一张牌，则造成三倍伤害。"
+  },
+  "${modID}:SockAndBuskin": {
+    "NAME": "喜与悲",
+    "DESCRIPTION": "触发你所有回合开始和结束时的能力效果。"
+  },
+  "${modID}:Swashbuckler": {
+    "NAME": "侠盗",
+    "DESCRIPTION": "保留。 NL 造成 !D! 点伤害。 NL 当你抽一张牌时，本次战斗增加等于其费用的伤害。"
+  },
+  "${modID}:Troubadour": {
+    "NAME": "游吟诗人",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 下回合失去[E]。"
+  },
+  "${modID}:Certificate": {
+    "NAME": "证书",
+    "DESCRIPTION": "不可用。固有。 NL 当你抽到这张牌时，将 !M! 张随机牌添加到你的手中并耗尽。"
+  },
+  "${modID}:SmearedJoker": {
+    "NAME": "模糊小丑",
+    "DESCRIPTION": "随机化你手中所有牌的费用。"
+  },
+  "${modID}:Throwback": {
+    "NAME": "回溯",
+    "DESCRIPTION": "对每个进入的？房间施加易伤和虚弱效果。 NL 耗尽。",
+    "UPGRADE_DESCRIPTION": "对每个进入的？房间施加易伤和虚弱效果 + 1。 NL 耗尽。",
+    "EXTENDED_DESCRIPTION": [
+      " NL (总计 !M!)"
+    ]
+  },
+  "${modID}:HangingChad": {
+    "NAME": "未断选票",
+    "DESCRIPTION": "打出你抽牌堆顶部的牌 !M! 次并耗尽它。"
+  },
+  "${modID}:RoughGem": {
+    "NAME": "璞玉",
+    "DESCRIPTION": "获得 !B! 格挡。 NL 你拥有的每 !M! 格挡，获得2金币。 NL 耗尽。"
+  },
+  "${modID}:Bloodstone": {
+    "NAME": "血石",
+    "DESCRIPTION": "重放本回合的每次攻击，有 !${modID}:probability! 的 !${modID}:chance! ${modID}:Chance。 NL 耗尽。",
+    "UPGRADE_DESCRIPTION": "重放本回合的每次攻击，有 !${modID}:probability! 的 !${modID}:chance! ${modID}:Chance。"
+  },
+  "${modID}:Arrowhead": {
+    "NAME": "箭头",
+    "DESCRIPTION": "在你的回合开始时，将 !M! 张安全牌添加到你的手中并丢弃 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": "在你的回合开始时，将 !M! 张安全牌添加到你的手中并丢弃 !M! 张牌。"
+  },
+  "${modID}:OnyxAgate": {
+    "NAME": "缟玛瑙",
+    "DESCRIPTION": "获得 !M! 力量。 NL 在本回合结束时失去 !M! 力量。"
+  },
+  "${modID}:GlassJoker": {
+    "NAME": "玻璃小丑",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 本次游戏中每移除一张牌，伤害增加+75%。如果致命，则从牌组中移除。"
+  },
+  "${modID}:Showman": {
+    "NAME": "马戏团长",
+    "DESCRIPTION": "从你的抽牌堆中选择1张牌，并将它的所有复制品放入你的手中。 NL 耗尽。"
+  },
+  "${modID}:FlowerPot": {
+    "NAME": "花盆",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果你持有3种不同的牌类型，则造成三倍伤害。"
+  },
+  "${modID}:Blueprint": {
+    "NAME": "蓝图",
+    "DESCRIPTION": "重播本次战斗中打出的最后一张牌。"
+  },
+  "${modID}:WeeJoker": {
+    "NAME": "小小丑",
+    "DESCRIPTION": "本次战斗中，每打出一张费用为0的牌，获得 !B! 格挡。",
+    "EXTENDED_DESCRIPTION": [
+      " NL (总计 !M!)"
+    ]
+  },
+  "${modID}:MerryAndy": {
+    "NAME": "快乐安迪",
+    "DESCRIPTION": "弃掉 !M! 张牌。 NL 抽 !M! 张牌。 NL 下回合少抽 1 张牌。"
+  },
+  "${modID}:OopsAll6s": {
+    "NAME": "六六大顺",
+    "DESCRIPTION": "所有列出的概率翻倍。",
+    "UPGRADE_DESCRIPTION": "所有列出的概率翻倍。 NL 增加战斗奖励中获得药水的额外机会。"
+  },
+  "${modID}:TheIdol": {
+    "NAME": "偶像",
+    "DESCRIPTION": "抽一张消耗为 [1,2,3] 的 [技能牌/攻击/力牌] 牌。本回合消耗为 0。每回合结束时改变。",
+    "UPGRADE_DESCRIPTION": "保留。 NL 抽一张消耗为 [1,2,3] 的 [技能牌/攻击/力牌] 牌。本回合消耗为 0。每回合结束时改变。",
+    "EXTENDED_DESCRIPTION": [
+      "抽一张消耗为",
+      "。本回合消耗为 0。每回合结束时改变。",
+      "保留。 NL "
+    ]
+  },
+  "${modID}:SeeingDouble": {
+    "NAME": "重影",
+    "DESCRIPTION": "获得困惑。 NL 造成双倍伤害。"
+  },
+  "${modID}:Matador": {
+    "NAME": "斗牛士",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 对精英或 Boss 使用时，获得 !M! 金币。 NL 耗尽。"
+  },
+  "${modID}:HitTheRoad": {
+    "NAME": "上路吧杰克",
+    "DESCRIPTION": "获得等同于本回合丢弃的牌张数量的力量。 NL 耗尽。",
+    "UPGRADE_DESCRIPTION": "获得等同于本回合丢弃的牌张数量的力量。",
+    "EXTENDED_DESCRIPTION": [
+      " NL (总共 !M!)"
+    ]
+  },
+  "${modID}:TheDuo": {
+    "NAME": "二重奏",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果你持有另一张攻击牌，则伤害翻倍。"
+  },
+  "${modID}:TheTrio": {
+    "NAME": "三重奏",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果你持有另外 2 张攻击牌，则伤害变为三倍。"
+  },
+  "${modID}:TheFamily": {
+    "NAME": "一家人",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果你持有另外 3 张攻击牌，则伤害变为四倍。"
+  },
+  "${modID}:TheOrder": {
+    "NAME": "秩序",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果你持有一张消耗为 0、1、2 和 3 的牌，则伤害变为三倍。"
+  },
+  "${modID}:TheTribe": {
+    "NAME": "部落",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果你只持有攻击牌，则伤害翻倍。"
+  },
+  "${modID}:Stuntman": {
+    "NAME": "特技演员",
+    "DESCRIPTION": "获得 !B! 格挡。 NL 在接下来的 2 回合中少抽 1 张牌。"
+  },
+  "${modID}:InvisibleJoker": {
+    "NAME": "隐形小丑",
+    "DESCRIPTION": "使用两次后，它会永久转变为牌组中随机牌的消耗为 0 的复制品。 NL 耗尽。"
+  },
+  "${modID}:Brainstorm": {
+    "NAME": "头脑风暴",
+    "DESCRIPTION": "重播本回合打出的第一张牌。"
+  },
+  "${modID}:Satellite": {
+    "NAME": "卫星",
+    "DESCRIPTION": "永久升级牌组中的一张随机牌。 NL 每升级一张牌，获得 !M! 金币。 NL 耗尽。"
+  },
+  "${modID}:ShootTheMoon": {
+    "NAME": "射月",
+    "DESCRIPTION": "根据你手中的每张技能牌造成 !D! 点伤害。"
+  },
+  "${modID}:DriversLicense": {
+    "NAME": "驾驶执照",
+    "DESCRIPTION": "如果你的牌组中至少有 4 张稀有牌，则获得 !M! 力量和 !M! 敏捷。 NL 耗尽。"
+  },
+  "${modID}:Cartomancer": {
+    "NAME": "卡牌术士",
+    "DESCRIPTION": "获得一瓶随机的普通药水。 NL 耗尽。",
+    "UPGRADE_DESCRIPTION": "固有。 NL 获得一瓶随机的普通药水。 NL 耗尽。"
+  },
+  "${modID}:Astronomer": {
+    "NAME": "天文学家",
+    "DESCRIPTION": "你接下来 !M! 张升级的牌消耗为 0。"
+  },
+  "${modID}:BurntJoker": {
+    "NAME": "烧焦小丑",
+    "DESCRIPTION": "弃掉任意数量的牌并升级它们。 NL 抽 !M! 张牌。"
+  },
+  "${modID}:Bootstraps": {
+    "NAME": "提靴带",
+    "DESCRIPTION": "造成的伤害等于你的金币。 NL 失去 !M! 金币。 NL 耗尽。"
+  },
+  "${modID}:Canio": {
+    "NAME": "卡尼奥",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 对于你耗尽堆中的每张能力牌，伤害提高 +100%。"
+  },
+  "${modID}:Triboulet": {
+    "NAME": "特里布莱",
+    "DESCRIPTION": "所有消耗为 2 的牌的伤害和格挡翻倍。",
+    "UPGRADE_DESCRIPTION": "固有。 NL 所有消耗为 2 的牌的伤害和格挡翻倍。"
+  },
+  "${modID}:Yorick": {
+    "NAME": "约里克",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 对于本场战斗中手动弃掉的每 !M! 张牌，伤害提高 +100%。"
+  },
+  "${modID}:Chicot": {
+    "NAME": "希科",
+    "DESCRIPTION": "虚无。 NL 眩晕 Boss。 NL 耗尽。",
+    "UPGRADE_DESCRIPTION": "眩晕 Boss。 NL 耗尽。"
+  },
+  "${modID}:Perkeo": {
+    "NAME": "帕奇欧",
+    "DESCRIPTION": "在本场战斗的奖励中获得额外的卡牌奖励。 NL 耗尽。"
+  },
+  "${modID}:Dilation": {
+    "NAME": "扩张",
+    "DESCRIPTION": "当你抽到这张牌时，将一张复制品添加到你的手中。 NL 耗尽。"
+  },
+  "${modID}:Blockade": {
+    "NAME": "封锁",
+    "DESCRIPTION": "获得 !B! 格挡。"
+  },
+  "${modID}:Assault": {
+    "NAME": "突击",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。"
+  },
+  "${modID}:Enhance": {
+    "NAME": "增强",
+    "DESCRIPTION": "永久增加 2 点格挡和 1 点伤害。"
+  }
+}

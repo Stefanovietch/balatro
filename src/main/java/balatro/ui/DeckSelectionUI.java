@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 
 public class DeckSelectionUI {
-    public static final String[] TEXT = CardCrawlGame.languagePack.getUIString(balatroMod.makeID("deckselectionUI")).TEXT;
     private final DeckPanel deckPanel;
     public String selectedDeck;
 
