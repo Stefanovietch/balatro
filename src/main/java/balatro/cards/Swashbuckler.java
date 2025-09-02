@@ -36,9 +36,10 @@ public class Swashbuckler extends BaseCard {
     public void triggerOnOtherCardDrawn(AbstractCard c) {
         if (c.costForTurn == -1) {
             baseDamage += EnergyPanel.getCurrentEnergy();
-        } else {
+        } else if (c.costForTurn != -2) {
             baseDamage += c.costForTurn;
         }
+        isDamageModified = true;
     }
 
     @Override

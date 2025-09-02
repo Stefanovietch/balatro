@@ -38,6 +38,7 @@ public class HitTheRoad extends BaseCard {
         super.applyPowers();
         this.magicNumber = GameActionManager.totalDiscardedThisTurn;
         if (magicNumber > 0) {
+            isMagicNumberModified = true;
             if (upgraded) {
                 this.rawDescription = cardStrings.UPGRADE_DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
             } else {

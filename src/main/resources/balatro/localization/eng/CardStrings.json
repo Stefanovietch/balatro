@@ -207,7 +207,7 @@
   },
   "${modID}:Superposition": {
     "NAME": "Superposition",
-    "DESCRIPTION": "If you are holding a cost 0, 1, 2 and 3 card, obtain a random potion. NL Exhaust."
+    "DESCRIPTION": "If you are holding a cost 0, 1, 2 and 3 card, obtain a random potion."
   },
   "${modID}:ToDoList": {
     "NAME": "To Do List",
@@ -593,7 +593,8 @@
   },
   "${modID}:Astronomer": {
     "NAME": "Astronomer",
-    "DESCRIPTION": "Your next !M! upgraded cards costs 0."
+    "DESCRIPTION": "Your next upgraded card costs 0.",
+    "UPGRADE_DESCRIPTION": "Your next !M! upgraded cards costs 0."
   },
   "${modID}:BurntJoker": {
     "NAME": "Burnt Joker",

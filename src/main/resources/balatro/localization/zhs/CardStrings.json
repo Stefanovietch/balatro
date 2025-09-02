@@ -214,7 +214,7 @@
   },
   "${modID}:Superposition": {
     "NAME": "叠加态",
-    "DESCRIPTION": "如果你持有消耗为 0、1、2 和 3 的牌，则获得一个随机药水。 NL 消耗。"
+    "DESCRIPTION": "如果你持有消耗为 0、1、2 和 3 的牌，则获得一个随机药水。"
   },
   "${modID}:ToDoList": {
     "NAME": "待办清单",

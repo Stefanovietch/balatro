@@ -1,6 +1,5 @@
 package balatro.relics;
 
-import balatro.actions.GainBlockOnAttackAction;
 import balatro.character.baseDeck;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -29,7 +28,6 @@ public class RuleBender extends BaseRelic{
         super.onAttack(info, damageAmount, target);
         if (info.type == DamageInfo.DamageType.NORMAL) {
             addToTop(new GainBlockAction(AbstractDungeon.player, info.base/2));
-            //addToBot(new GainBlockOnAttackAction(target, info));
         }
     }
 

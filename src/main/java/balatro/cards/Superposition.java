@@ -24,7 +24,6 @@ public class Superposition extends BaseCard {
 
     public Superposition() {
         super(ID, info); //Pass the required information to the BaseCard constructor.
-        setExhaust(true);
         setCostUpgrade(0);
     }
 
