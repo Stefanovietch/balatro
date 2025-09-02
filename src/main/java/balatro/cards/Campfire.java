@@ -35,7 +35,9 @@ public class Campfire extends BaseCard {
 
     public void applyPowers() {
         super.applyPowers();
+        magicNumber = baseMagicNumber;
         magicNumber += Data.getRestSites();
+
     }
 
     @Override

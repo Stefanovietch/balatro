@@ -178,7 +178,7 @@
     "NAME": "The Wheel",
     "DESCRIPTIONS": [
       "When drawing a card have #b",
-      " in #b7 #yChance to set its cost to #b3."
+      " in #b7 #yChance to set its cost to #b3 for the turn."
     ]
   },
   "${modID}:TheArm": {

@@ -29,7 +29,7 @@ public class WalkieTalkiePower extends BasePower{
         super.onUseCard(card, action);
         if (card.costForTurn == 1) {
             addToBot(new GainBlockAction(owner,amount));
-            addToBot(new DamageRandomEnemyAction(new DamageInfo(owner,amount), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+            addToBot(new DamageRandomEnemyAction(new DamageInfo(owner,amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         }
     }
 }

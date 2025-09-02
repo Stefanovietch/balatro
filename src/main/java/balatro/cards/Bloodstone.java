@@ -28,8 +28,9 @@ public class Bloodstone extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (AbstractCard c : AbstractDungeon.actionManager.cardsPlayedThisTurn) {
-            if (c.type == CardType.ATTACK && getChance()) {
+        for (AbstractCard card : AbstractDungeon.actionManager.cardsPlayedThisTurn) {
+            if (card.type == CardType.ATTACK && getChance()) {
+                AbstractCard c = card.makeStatEquivalentCopy();
                 AbstractDungeon.player.limbo.group.add(c);
                 c.current_y = -200.0F * Settings.scale;
                 c.purgeOnUse = true;

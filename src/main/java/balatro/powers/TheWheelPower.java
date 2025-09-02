@@ -42,7 +42,7 @@ public class TheWheelPower extends BlindPower{
             if (card.cost >= 0) {
                 costUp = 3 - card.cost;
                 wheelCards.put(card, costUp);
-                card.modifyCostForCombat(costUp);
+                card.costForTurn = costUp;
             }
         }
     }

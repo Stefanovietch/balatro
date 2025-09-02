@@ -42,7 +42,8 @@ public class Hologram extends BaseCard {
         if (magicNumber > 0) {
             isMagicNumberModified = true;
             float increase = 1 + 0.25F * (magicNumber);
-            this.damage *= (int) increase;
+            damage *= (int) increase;
+            isDamageModified = true;
         }
     }
 
@@ -53,8 +54,8 @@ public class Hologram extends BaseCard {
         if (magicNumber > 0) {
             isMagicNumberModified = true;
             float increase = 1 + 0.25F * (magicNumber);
-            this.damage *= (int) increase;
-
+            damage *= (int) increase;
+            isDamageModified = true;
         }
     }
 

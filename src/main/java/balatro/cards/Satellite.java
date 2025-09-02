@@ -30,6 +30,7 @@ public class Satellite extends BaseCard {
         super(ID, info); //Pass the required information to the BaseCard constructor.
         setExhaust(true);
         setMagic(MAGIC,UPG_MAGIC);
+        hasTag(CardTags.HEALING);
     }
 
     @Override
