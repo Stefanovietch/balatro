@@ -2,6 +2,7 @@ package balatro.relics;
 
 import balatro.actions.GainBlockOnAttackAction;
 import balatro.character.baseDeck;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -27,7 +28,8 @@ public class RuleBender extends BaseRelic{
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
         super.onAttack(info, damageAmount, target);
         if (info.type == DamageInfo.DamageType.NORMAL) {
-            addToBot(new GainBlockOnAttackAction(target, info));
+            addToTop(new GainBlockAction(AbstractDungeon.player, info.base/2));
+            //addToBot(new GainBlockOnAttackAction(target, info));
         }
     }
 

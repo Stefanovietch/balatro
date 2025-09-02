@@ -24,21 +24,24 @@ public class FourFingers extends BaseCard {
 
     public FourFingers() {
         super(ID, info); //Pass the required information to the BaseCard constructor.
-        setDamage(DAMAGE);
+        setCustomVar("damage1",VariableType.DAMAGE,1);
+        setCustomVar("damage2",VariableType.DAMAGE,2);
+        setCustomVar("damage3",VariableType.DAMAGE,3);
+        setCustomVar("damage4",VariableType.DAMAGE,4);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (upgraded) {
-            addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-            addToBot(new DamageAction(m, new DamageInfo(p, damage + 1, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-            addToBot(new DamageAction(m, new DamageInfo(p, damage + 2, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-            addToBot(new DamageAction(m, new DamageInfo(p, damage + 3, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+            addToBot(new DamageAction(m, new DamageInfo(p, customVar("damage1"), DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+            addToBot(new DamageAction(m, new DamageInfo(p, customVar("damage2"), DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+            addToBot(new DamageAction(m, new DamageInfo(p, customVar("damage3"), DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+            addToBot(new DamageAction(m, new DamageInfo(p, customVar("damage4"), DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         } else {
-            addToBot(new DamageRandomEnemyAction(new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-            addToBot(new DamageRandomEnemyAction(new DamageInfo(p, damage + 1, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-            addToBot(new DamageRandomEnemyAction(new DamageInfo(p, damage + 2, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-            addToBot(new DamageRandomEnemyAction(new DamageInfo(p, damage + 3, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+            addToBot(new DamageRandomEnemyAction(new DamageInfo(p, customVar("damage1"), DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+            addToBot(new DamageRandomEnemyAction(new DamageInfo(p, customVar("damage2"), DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+            addToBot(new DamageRandomEnemyAction(new DamageInfo(p, customVar("damage3"), DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+            addToBot(new DamageRandomEnemyAction(new DamageInfo(p, customVar("damage4"), DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         }
     }
 

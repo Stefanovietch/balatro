@@ -39,6 +39,7 @@ public class Acrobat extends BaseCard {
         super.applyPowers();
         if (AbstractDungeon.player.hand.isEmpty() || (AbstractDungeon.player.hand.size() == 1 && AbstractDungeon.player.hand.getBottomCard() instanceof Acrobat)) {
             damage *= 3;
+            isDamageModified = true;
         }
     }
 
@@ -47,6 +48,7 @@ public class Acrobat extends BaseCard {
         super.calculateCardDamage(m);
         if (AbstractDungeon.player.hand.isEmpty() || (AbstractDungeon.player.hand.size() == 1 && AbstractDungeon.player.hand.getBottomCard() instanceof Acrobat)) {
             damage *= 3;
+            isDamageModified = true;
         }
     }
 

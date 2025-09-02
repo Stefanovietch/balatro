@@ -21,8 +21,8 @@
   },
   "${modID}:FourFingers": {
     "NAME": "Four Fingers",
-    "DESCRIPTION": "Deal 1, 2, 3 and 4 damage to a random enemy.",
-    "UPGRADE_DESCRIPTION": "Deal 1, 2, 3 and 4 damage to an enemy."
+    "DESCRIPTION": "Deal !${modID}:damage1!, !${modID}:damage2!, !${modID}:damage3! and !${modID}:damage4! damage to a random enemy.",
+    "UPGRADE_DESCRIPTION": "Deal !${modID}:damage1!, !${modID}:damage2!, !${modID}:damage3! and !${modID}:damage4! damage to an enemy."
   },
   "${modID}:Mime": {
     "NAME": "Mime",

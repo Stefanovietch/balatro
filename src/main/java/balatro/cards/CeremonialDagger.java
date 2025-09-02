@@ -29,12 +29,20 @@ public class CeremonialDagger extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        applyPowers();
+        calculateCardDamage(m);
         addToBot(new CeremonialDaggerAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), this));
     }
 
     public void applyPowers() {
         this.baseDamage = this.misc;
         super.applyPowers();
+    }
+
+    @Override
+    public void calculateCardDamage(AbstractMonster m) {
+        this.baseDamage = this.misc;
+        super.calculateCardDamage(m);
     }
 
     @Override

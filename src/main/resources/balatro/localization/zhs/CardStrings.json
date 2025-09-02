@@ -35,8 +35,8 @@
   },
   "${modID}:FourFingers": {
     "NAME": "四指",
-    "DESCRIPTION": "对一个随机敌人造成 1、2、3 和 4 点伤害。",
-    "UPGRADE_DESCRIPTION": "对一个敌人造成 1、2、3 和 4 点伤害。"
+    "DESCRIPTION": "对一个随机敌人造成 !${modID}:damage1!、!${modID}:damage2!、!${modID}:damage3! 和 !${modID}:damage4! 点伤害。",
+    "UPGRADE_DESCRIPTION": "对一个敌人造成 !${modID}:damage1!、!${modID}:damage2!、!${modID}:damage3! 和 !${modID}:damage4! 点伤害。"
   },
   "${modID}:Mime": {
     "NAME": "哑剧演员",

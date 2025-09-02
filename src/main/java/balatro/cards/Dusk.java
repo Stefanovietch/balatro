@@ -49,7 +49,6 @@ public class Dusk extends BaseCard {
                     c.applyPowers();
                     addToBot(new NewQueueCardAction(c, m, false, true));
                     addToTop(new UnlimboAction(c));
-                    //addToBot(new WaitAction(2F));
                 }
             }
         }

@@ -10,6 +10,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.rewards.RewardItem;
 
+import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.cardRng;
+import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.treasureRng;
+
 public class GiftCard extends BaseCard {
     public static final String ID = makeID(GiftCard.class.getSimpleName());
     private static final CardStats info = new CardStats(
@@ -32,28 +35,9 @@ public class GiftCard extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(p,p,new ArtifactPower(p, magicNumber),magicNumber));
-        AbstractDungeon.getCurrRoom().uncommonCardChance += 10;
-        AbstractDungeon.getCurrRoom().rareCardChance += 10;
-        for (RewardItem ri : AbstractDungeon.getCurrRoom().rewards) {
-            if (ri.type == RewardItem.RewardType.GOLD){ri.incrementGold(500);}
-            /*
-            if (ri.type == RewardItem.RewardType.CARD){
-                boolean isColorless = true;
-                for (AbstractCard c : ri.cards) {
-                    balatroMod.logger.info(c);
-                    if (c.color != CardColor.COLORLESS) {
-                        isColorless = false;
-                        //break;
-                    }
-                }
-                if (isColorless) {
-                    //ri.cards = AbstractDungeon.getColorlessRewardCards();
-                } else {
-                    //ri.cards = AbstractDungeon.getRewardCards();
-                }
-            }
-        */
-        }
+        AbstractDungeon.getCurrRoom().baseUncommonCardChance += 10;
+        AbstractDungeon.getCurrRoom().baseRareCardChance += 10;
+        AbstractDungeon.getCurrRoom().addGoldToRewards(treasureRng.random(1,10));
     }
 
     @Override

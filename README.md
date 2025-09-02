@@ -1,5 +1,5 @@
 A balatro themed mod!
 Just like in balatro there are 15 different decks to play with (with their own starting relic). They all share the same card pool of 140 cards, their rarity is the same as in balatro. That means there is a legendary rarity, which have a chance to replace any colorless rare card.
-Most terms in balatro are not easily relatible in slay the spire, but that doesn't mean I didn't try. For example, energy is hands, powers are face cards, potions are tarot cards and Gold is of course money. You can earn a lot of Gold in this mod, to prevent infinite gold and long battles I've implement a limit of 200 Gold per battle (which can be increased with a relic) to keep the game quick.
+Most terms in balatro are not easily relatable in slay the spire, but that doesn't mean I didn't try. For example, energy is hands, powers are face cards, potions are tarot cards and Gold is of course money. You can earn a lot of Gold in this mod, to prevent infinite gold and long battles I've implement a limit of 200 Gold per battle (which can be increased with a relic and disabled in settings) to keep the game quick.
 Bosses and Elites have blind abilities to make it more challenging, as the average card is quite strong.
 I hope you'll enjoy the climb!
