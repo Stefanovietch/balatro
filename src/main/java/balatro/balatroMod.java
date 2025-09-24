@@ -43,6 +43,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.relics.*;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
+import com.megacrit.cardcrawl.rooms.MonsterRoomElite;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -425,7 +427,7 @@ public class balatroMod implements
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         Data.saveBattleData();
         Data.resetBattleData();
-        if (blinds) {
+        if (blinds && (AbstractDungeon.getCurrRoom() instanceof MonsterRoomElite || AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss)) {
             for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
                 if (m.type == AbstractMonster.EnemyType.ELITE) {
                     BlindPower.BlindType newBlindIndex = BlindPower.BlindType.randomType();
