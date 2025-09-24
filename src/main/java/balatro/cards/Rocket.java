@@ -34,7 +34,9 @@ public class Rocket extends BaseCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
             addToBot(new ApplyPowerAction(monster, p, new StrengthPower(monster, -magicNumber), -magicNumber));
-            addToBot(new ApplyPowerAction(monster, p, new GainStrengthPower(monster, magicNumber), magicNumber));
+            if (!monster.hasPower("Artifact")) {
+                addToBot(new ApplyPowerAction(monster, p, new GainStrengthPower(monster, magicNumber), magicNumber));
+            }
         }
         addToBot(new GainGoldAction(AbstractDungeon.floorNum));
     }

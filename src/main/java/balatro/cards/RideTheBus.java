@@ -21,7 +21,6 @@ public class RideTheBus extends BaseCard {
 
     private static final int DAMAGE = 4;
 
-
     private static final int MAGIC = 1;
     private static final int UPG_MAGIC = 1;
 
@@ -39,6 +38,20 @@ public class RideTheBus extends BaseCard {
 
     public void applyPowers() {
         super.applyPowers();
+        int extraDamage = 0;
+        for (AbstractCard c : AbstractDungeon.actionManager.cardsPlayedThisCombat) {
+            if (c.type != CardType.POWER) {
+                extraDamage += magicNumber;
+            } else {
+                extraDamage = 0;
+            }
+        }
+        damage += extraDamage;
+        isDamageModified = baseDamage != damage;
+    }
+
+    public void calculateCardDamage(AbstractMonster m) {
+        super.calculateCardDamage(m);
         int extraDamage = 0;
         for (AbstractCard c : AbstractDungeon.actionManager.cardsPlayedThisCombat) {
             if (c.type != CardType.POWER) {

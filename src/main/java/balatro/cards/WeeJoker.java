@@ -48,6 +48,7 @@ public class WeeJoker extends BaseCard {
         magicNumber = cost0Count;
         if (magicNumber > 0) {
             this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
+            isMagicNumberModified = true;
             initializeDescription();
         }
     }

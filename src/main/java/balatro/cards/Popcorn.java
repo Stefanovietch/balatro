@@ -42,7 +42,7 @@ public class Popcorn extends BaseCard {
     @Override
     public void applyPowers() {
         super.applyPowers();
-        damage -= GameActionManager.turn * magicNumber;
+        damage -= (GameActionManager.turn - 1) * magicNumber;
         if (damage < 0) {damage = 0;}
         isDamageModified = damage != baseDamage;
     }
@@ -50,7 +50,7 @@ public class Popcorn extends BaseCard {
     @Override
     public void calculateCardDamage(AbstractMonster m) {
         super.calculateCardDamage(m);
-        damage -= GameActionManager.turn * magicNumber;
+        damage -= (GameActionManager.turn - 1) * magicNumber;
         if (damage < 0) {damage = 0;}
         isDamageModified = damage != baseDamage;
     }

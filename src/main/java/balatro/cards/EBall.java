@@ -34,7 +34,9 @@ public class EBall extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(m,p,new StrengthPower(m,-magicNumber),-magicNumber));
-        addToBot(new ApplyPowerAction(m,p,new GainStrengthPower(m,magicNumber),magicNumber));
+        if (!m.hasPower("Artifact")) {
+            addToBot(new ApplyPowerAction(m,p,new GainStrengthPower(m,magicNumber),magicNumber));
+        }
         if (getChance()) {
             addToBot(new ObtainPotionAction(AbstractDungeon.returnRandomPotion(true)));
         }

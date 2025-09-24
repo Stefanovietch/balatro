@@ -222,7 +222,6 @@ public class baseDeck extends CustomPlayer {
         String[] DECKSTRING = CardCrawlGame.languagePack.getUIString(balatroMod.makeID(deck)).TEXT;
         String adjectiveName = DECKSTRING[2];
         String fullName = "the " + DECKSTRING[0];
-        this.name = NAMES[0] = fullName;
         this.title = NAMES[1] = fullName;
         AbstractDungeon.topPanel.setPlayerName();
         TEXT[2] = "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~\"Join~ ~us~ ~"+ adjectiveName +"~ ~one,~ ~and~ ~feel~ ~the~ ~warmth~ ~of~ ~the~ ~Spire.\"~";

@@ -194,7 +194,7 @@ public class balatroMod implements
 
         Texture badgeTexture = TextureLoader.getTexture(imagePath("badge.png"));
         BaseMod.registerModBadge(badgeTexture, info.Name, GeneralUtils.arrToString(info.Authors), info.Description, settingsPanel);
-
+        initializeSavedData();
     }
 
     /*----------Localization----------*/
@@ -336,6 +336,9 @@ public class balatroMod implements
 
     @Override
     public void receiveStartGame() {
+        if (CardCrawlGame.loadingSave && AbstractDungeon.player instanceof baseDeck) {
+            ((baseDeck) AbstractDungeon.player).setDeck(selectedDeck);
+        }
         if (!CardCrawlGame.loadingSave && AbstractDungeon.player instanceof baseDeck) {
             Data.resetData();
 

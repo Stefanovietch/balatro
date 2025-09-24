@@ -30,14 +30,17 @@ public class Campfire extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyPowers();
-        addToBot(new ApplyPowerAction(p, p, new StrengthPower(p,magicNumber),magicNumber));
+        if (magicNumber > 0) {
+            addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber), magicNumber));
+        }
     }
 
     public void applyPowers() {
         super.applyPowers();
-        magicNumber = baseMagicNumber;
-        magicNumber += Data.getRestSites();
-
+        magicNumber = Data.getRestSites();
+        if (magicNumber > 0) {
+            isMagicNumberModified = true;
+        }
     }
 
     @Override

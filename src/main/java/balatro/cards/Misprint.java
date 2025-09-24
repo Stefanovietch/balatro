@@ -30,7 +30,7 @@ public class Misprint extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageAction(m, new DamageInfo(p, aiRng.random(this.damage), DamageInfo.DamageType.NORMAL)));
+        addToBot(new DamageAction(m, new DamageInfo(p, aiRng.random(1, this.damage), DamageInfo.DamageType.NORMAL)));
     }
 
     @Override
