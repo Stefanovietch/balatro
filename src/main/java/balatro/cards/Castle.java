@@ -28,8 +28,8 @@ public class Castle extends BaseCard implements RandomType{
             Arrays.asList(CardType.ATTACK, CardType.SKILL, CardType.POWER);
 
     private static final int BLOCK = 5;
-    private static final int MAGIC = 3;
-    private static final int UPG_MAGIC = 2;
+    private static final int MAGIC = 2;
+    private static final int UPG_MAGIC = 1;
 
 
     public Castle() {
@@ -43,12 +43,6 @@ public class Castle extends BaseCard implements RandomType{
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
        addToBot(new GainBlockAction(p, block));
-    }
-
-    @Override
-    public void upgrade() {
-        super.upgrade();
-        setRandomType();
     }
 
     public void triggerOnOtherCardDiscarded(AbstractCard c) {

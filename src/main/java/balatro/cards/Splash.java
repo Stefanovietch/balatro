@@ -40,7 +40,7 @@ public class Splash extends BaseCard {
             }
         }
         if (!debuffs.isEmpty()) {
-            AbstractPower power = debuffs.get(aiRng.random(p.powers.size() - 1));
+            AbstractPower power = debuffs.get(aiRng.random(debuffs.size() - 1));
             addToBot(new RemoveSpecificPowerAction(p,p,power));
         }
     }

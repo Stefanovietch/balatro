@@ -38,12 +38,6 @@ public class TheIdol extends BaseCard implements RandomType{
     }
 
     @Override
-    public void upgrade() {
-        super.upgrade();
-        setRandomType();
-    }
-
-    @Override
     public AbstractCard makeCopy() { //Optional
         return new TheIdol();
     }
