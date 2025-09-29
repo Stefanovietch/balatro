@@ -30,8 +30,8 @@ public class CardSharp extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        calculateCardDamage(m);
-        applyPowers();
+        //calculateCardDamage(m);
+        //applyPowers();
         addToBot(new DamageAllEnemiesAction(p, damage, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
     }
 

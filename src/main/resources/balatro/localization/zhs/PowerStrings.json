@@ -1,5 +1,5 @@
 {
-  "${modID}:LoyaltyCard": {
+  "Balatro:LoyaltyCard": {
     "NAME": "积分卡",
     "DESCRIPTIONS": [
       "你的下一张牌造成 #b4 倍伤害",
@@ -8,42 +8,42 @@
       "张牌造成 #b4 倍伤害。"
     ]
   },
-  "${modID}:OopsAll6s": {
+  "Balatro:OopsAll6s": {
     "NAME": "六六大顺",
     "DESCRIPTIONS": [
       "使你的所有概率翻倍。（#b",
       " 倍）"
     ]
   },
-  "${modID}:Pareidolia": {
+  "Balatro:Pareidolia": {
     "NAME": "幻视",
     "DESCRIPTIONS": [
       "所有卡牌都被视为 #y能力牌。"
     ]
   },
-  "${modID}:ScaryFace": {
+  "Balatro:ScaryFace": {
     "NAME": "恐怖面孔",
     "DESCRIPTIONS": [
       "每当你打出一张 #y能力牌时，获得 #b",
-      " #y格挡。"
+      " #y 格挡 。"
     ]
   },
-  "${modID}:Egg": {
+  "Balatro:Egg": {
     "NAME": "鸡蛋",
     "DESCRIPTIONS": [
       "如果你没有受到伤害，在回合结束时获得 #b",
       " #y金币。"
     ]
   },
-  "${modID}:BusinessCard": {
+  "Balatro:BusinessCard": {
     "NAME": "名片",
     "DESCRIPTIONS": [
-      "每当你打出一张 #y能力牌时，你有 #b",
-      " 的 #b4 #y几率获得 #b",
+      "每当你打出一张 #y能力牌时，你有 #b4",
+      " 分之 #b #y几率获得 #b",
       " #y金币。"
     ]
   },
-  "${modID}:ToDoList": {
+  "Balatro:ToDoList": {
     "NAME": "待办清单",
     "DESCRIPTIONS": [
       "每当 ",
@@ -51,14 +51,14 @@
       " #y金币。在每个回合结束时改变。"
     ]
   },
-  "${modID}:Cavendish": {
+  "Balatro:Cavendish": {
     "NAME": "卡文迪什",
     "DESCRIPTIONS": [
       "你的下一张 #y攻击牌造成 #b",
       " 倍的伤害。"
     ]
   },
-  "${modID}:Photograph": {
+  "Balatro:Photograph": {
     "NAME": "照片",
     "DESCRIPTIONS": [
       "你的下一张 #y能力牌被使用两次",
@@ -66,7 +66,7 @@
       " 张 #y能力牌被使用两次。"
     ]
   },
-  "${modID}:Juggler": {
+  "Balatro:Juggler": {
     "NAME": "杂耍师",
     "DESCRIPTIONS": [
       "在你的回合开始时，额外抽 #b",
@@ -74,43 +74,43 @@
       " 张额外的牌。"
     ]
   },
-  "${modID}:BaseballCard": {
+  "Balatro:BaseballCard": {
     "NAME": "棒球卡",
     "DESCRIPTIONS": [
       "所有 #y罕见牌的伤害提高 #bx",
       "。"
     ]
   },
-  "${modID}:TradingCard": {
+  "Balatro:TradingCard": {
     "NAME": "交易卡",
     "DESCRIPTIONS": [
-      "在你的回合开始时，消耗一张牌并获得 #b",
+      "在你的回合开始时， 消耗 一张牌并获得 #b",
       " 金币。"
     ]
   },
-  "${modID}:WalkieTalkie": {
+  "Balatro:WalkieTalkie": {
     "NAME": "对讲机",
     "DESCRIPTIONS": [
       "当打出一张费用为 #b1 的牌时，获得 #b",
-      " #y格挡并对一个随机敌人造成 #b",
+      " #y 格挡 并对一个随机敌人造成 #b",
       " 点伤害。"
     ]
   },
-  "${modID}:Seltzer": {
+  "Balatro:Seltzer": {
     "NAME": "苏打水",
     "DESCRIPTIONS": [
-      "重播下一张牌",
-      "重播下 #b",
-      " 张牌。"
+      "下一张牌会打出两次",
+      "下 #b",
+      " 张牌会打出两次。"
     ]
   },
-  "${modID}:MrBones": {
+  "Balatro:MrBones": {
     "NAME": "骷髅先生",
     "DESCRIPTIONS": [
       "受到致命伤害时，以 25% 的生命值复活，然后将其从你的牌组中移除。"
     ]
   },
-  "${modID}:Astronomer": {
+  "Balatro:Astronomer": {
     "NAME": "天文学家",
     "DESCRIPTIONS": [
       "你的下一张升级后的牌费用为 #b0。",
@@ -118,23 +118,23 @@
       " 张升级后的牌费用为 #b0。"
     ]
   },
-  "${modID}:Triboulet": {
+  "Balatro:Triboulet": {
     "NAME": "特里布莱",
     "DESCRIPTIONS": [
-      "使所有 2 费牌的伤害和格挡翻倍。"
+      "使所有 2 费牌的伤害和 格挡 翻倍。"
     ]
   },
-  "${modID}:LuckyCat": {
+  "Balatro:LuckyCat": {
     "NAME": "招财猫",
     "DESCRIPTIONS": [
       "在你的回合开始时，有 #b",
       " 的 #b4 #y几率获得 #b",
-      " #y格挡，并且有 #b",
-      " 的 #b4 #y几率对所有敌人造成 #b",
+      " #y 格挡 ，并且有 #b4",
+      " 分之 #b #y几率对所有敌人造成 #b",
       " 点伤害。"
     ]
   },
-  "${modID}:Arrowhead": {
+  "Balatro:Arrowhead": {
     "NAME": "箭头",
     "DESCRIPTIONS": [
       "在你的回合开始时，将 #b",
@@ -142,116 +142,116 @@
       " 张牌。"
     ]
   },
-  "${modID}:SeeingDouble": {
+  "Balatro:SeeingDouble": {
     "NAME": "重影",
     "DESCRIPTIONS": [
       "造成双倍伤害。"
     ]
   },
-  "${modID}:TheHook": {
+  "Balatro:TheHook": {
     "NAME": "钩子",
     "DESCRIPTIONS": [
       "在你的回合开始时，弃掉 #b2 张牌。"
     ]
   },
-  "${modID}:TheOx": {
+  "Balatro:TheOx": {
     "NAME": "公牛",
     "DESCRIPTIONS": [
       "在你的回合开始时，使一张手牌的 #y金币设置为 #b0。"
     ]
   },
-  "${modID}:TheHouse": {
+  "Balatro:TheHouse": {
     "NAME": "房屋",
     "DESCRIPTIONS": [
       "在本回合中，你第一手牌中的所有牌的费用为 #b3。"
     ]
   },
-  "${modID}:TheWall": {
+  "Balatro:TheWall": {
     "NAME": "围墙",
     "DESCRIPTIONS": [
       "生命值翻倍。"
     ]
   },
-  "${modID}:TheWheel": {
+  "Balatro:TheWheel": {
     "NAME": "车轮",
     "DESCRIPTIONS": [
       "抽牌时，有 #b",
       " 的 #b7 #y几率将其费用设置为 #b3。"
     ]
   },
-  "${modID}:TheArm": {
+  "Balatro:TheArm": {
     "NAME": "手臂",
     "DESCRIPTIONS": [
       "在本场战斗中，你的升级牌费用增加 #b1。"
     ]
   },
-  "${modID}:TheClub": {
+  "Balatro:TheClub": {
     "NAME": "梅花",
     "DESCRIPTIONS": [
       "在你的回合结束时，将一张 #y伤口牌洗入你的抽牌堆。"
     ]
   },
-  "${modID}:TheFish": {
+  "Balatro:TheFish": {
     "NAME": "鱼",
     "DESCRIPTIONS": [
       "在你的回合中抽到的牌在本回合的费用为 #b3。"
     ]
   },
-  "${modID}:ThePsychic": {
+  "Balatro:ThePsychic": {
     "NAME": "灵媒",
     "DESCRIPTIONS": [
       "每个回合你最多只能打出 #b5 张牌。"
     ]
   },
-  "${modID}:TheGoad": {
+  "Balatro:TheGoad": {
     "NAME": "挑衅",
     "DESCRIPTIONS": [
       "在你的回合结束时，失去 #b2 #y生命值。"
     ]
   },
-  "${modID}:TheWater": {
+  "Balatro:TheWater": {
     "NAME": "水",
     "DESCRIPTIONS": [
       "你无法手动弃牌。"
     ]
   },
-  "${modID}:TheWindow": {
+  "Balatro:TheWindow": {
     "NAME": "窗口",
     "DESCRIPTIONS": [
       "具有 #b4 点荆棘。"
     ]
   },
-  "${modID}:TheManacle": {
+  "Balatro:TheManacle": {
     "NAME": "镣铐",
     "DESCRIPTIONS": [
       "每个回合你少抽 #b1 张牌。"
     ]
   },
-  "${modID}:TheEye": {
+  "Balatro:TheEye": {
     "NAME": "眼睛",
     "DESCRIPTIONS": [
       "你不能连续打出相同类型的牌。"
     ]
   },
-  "${modID}:TheMouth": {
+  "Balatro:TheMouth": {
     "NAME": "嘴巴",
     "DESCRIPTIONS": [
       "每个回合你只能打出两种类型的牌。"
     ]
   },
-  "${modID}:ThePlant": {
+  "Balatro:ThePlant": {
     "NAME": "植物",
     "DESCRIPTIONS": [
-      "所有 #y能力牌在你的回合结束时都会消耗。"
+      "所有 #y能力牌在你的回合结束时都会 消耗 。"
     ]
   },
-  "${modID}:TheSerpent": {
+  "Balatro:TheSerpent": {
     "NAME": "巨蟒",
     "DESCRIPTIONS": [
       "无法被施加Debuff。"
     ]
   },
-  "${modID}:TheNeedle": {
+  "Balatro:TheNeedle": {
     "NAME": "针",
     "DESCRIPTIONS": [
       "你将在 #b",
@@ -260,55 +260,55 @@
       "你还活着？？别担心，你仍然会在下个回合死亡。"
     ]
   },
-  "${modID}:TheHead": {
+  "Balatro:TheHead": {
     "NAME": "头部",
     "DESCRIPTIONS": [
       "在本回合中，你每打出一张牌，受到的伤害增加 #b10%。"
     ]
   },
-  "${modID}:TheTooth": {
+  "Balatro:TheTooth": {
     "NAME": "牙齿",
     "DESCRIPTIONS": [
       "每当你打出一张牌时，失去 #b10 #y金币。"
     ]
   },
-  "${modID}:TheFlint": {
+  "Balatro:TheFlint": {
     "NAME": "燧石",
     "DESCRIPTIONS": [
-      "你总是 #y虚弱和 #y易伤。"
+      "你总是被 #y虚弱 和 #y易伤 。"
     ]
   },
-  "${modID}:TheMark": {
+  "Balatro:TheMark": {
     "NAME": "标记",
     "DESCRIPTIONS": [
       "你所有的 #y能力牌费用为 #b3。"
     ]
   },
-  "${modID}:AmberAcorn": {
+  "Balatro:AmberAcorn": {
     "NAME": "琥珀之实",
     "DESCRIPTIONS": [
       "在你的回合结束时，将你的弃牌堆洗入你的抽牌堆。"
     ]
   },
-  "${modID}:VerdantLeaf": {
+  "Balatro:VerdantLeaf": {
     "NAME": "翠绿之叶",
     "DESCRIPTIONS": [
-      "在你的回合开始时，消耗一张牌。"
+      "在你的回合开始时， 消耗 一张牌。"
     ]
   },
-  "${modID}:VioletVessel": {
+  "Balatro:VioletVessel": {
     "NAME": "靛紫之杯",
     "DESCRIPTIONS": [
       "生命值变为三倍。"
     ]
   },
-  "${modID}:CrimsonHeart": {
+  "Balatro:CrimsonHeart": {
     "NAME": "绯红之心",
     "DESCRIPTIONS": [
       "在你的回合开始时，弃掉一张随机牌。"
     ]
   },
-  "${modID}:CeruleanBell": {
+  "Balatro:CeruleanBell": {
     "NAME": "蔚蓝之铃",
     "DESCRIPTIONS": [
       "在你的回合开始时，打出一张随机牌。"

@@ -1,5 +1,5 @@
 {
-  "${modID}:PotionID": {
+  "Balatro:PotionID": {
     "NAME": "Some Kind of Potion",
     "DESCRIPTIONS": [
       "Little",

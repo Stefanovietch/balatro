@@ -32,7 +32,7 @@ public class Erosion extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyPowers();
+        //applyPowers();
         for (int i = 0; i < magicNumber + 1; i++) {
             addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL)));
         }

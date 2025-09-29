@@ -33,10 +33,22 @@ public class Clairvoyance extends BaseRelic{
 
     public ArrayList<AbstractCard> getColorlessRewardCards() {
         ArrayList<AbstractCard> retVal = new ArrayList<>();
-        for (int numCards = 3, i = 0; i < numCards; i++) {
-            AbstractCard card = AbstractDungeon.getColorlessCardFromPool(AbstractCard.CardRarity.RARE).makeCopy();
-            retVal.add(card);
+
+        AbstractCard card1 = AbstractDungeon.getColorlessCardFromPool(AbstractCard.CardRarity.RARE).makeCopy();
+        retVal.add(card1);
+
+        AbstractCard card2 = AbstractDungeon.getColorlessCardFromPool(AbstractCard.CardRarity.RARE).makeCopy();
+        while (card1 == card2) {
+            card2 = AbstractDungeon.getColorlessCardFromPool(AbstractCard.CardRarity.RARE).makeCopy();
         }
+        retVal.add(card2);
+
+        AbstractCard card3 = AbstractDungeon.getColorlessCardFromPool(AbstractCard.CardRarity.RARE).makeCopy();
+        while (card1 == card3 || card2 == card3) {
+            card3 = AbstractDungeon.getColorlessCardFromPool(AbstractCard.CardRarity.RARE).makeCopy();
+        }
+        retVal.add(card3);
+
         return retVal;
     }
 }

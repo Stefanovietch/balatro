@@ -1,5 +1,6 @@
 package balatro.actions;
 
+import balatro.balatroMod;
 import balatro.cards.BaseCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -36,17 +37,18 @@ public class SpareTrousersAction extends AbstractGameAction {
     public void update() {
         ArrayList<AbstractMonster> availableTargets = new ArrayList<>();
         for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
-            if (!monster.isDead || !monster.isDying) {
+            if (!(monster.isDead || monster.isDying || monster.halfDead)) {
                 availableTargets.add(monster);
             }
         }
-        int fatalHits = 0;
+        balatroMod.logger.info("available targets:{}", availableTargets.size());
+        boolean fatal = false;
         if (availableTargets.size() <= 2) {
             for (AbstractMonster m : availableTargets) {
                 m.damage(this.info);
                 if ((m.isDying || m.currentHealth <= 0) && !m.halfDead &&
                         !m.hasPower("Minion")) {
-                    fatalHits++;
+                    fatal = true;
                 }
             }
         } else {
@@ -58,16 +60,16 @@ public class SpareTrousersAction extends AbstractGameAction {
             m1.damage(this.info);
             if ((m1.isDying || m1.currentHealth <= 0) && !m1.halfDead &&
                     !m1.hasPower("Minion")) {
-                fatalHits++;
+                fatal = true;
             }
             m2.damage(this.info);
             if ((m2.isDying || m2.currentHealth <= 0) && !m2.halfDead &&
                     !m2.hasPower("Minion")) {
-                fatalHits++;
+                fatal = true;
             }
         }
 
-        if (fatalHits == 2) {
+        if (fatal) {
             for (AbstractCard c : p.masterDeck.group) {
                 if (!c.uuid.equals(this.uuid))
                     continue;

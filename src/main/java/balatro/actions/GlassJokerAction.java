@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
+import java.util.ArrayList;
+
 public class GlassJokerAction extends AbstractGameAction {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("DiscardAction");
 
@@ -30,9 +32,13 @@ public class GlassJokerAction extends AbstractGameAction {
     }
     @Override
     public void update() {
-        int temp = (AbstractDungeon.getCurrRoom()).monsters.monsters.size();
-        for (int i = 0; i < temp; i++) {
-            AbstractMonster monster = (AbstractDungeon.getCurrRoom()).monsters.monsters.get(i);
+        ArrayList<AbstractMonster> availableTargets = new ArrayList<>();
+        for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+            if (!(monster.isDead || monster.isDying || monster.halfDead)) {
+                availableTargets.add(monster);
+            }
+        }
+        for (AbstractMonster monster : availableTargets) {
             AbstractDungeon.effectList.add(new FlashAtkImgEffect(monster.hb.cX, monster.hb.cY, AbstractGameAction.AttackEffect.NONE));
             monster.damage(this.info);
             if ((monster.isDying || monster.currentHealth <= 0) && !monster.halfDead &&

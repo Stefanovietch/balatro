@@ -40,11 +40,12 @@ public class AncientJoker extends BaseCard implements RandomType{
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyPowers();
-        calculateCardDamage(m);
+        //applyPowers();
+        //calculateCardDamage(m);
         addToBot(new DamageAction(m,new DamageInfo(p,damage, DamageInfo.DamageType.NORMAL)));
     }
 
+    @Override
     public void applyPowers() {
         super.applyPowers();
         float actualDamage = damage;

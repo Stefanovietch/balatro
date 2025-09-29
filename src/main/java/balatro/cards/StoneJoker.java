@@ -31,7 +31,7 @@ public class StoneJoker extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyPowers();
+        //applyPowers();
         for (int i = 0; i < safetyCount; i++) {
             addToBot(new GainBlockAction(p, p, block));
         }

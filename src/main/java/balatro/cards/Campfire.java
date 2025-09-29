@@ -29,7 +29,7 @@ public class Campfire extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyPowers();
+        //applyPowers();
         if (magicNumber > 0) {
             addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber), magicNumber));
         }

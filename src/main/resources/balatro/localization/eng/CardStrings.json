@@ -383,7 +383,7 @@
   },
   "${modID}:SpareTrousers": {
     "NAME": "Spare Trousers",
-    "DESCRIPTION": "Deal !D! damage to two random enemies. Permanently increased by !M! if both are Fatal."
+    "DESCRIPTION": "Deal !D! damage to two random enemies. Permanently increased by !M! if either is Fatal."
   },
   "${modID}:AncientJoker": {
     "NAME": "Ancient Joker",

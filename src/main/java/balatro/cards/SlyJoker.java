@@ -18,7 +18,7 @@ public class SlyJoker extends BaseCard {
     );
 
     private static final int BLOCK = 5;
-    private static final int UPG_BLOCK = 2;
+    private static final int UPG_BLOCK = 3;
 
     public SlyJoker() {
         super(ID, info); //Pass the required information to the BaseCard constructor.

@@ -32,7 +32,7 @@ public class RideTheBus extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyPowers();
+        //applyPowers();
         addToBot(new DamageAction(m, new DamageInfo(p, damage-magicNumber, DamageInfo.DamageType.NORMAL)));
     }
 

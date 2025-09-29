@@ -28,7 +28,7 @@ public class Throwback extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyPowers();
+        //applyPowers();
         if (magicNumber > 0) {
             addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, magicNumber, false), magicNumber));
             addToBot(new ApplyPowerAction(m, p, new WeakPower(m, magicNumber, false), magicNumber));

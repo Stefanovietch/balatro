@@ -30,7 +30,7 @@ public class WeeJoker extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyPowers();
+        //applyPowers();
         for (int i = 0; i < magicNumber; i++) {
             addToBot(new GainBlockAction(p, block));
         }

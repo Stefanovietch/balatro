@@ -32,8 +32,8 @@ public class Yorick extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        calculateCardDamage(m);
-        applyPowers();
+        //calculateCardDamage(m);
+        //applyPowers();
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL)));
     }
 

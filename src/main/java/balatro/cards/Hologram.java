@@ -30,8 +30,8 @@ public class Hologram extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyPowers();
-        calculateCardDamage(m);
+        //applyPowers();
+        //calculateCardDamage(m);
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL)));
     }
 
