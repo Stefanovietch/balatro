@@ -1,7 +1,9 @@
 package balatro.relics;
 
+import balatro.balatroMod;
 import balatro.character.baseDeck;
 import basemod.ReflectionHacks;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.relics.ClickableRelic;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -9,6 +11,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rooms.ShopRoom;
 import com.megacrit.cardcrawl.shop.ShopScreen;
+import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -67,25 +70,25 @@ public class RerollGlut extends BaseRelic implements ClickableRelic {
             ReflectionHacks.privateMethod(ShopScreen.class,"initCards").invoke(shopScreen);
 
             for (AbstractCard card : shopScreen.coloredCards) {
-                card.price = getPrice(card);
+                setPrice(card);
             }
+
             for (AbstractCard card : shopScreen.colorlessCards) {
-                card.price = getPrice(card);
+                setPrice(card);
             }
-            AbstractDungeon.shopScreen.update();
 
             AbstractDungeon.player.loseGold(50);
         }
     }
-
-    private int getPrice(AbstractCard card) {
+    private void setPrice(AbstractCard card) {
         float tmpPrice = AbstractCard.getPrice(card.rarity) * AbstractDungeon.merchantRng.random(0.9F, 1.1F);
         if (card.color == AbstractCard.CardColor.COLORLESS)
             tmpPrice *= 1.2F;
         if (AbstractDungeon.player.hasRelic("The Courier"))
             tmpPrice *= 0.8F;
-        if (AbstractDungeon.player.hasRelic("Liquidation"))
+        if (AbstractDungeon.player.hasRelic("Balatro:Liquidation"))
             tmpPrice *= 0.5F;
-        return (int)tmpPrice;
+        card.price = (int)tmpPrice;
     }
+
 }
