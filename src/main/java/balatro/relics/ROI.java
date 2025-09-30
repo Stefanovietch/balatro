@@ -1,6 +1,7 @@
 package balatro.relics;
 
 import balatro.character.baseDeck;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 import static balatro.balatroMod.makeID;
 
@@ -12,6 +13,15 @@ public class ROI extends BaseRelic{
 
     public ROI() {
         super(ID, NAME, baseDeck.Enums.CARD_COLOR, RARITY, SOUND);
+    }
+
+    public void onEnterRoom(AbstractRoom room) {
+        if (room instanceof com.megacrit.cardcrawl.rooms.ShopRoom) {
+            flash();
+            this.pulse = true;
+        } else {
+            this.pulse = false;
+        }
     }
 
     public String getUpdatedDescription() {

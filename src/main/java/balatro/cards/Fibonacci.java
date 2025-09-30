@@ -2,6 +2,7 @@ package balatro.cards;
 
 import balatro.character.baseDeck;
 import balatro.util.CardStats;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -43,7 +44,19 @@ public class Fibonacci extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageAction(m, new DamageInfo(p, customVar("fibonacci_damage"), DamageInfo.DamageType.NORMAL)));
+        AbstractGameAction.AttackEffect attackEffect;
+        if (customVar("fibonacci_damage") < 3) {
+            attackEffect = AbstractGameAction.AttackEffect.SLASH_VERTICAL;
+        } else if (customVar("fibonacci_damage") < 9) {
+            attackEffect = AbstractGameAction.AttackEffect.SLASH_HEAVY;
+        } else if (customVar("fibonacci_damage") < 22) {
+            attackEffect = AbstractGameAction.AttackEffect.BLUNT_LIGHT;
+        } else if (customVar("fibonacci_damage") < 60) {
+            attackEffect = AbstractGameAction.AttackEffect.BLUNT_HEAVY;
+        } else {
+            attackEffect = AbstractGameAction.AttackEffect.SMASH;
+        }
+        addToBot(new DamageAction(m, new DamageInfo(p, customVar("fibonacci_damage"), DamageInfo.DamageType.NORMAL), attackEffect));
 
     }
 

@@ -2,6 +2,7 @@ package balatro.cards;
 
 import balatro.character.baseDeck;
 import balatro.util.CardStats;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -29,7 +30,7 @@ public class AbstractJoker extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (AbstractCard card : p.hand.group) {
-            addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL)));
+            addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         }
     }
 

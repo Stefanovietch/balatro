@@ -1,22 +1,26 @@
 package balatro;
 
-import balatro.cards.*;
+import balatro.cards.BaseCard;
+import balatro.cards.RandomType;
+import balatro.character.baseDeck;
 import balatro.events.JackInTheBoxEvent;
 import balatro.events.SpectralMerchantEvent;
 import balatro.events.WeirdJokerEvent;
 import balatro.powers.*;
-import balatro.ui.GoldPerCombat;
 import balatro.relics.*;
 import balatro.ui.DeckSelectionUI;
+import balatro.ui.GoldPerCombat;
 import balatro.util.Data;
-import basemod.*;
-import basemod.abstracts.CustomSavable;
-import basemod.eventUtil.AddEventParams;
-import basemod.interfaces.*;
 import balatro.util.GeneralUtils;
 import balatro.util.KeywordInfo;
 import balatro.util.TextureLoader;
-import balatro.character.baseDeck;
+import basemod.AutoAdd;
+import basemod.BaseMod;
+import basemod.ModLabeledToggleButton;
+import basemod.ModPanel;
+import basemod.abstracts.CustomSavable;
+import basemod.eventUtil.AddEventParams;
+import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -379,6 +383,7 @@ public class balatroMod implements
             } else if (Objects.equals(deckName, "erraticDeck")) {
                 relicID = Shattered.ID;
             }
+
             AbstractDungeon.relicsToRemoveOnStart.add(StrikeDummy.ID);
             AbstractDungeon.relicsToRemoveOnStart.add(QuestionCard.ID);
             AbstractDungeon.relicsToRemoveOnStart.add(MembershipCard.ID);

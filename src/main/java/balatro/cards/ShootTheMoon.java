@@ -2,6 +2,7 @@ package balatro.cards;
 
 import balatro.character.baseDeck;
 import balatro.util.CardStats;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -19,7 +20,7 @@ public class ShootTheMoon extends BaseCard {
             1 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
 
-    private static final int DAMAGE = 5;
+    private static final int DAMAGE = 6;
     private static final int UPG_DAMAGE = 2;
 
     public ShootTheMoon() {
@@ -31,7 +32,7 @@ public class ShootTheMoon extends BaseCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         for(AbstractCard c : AbstractDungeon.player.hand.group) {
             if (c.type.equals(CardType.SKILL)) {
-                addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL)));
+                addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
             }
         }
     }

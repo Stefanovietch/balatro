@@ -5,9 +5,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import static balatro.balatroMod.makeID;
 
 public class TheToothPower extends BlindPower{

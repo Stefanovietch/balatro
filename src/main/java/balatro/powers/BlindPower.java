@@ -2,13 +2,11 @@ package balatro.powers;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.random.Random;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.megacrit.cardcrawl.core.Settings.seed;
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.aiRng;
 
 public abstract class BlindPower extends BasePower{

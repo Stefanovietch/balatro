@@ -2,6 +2,7 @@ package balatro.cards;
 
 import balatro.character.baseDeck;
 import balatro.util.CardStats;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -34,7 +35,7 @@ public class EvenSteven extends BaseCard {
         ArrayList<AbstractCard> cards = AbstractDungeon.actionManager.cardsPlayedThisTurn;
         for (AbstractCard card : cards) {
             if (card.costForTurn % 2 == 0) {
-                addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL)));
+                addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
             }
         }
 

@@ -1,6 +1,5 @@
 package balatro.patches;
 
-import balatro.balatroMod;
 import balatro.powers.TheEyePower;
 import balatro.powers.TheMouthPower;
 import balatro.powers.ThePsychicPower;

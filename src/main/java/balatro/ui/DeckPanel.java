@@ -1,6 +1,5 @@
 package balatro.ui;
 
-import balatro.character.baseDeck;
 import balatro.ui.decks.ClickableDeck;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.core.Settings;

@@ -1,14 +1,8 @@
 package balatro.patches;
 
-import com.evacipated.cardcrawl.modthespire.lib.*;
-import com.evacipated.cardcrawl.modthespire.patcher.PatchingException;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePatch2;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.shop.ShopScreen;
-import com.megacrit.cardcrawl.shop.StoreRelic;
-import javassist.CannotCompileException;
-import javassist.CtBehavior;
-
-import java.util.ArrayList;
 
 import static balatro.util.GeneralUtils.hasRelic;
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.shopScreen;

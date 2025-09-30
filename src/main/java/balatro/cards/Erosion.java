@@ -1,14 +1,13 @@
 package balatro.cards;
 
-import balatro.balatroMod;
 import balatro.character.baseDeck;
 import balatro.util.CardStats;
 import balatro.util.Data;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class Erosion extends BaseCard {
@@ -34,7 +33,7 @@ public class Erosion extends BaseCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         //applyPowers();
         for (int i = 0; i < magicNumber + 1; i++) {
-            addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL)));
+            addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         }
     }
 

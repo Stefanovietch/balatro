@@ -20,8 +20,8 @@ public class MysticSummit extends BaseCard {
             1 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
 
-    private static final int DAMAGE = 20;
-    private static final int UPG_DAMAGE = 5;
+    private static final int DAMAGE = 25;
+    private static final int UPG_DAMAGE = 10;
 
     public MysticSummit() {
         super(ID, info); //Pass the required information to the BaseCard constructor.

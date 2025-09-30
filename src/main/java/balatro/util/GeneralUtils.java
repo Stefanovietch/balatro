@@ -1,12 +1,8 @@
 package balatro.util;
 
-import balatro.cards.*;
-import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-
-import static basemod.BaseMod.logger;
 
 public class GeneralUtils {
     public static String arrToString(Object[] arr) {

@@ -1,11 +1,9 @@
 package balatro.ui.decks;
 
-import balatro.character.baseDeck;
+import balatro.balatroMod;
 import balatro.ui.DeckPanel;
 import balatro.util.TextureLoader;
 import basemod.ClickableUIElement;
-import balatro.balatroMod;
-
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;

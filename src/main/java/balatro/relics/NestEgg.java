@@ -1,10 +1,8 @@
 package balatro.relics;
 
 import balatro.character.baseDeck;
-import com.megacrit.cardcrawl.actions.common.GainGoldAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 import static balatro.balatroMod.makeID;
 

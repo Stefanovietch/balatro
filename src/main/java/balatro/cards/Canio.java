@@ -3,6 +3,7 @@ package balatro.cards;
 import balatro.character.baseDeck;
 import balatro.patches.LegendaryPatch;
 import balatro.util.CardStats;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -32,7 +33,7 @@ public class Canio extends BaseCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         //calculateCardDamage(m);
         //applyPowers();
-        addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL)));
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SMASH));
     }
 
     @Override

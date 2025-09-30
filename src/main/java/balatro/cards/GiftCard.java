@@ -8,9 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
-import com.megacrit.cardcrawl.rewards.RewardItem;
 
-import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.cardRng;
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.treasureRng;
 
 public class GiftCard extends BaseCard {

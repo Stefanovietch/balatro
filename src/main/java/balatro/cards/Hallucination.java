@@ -19,7 +19,7 @@ public class Hallucination extends BaseCard {
             1 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
 
-    private static final int MAGIC = 2;
+    private static final int MAGIC = 1;
     private static final int UPG_MAGIC = 1;
 
     public Hallucination() {

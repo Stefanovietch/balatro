@@ -8,10 +8,8 @@ import com.megacrit.cardcrawl.random.Random;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Objects;
 
 import static balatro.balatroMod.makeID;
-import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.aiRng;
 
 public class ToDoListPower extends BasePower{
     public static final String POWER_ID = makeID("ToDoList");

@@ -1,8 +1,8 @@
 package balatro.patches;
 
-import balatro.balatroMod;
 import balatro.util.Data;
-import com.evacipated.cardcrawl.modthespire.lib.*;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePatch2;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 
 public class RemoveCardPatches {

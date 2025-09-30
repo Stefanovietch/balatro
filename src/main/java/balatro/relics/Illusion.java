@@ -21,6 +21,9 @@ public class Illusion extends BaseRelic{
     }
 
     public void onEquip() {
+        if (AbstractDungeon.getCurrRoom() instanceof com.megacrit.cardcrawl.rooms.ShopRoom) {
+            AbstractDungeon.getCurrRoom().rewards.clear();
+        }
         AbstractDungeon.getCurrRoom().addCardReward(getCardRewardWithRarity(AbstractCard.CardRarity.COMMON));
         AbstractDungeon.getCurrRoom().addCardReward(getCardRewardWithRarity(AbstractCard.CardRarity.UNCOMMON));
         AbstractDungeon.getCurrRoom().addCardReward(getCardRewardWithRarity(AbstractCard.CardRarity.RARE));

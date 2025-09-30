@@ -2,11 +2,8 @@ package balatro.ui;
 
 import balatro.balatroMod;
 import balatro.ui.decks.*;
-import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.helpers.FontHelper;
 
 public class DeckSelectionUI {
     private final DeckPanel deckPanel;
