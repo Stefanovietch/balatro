@@ -2,11 +2,14 @@ package balatro.cards;
 
 import balatro.character.baseDeck;
 import balatro.util.CardStats;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 public class DietCola extends BaseCard {
     public static final String ID = makeID(DietCola.class.getSimpleName());
@@ -32,8 +35,25 @@ public class DietCola extends BaseCard {
     @Override
     public void onRemoveFromMasterDeck() {
         super.onRemoveFromMasterDeck();
-        AbstractDungeon.returnRandomScreenlessRelic(AbstractRelic.RelicTier.COMMON)
-                .instantObtain(AbstractDungeon.player,AbstractDungeon.player.relics.size(),true);
+        AbstractDungeon.effectsQueue.add(new AbstractGameEffect() {
+            @Override
+            public void update() {
+                AbstractDungeon.returnRandomScreenlessRelic(AbstractRelic.RelicTier.COMMON)
+                        .instantObtain(AbstractDungeon.player,AbstractDungeon.player.relics.size(),true);
+                isDone = true;
+            }
+
+            @Override
+            public void render(SpriteBatch spriteBatch) {
+
+            }
+
+            @Override
+            public void dispose() {
+
+            }
+        });
+
     }
 
     @Override
