@@ -29,7 +29,7 @@ public class IceCream extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //applyPowers();
+        applyPowers();
         addToBot(new GainBlockAction(p, p, block + counterSelfReduction));
     }
 

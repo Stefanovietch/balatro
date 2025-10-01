@@ -22,7 +22,7 @@ public class Liquidation extends BaseRelic{
         if (AbstractDungeon.getCurrRoom() instanceof com.megacrit.cardcrawl.rooms.ShopRoom) {
             flash();
             this.pulse = true;
-            AbstractDungeon.shopScreen.update();
+            AbstractDungeon.shopScreen.applyDiscount(0.5F,true);
         }
     }
 
