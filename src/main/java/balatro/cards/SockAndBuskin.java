@@ -1,11 +1,15 @@
 package balatro.cards;
 
 import balatro.character.baseDeck;
+import balatro.powers.JugglerPower;
 import balatro.util.CardStats;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.blue.MachineLearning;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.DrawPower;
 
 public class SockAndBuskin extends BaseCard {
     public static final String ID = makeID(SockAndBuskin.class.getSimpleName());
@@ -29,6 +33,9 @@ public class SockAndBuskin extends BaseCard {
             power.atStartOfTurn();
             power.atEndOfTurn(true);
             power.atEndOfRound();
+            if (power instanceof JugglerPower || power instanceof DrawPower) {
+                addToBot(new DrawCardAction(power.amount));
+            }
         }
     }
 
