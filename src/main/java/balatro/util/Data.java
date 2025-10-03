@@ -1,13 +1,18 @@
 package balatro.util;
 
 import balatro.balatroMod;
+import balatro.powers.BlindPower;
+import com.badlogic.gdx.utils.Array;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Data {
     public static Map<String, Integer> savedData = new HashMap<String,Integer>();
     public static Map<String, Integer> savedDataInBattle = new HashMap<String,Integer>();
+    public static List<BlindPower.BlindType> bossBlinds = new ArrayList<BlindPower.BlindType>();
 
     static {
         savedData.put("PotionsUsed", 0);
@@ -42,7 +47,6 @@ public class Data {
         savedData.put("RestSites", 0);
         savedData.put("MaxGoldCombat", 200);
         savedData.put("RemovedCards", 0);
-
     }
     public static void setData(Map<String, Integer> map) {
         savedData.put("PotionsUsed", map.get("PotionsUsed"));
@@ -111,11 +115,24 @@ public class Data {
 
     }
 
+    public static List<BlindPower.BlindType> getBossBlinds() {
+        return bossBlinds;
+    }
+    public static void setBossBlinds(List<BlindPower.BlindType> bb) {
+        bossBlinds = bb;
+    }
+    public static void useBossBlind(BlindPower.BlindType blind) {
+        bossBlinds.add(blind);
+    }
+    public static void resetBossBlind() {
+        bossBlinds.clear();
+    }
+
+
 
     public static void setMaxGoldCombat(int amount) {
         savedData.put("MaxGoldCombat", amount);
     }
-
 
     public static void resetRestSites() {
         savedData.put("RestSites", 0);

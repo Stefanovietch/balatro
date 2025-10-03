@@ -55,6 +55,7 @@ import org.apache.logging.log4j.Logger;
 import org.scannotation.AnnotationDB;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
@@ -345,6 +346,7 @@ public class balatroMod implements
         }
         if (!CardCrawlGame.loadingSave && AbstractDungeon.player instanceof baseDeck) {
             Data.resetData();
+            Data.resetBossBlind();
 
             String deckName = balatroMod.deckUI.selectedDeck;
             ((baseDeck) AbstractDungeon.player).setDeck(deckName);
@@ -409,6 +411,22 @@ public class balatroMod implements
             public void onLoad(Map<String, Integer> dataMap) {
                 if (dataMap != null) {
                     Data.setData(dataMap);
+                }
+            }
+        });
+        BaseMod.addSaveField("BossBlinds", new CustomSavable<List<BlindPower.BlindType>>() {
+            @Override
+            public Type savedType() {
+                return new TypeToken<List<BlindPower.BlindType>>(){}.getType();
+            }
+            @Override
+            public List<BlindPower.BlindType> onSave() {
+                return Data.getBossBlinds();
+            }
+            @Override
+            public void onLoad(List<BlindPower.BlindType> dataMap) {
+                if (dataMap != null) {
+                    Data.setBossBlinds(dataMap);
                 }
             }
         });
@@ -514,6 +532,10 @@ public class balatroMod implements
                 }
                 if (m.type == AbstractMonster.EnemyType.BOSS) {
                     BlindPower.BlindType newBlindIndex = BlindPower.BlindType.randomBossType();
+                    while (Data.getBossBlinds().contains(newBlindIndex) || (Objects.equals(m.name, "Corrupt Heart")) && newBlindIndex == BlindPower.BlindType.VIOLET_VESSEL) {
+                        newBlindIndex = BlindPower.BlindType.randomBossType();
+                    }
+                    Data.useBossBlind(newBlindIndex);
                     switch (newBlindIndex) {
                         case AMBER_ACORN:
                             m.addToBot(new ApplyPowerAction(m, m, new AmberAcornPower(m)));

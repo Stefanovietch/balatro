@@ -3,6 +3,7 @@ package balatro.patches;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.evacipated.cardcrawl.modthespire.patcher.PatchingException;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import javassist.CannotCompileException;
 import javassist.CtBehavior;
@@ -35,7 +36,7 @@ public class UpgradeAfterPlayedPatches {
                 // of matcher that matches a method call based on the type of the calling
                 // object and the name of the method being called. Here you can see that
                 // we're expecting the `end` method to be called on a `SpireBatch`
-                Matcher finalMatcher = new Matcher.MethodCallMatcher(AbstractCard.class, "use");
+                Matcher finalMatcher = new Matcher.MethodCallMatcher(CardGroup.class, "removeCard");
                 // the `new ArrayList<Matcher>()` specifies the prerequisites before the line can be matched -
                 // the LineFinder will search for all the prerequisites in order before it will match the finalMatcher -
                 // since we didn't specify any prerequisites here, the LineFinder will simply find the first expression

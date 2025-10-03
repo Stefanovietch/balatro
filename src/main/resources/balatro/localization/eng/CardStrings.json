@@ -121,11 +121,11 @@
   },
   "${modID}:EvenSteven": {
     "NAME": "Even Steven",
-    "DESCRIPTION": "Deal !D! damage for each even cost card played."
+    "DESCRIPTION": "Deal !D! damage for each even cost card played this turn."
   },
   "${modID}:OddTodd": {
     "NAME": "Odd Todd",
-    "DESCRIPTION": "Gain !B! Block for each odd cost card played."
+    "DESCRIPTION": "Gain !B! Block for each odd cost card played this turn."
   },
   "${modID}:Scholar": {
     "NAME": "Scholar",
