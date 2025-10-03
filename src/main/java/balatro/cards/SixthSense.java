@@ -3,6 +3,8 @@ package balatro.cards;
 import balatro.character.baseDeck;
 import balatro.util.CardStats;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.curses.AscendersBane;
+import com.megacrit.cardcrawl.cards.curses.CurseOfTheBell;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -31,7 +33,7 @@ public class SixthSense extends BaseCard {
     @Override
     public void triggerOnOtherCardPlayed(AbstractCard c) {
         super.triggerOnOtherCardPlayed(c);
-        if(!cardPlayed) {
+        if(!cardPlayed && !(c instanceof CurseOfTheBell || c instanceof AscendersBane)) {
             c.purgeOnUse = true;
             for (AbstractCard card : AbstractDungeon.player.masterDeck.group) {
                 if (c.uuid.equals(card.uuid)) {

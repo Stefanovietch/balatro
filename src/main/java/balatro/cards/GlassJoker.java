@@ -36,7 +36,14 @@ public class GlassJoker extends BaseCard {
     public void applyPowers() {
         super.applyPowers();
         damage *= (int) (1F + 0.75F * Data.getRemovedCards());
-        isDamageModified = true;
+        isDamageModified = baseDamage != damage;
+    }
+
+    @Override
+    public void calculateCardDamage(AbstractMonster m) {
+        super.calculateCardDamage(m);
+        damage *= (int) (1F + 0.75F * Data.getRemovedCards());
+        isDamageModified = baseDamage != damage;
     }
 
     @Override

@@ -66,7 +66,7 @@
     "NAME": "Retrograde",
     "FLAVOR": "Quick check if everything is ready.",
     "DESCRIPTIONS": [
-      "#yUpgrade half of your deck."
+      "#yUpgrade half of your deck at start of combat."
     ]
   },
   "${modID}:ROI": {
@@ -167,7 +167,7 @@
     "NAME": "Tarot Tycoon",
     "FLAVOR": "Don't be too greedy.",
     "DESCRIPTIONS": [
-      "Whenever you obtain a potion, gain #b2 maximum Health."
+      "Whenever you obtain a potion, gain #b1 maximum Health."
     ]
   },
   "${modID}:PlanetTycoon": {

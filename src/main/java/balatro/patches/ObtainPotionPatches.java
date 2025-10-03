@@ -26,7 +26,7 @@ public class ObtainPotionPatches {
         public static void obtainPotion() {
             if (hasRelic("Balatro:TarotTycoon")) {
                 getRelic("Balatro:TarotTycoon").flash();
-                AbstractDungeon.player.increaseMaxHp(2, true);
+                AbstractDungeon.player.increaseMaxHp(1, true);
             }
         }
 
@@ -61,7 +61,7 @@ public class ObtainPotionPatches {
         public static void obtainPotion() {
             if (hasRelic("Balatro:TarotTycoon")) {
                 getRelic("Balatro:TarotTycoon").flash();
-                AbstractDungeon.player.increaseMaxHp(2, true);
+                AbstractDungeon.player.increaseMaxHp(1, true);
             }
         }
 

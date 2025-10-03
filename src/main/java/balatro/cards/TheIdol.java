@@ -51,17 +51,16 @@ public class TheIdol extends BaseCard implements RandomType{
         }
         if (CardCrawlGame.isInARun()) {
             if (!AbstractDungeon.player.drawPile.isEmpty()) {
-                ArrayList<CardType> availableCardTypes = new ArrayList<>();
-                ArrayList<Integer> availableCardCosts = new ArrayList<>();
+                ArrayList<AbstractCard> availableCards = new ArrayList<>();
                 for (AbstractCard card : AbstractDungeon.player.drawPile.group) {
                     if ((card.costForTurn == 1 || card.costForTurn == 2 || card.costForTurn == 3) && (card.type == CardType.ATTACK || card.type == CardType.SKILL || card.type == CardType.POWER)) {
-                        availableCardTypes.add(card.type);
-                        availableCardCosts.add(card.costForTurn);
+                        availableCards.add(card);
                     }
                 }
-                if (!availableCardTypes.isEmpty() && !availableCardCosts.isEmpty()) {
-                    cardCost = availableCardCosts.get(typeRandom.random(availableCardCosts.size() - 1));
-                    cardtype = availableCardTypes.get(typeRandom.random(availableCardTypes.size() - 1));
+                if (!availableCards.isEmpty()) {
+                    AbstractCard targetCard = availableCards.get(typeRandom.random(availableCards.size() - 1));
+                    cardCost = targetCard.cost;
+                    cardtype = targetCard.type;
 
                     String typeString;
                     if (cardtype == CardType.ATTACK) {

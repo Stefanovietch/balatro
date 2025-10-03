@@ -18,8 +18,8 @@ public class Banner extends BaseCard {
             2 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
 
-    private static final int BLOCK = 30;
-    private static final int UPG_BLOCK = 10;
+    private static final int BLOCK = 24;
+    private static final int UPG_BLOCK = 7;
 
     public Banner() {
         super(ID, info); //Pass the required information to the BaseCard constructor.

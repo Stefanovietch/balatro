@@ -71,7 +71,7 @@
   },
   "Balatro:EBall": {
     "NAME": "八号球",
-    "DESCRIPTION": "敌人失去 8  力量 一回合。 NL  !Balatro:chance! 分之 !Balatro:probability!  几率  获得一瓶随机药水。 NL  消耗 。"
+    "DESCRIPTION": "敌人失去 !M!  力量 一回合。 NL  !Balatro:chance! 分之 !Balatro:probability!  几率  获得一瓶随机药水。 NL  消耗 。"
   },
   "Balatro:Misprint": {
     "NAME": "印错小丑",

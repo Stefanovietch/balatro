@@ -34,7 +34,15 @@ public class Fibonacci extends BaseCard {
                 amount1 += amount2;
                 amount2 = temp;
             }
-            return amount1;
+            this.baseDamage = amount1;
+
+            if (m != null)
+                super.calculateCardDamage(m);
+            else
+                super.applyPowers();
+            isDamageModified = baseDamage != damage;
+
+            return damage;
         });
 
         setCustomVar("turn",VariableType.MAGIC,1,0);

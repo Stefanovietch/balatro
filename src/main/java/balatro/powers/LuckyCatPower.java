@@ -43,7 +43,7 @@ public class LuckyCatPower extends BasePower{
             addToBot(new GainBlockAction(this.owner, this.amount));
         }
         if (aiRng.randomBoolean(this.prob/4F)) {
-            addToBot(new DamageAllEnemiesAction(AbstractDungeon.player, this.amount, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+            addToBot(new DamageAllEnemiesAction(null, DamageInfo.createDamageMatrix(this.amount, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         }
     }
 
