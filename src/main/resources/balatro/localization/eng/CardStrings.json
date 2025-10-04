@@ -498,7 +498,7 @@
   },
   "${modID}:Blueprint": {
     "NAME": "Blueprint",
-    "DESCRIPTION": "Replay the last card played this combat."
+    "DESCRIPTION": "Replay the last card played this turn."
   },
   "${modID}:WeeJoker": {
     "NAME": "Wee Joker",

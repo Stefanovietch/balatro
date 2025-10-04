@@ -505,7 +505,7 @@
   },
   "Balatro:Blueprint": {
     "NAME": "蓝图",
-    "DESCRIPTION": "打出你在本场战斗中打出的上一张牌的复制。"
+    "DESCRIPTION": "打出你在本回合打出的第一张牌的复制。"
   },
   "Balatro:WeeJoker": {
     "NAME": "小小丑",

@@ -27,8 +27,8 @@ public class Blueprint extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() > 1) {
-            AbstractCard c = AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 2).makeSameInstanceOf();
+        if (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() > 1) {
+            AbstractCard c = AbstractDungeon.actionManager.cardsPlayedThisTurn.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 2).makeSameInstanceOf();
             AbstractDungeon.player.limbo.group.add(c);
             c.current_y = -200.0F * Settings.scale;
             c.purgeOnUse = true;
