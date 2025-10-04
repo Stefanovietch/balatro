@@ -28,7 +28,7 @@ public class Blueprint extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() > 1) {
-            AbstractCard c = AbstractDungeon.actionManager.cardsPlayedThisTurn.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 2).makeSameInstanceOf();
+            AbstractCard c = AbstractDungeon.actionManager.cardsPlayedThisTurn.get(AbstractDungeon.actionManager.cardsPlayedThisTurn.size() - 2).makeSameInstanceOf();
             AbstractDungeon.player.limbo.group.add(c);
             c.current_y = -200.0F * Settings.scale;
             c.purgeOnUse = true;
@@ -46,7 +46,7 @@ public class Blueprint extends BaseCard {
     }
 
     public void triggerOnGlowCheck() {
-        if (!AbstractDungeon.actionManager.cardsPlayedThisCombat.isEmpty()) {
+        if (!AbstractDungeon.actionManager.cardsPlayedThisTurn.isEmpty()) {
             this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
         } else {
            this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
@@ -55,7 +55,7 @@ public class Blueprint extends BaseCard {
 
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        if (AbstractDungeon.actionManager.cardsPlayedThisCombat.isEmpty()) {
+        if (AbstractDungeon.actionManager.cardsPlayedThisTurn.isEmpty()) {
             return false;
         }
         return super.canUse(p, m);
