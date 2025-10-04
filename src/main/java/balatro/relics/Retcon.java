@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
+import java.util.Objects;
+
 import static balatro.balatroMod.makeID;
 
 public class Retcon extends BaseRelic implements ClickableRelic {
@@ -128,7 +130,7 @@ public class Retcon extends BaseRelic implements ClickableRelic {
                     }
                 } else {
                     BlindPower.BlindType newBlindIndex = BlindPower.BlindType.randomBossType();
-                    while (blindIndex == newBlindIndex) {
+                    while (blindIndex == newBlindIndex || (Objects.equals(blindTarget.name, "Corrupt Heart") && newBlindIndex == BlindPower.BlindType.VIOLET_VESSEL)) {
                         newBlindIndex = BlindPower.BlindType.randomBossType();
                     }
                     switch (newBlindIndex) {

@@ -532,7 +532,7 @@ public class balatroMod implements
                 }
                 if (m.type == AbstractMonster.EnemyType.BOSS) {
                     BlindPower.BlindType newBlindIndex = BlindPower.BlindType.randomBossType();
-                    while (Data.getBossBlinds().contains(newBlindIndex) || (Objects.equals(m.name, "Corrupt Heart")) && newBlindIndex == BlindPower.BlindType.VIOLET_VESSEL) {
+                    while (Data.getBossBlinds().contains(newBlindIndex) || (Objects.equals(m.name, "Corrupt Heart") && newBlindIndex == BlindPower.BlindType.VIOLET_VESSEL)) {
                         newBlindIndex = BlindPower.BlindType.randomBossType();
                     }
                     Data.useBossBlind(newBlindIndex);
