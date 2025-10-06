@@ -25,6 +25,7 @@ public class SelectScreenPatches {
         public static void updateCharOption(CharacterOption __instance) {
             if (__instance.c instanceof baseDeck && __instance.selected) {
                 balatroMod.deckUI.update();
+                balatroMod.stakeUI.update();
             }
         }
     }
@@ -35,6 +36,7 @@ public class SelectScreenPatches {
         public static void renderCharOption(CharacterOption __instance, SpriteBatch sb, float ___infoX) {
             if (__instance.c instanceof baseDeck && __instance.selected) {
                 balatroMod.deckUI.render(sb, ___infoX);
+                balatroMod.stakeUI.render(sb, ___infoX);
             }
         }
     }

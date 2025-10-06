@@ -2,7 +2,6 @@ package balatro.util;
 
 import balatro.balatroMod;
 import balatro.powers.BlindPower;
-import com.badlogic.gdx.utils.Array;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -13,6 +12,7 @@ public class Data {
     public static Map<String, Integer> savedData = new HashMap<String,Integer>();
     public static Map<String, Integer> savedDataInBattle = new HashMap<String,Integer>();
     public static List<BlindPower.BlindType> bossBlinds = new ArrayList<BlindPower.BlindType>();
+    public static Map<String, Integer> stakesUnlocked = new HashMap<String,Integer>();
 
     static {
         savedData.put("PotionsUsed", 0);
@@ -24,6 +24,22 @@ public class Data {
         savedDataInBattle.put("CardsDiscarded", 0);
         savedDataInBattle.put("GoldCombat", 0);
         savedDataInBattle.put("RemovedCards", 0);
+
+        stakesUnlocked.put("redDeck",1);
+        stakesUnlocked.put("blueDeck",0);
+        stakesUnlocked.put("yellowDeck",0);
+        stakesUnlocked.put("greenDeck",0);
+        stakesUnlocked.put("blackDeck",0);
+        stakesUnlocked.put("magicDeck",0);
+        stakesUnlocked.put("nebulaDeck",0);
+        stakesUnlocked.put("ghostDeck",0);
+        stakesUnlocked.put("abandonedDeck",0);
+        stakesUnlocked.put("checkeredDeck",0);
+        stakesUnlocked.put("zodiacDeck",0);
+        stakesUnlocked.put("paintedDeck",0);
+        stakesUnlocked.put("anaglyphDeck",0);
+        stakesUnlocked.put("plasmaDeck",0);
+        stakesUnlocked.put("erraticDeck",0);
     }
 
     public static void saveBattleData() {
@@ -129,13 +145,43 @@ public class Data {
     }
 
 
-
     public static void setMaxGoldCombat(int amount) {
         savedData.put("MaxGoldCombat", amount);
     }
 
     public static void resetRestSites() {
         savedData.put("RestSites", 0);
+    }
+
+
+    public static void setStakesUnlocked(Map<String, Integer> map) {
+        stakesUnlocked.put("redDeck",map.get("redDeck"));
+        stakesUnlocked.put("blueDeck",map.get("blueDeck"));
+        stakesUnlocked.put("yellowDeck",map.get("yellowDeck"));
+        stakesUnlocked.put("greenDeck",map.get("greenDeck"));
+        stakesUnlocked.put("blackDeck",map.get("blackDeck"));
+        stakesUnlocked.put("magicDeck",map.get("magicDeck"));
+        stakesUnlocked.put("nebulaDeck",map.get("nebulaDeck"));
+        stakesUnlocked.put("ghostDeck",map.get("ghostDeck"));
+        stakesUnlocked.put("abandonedDeck",map.get("abandonedDeck"));
+        stakesUnlocked.put("checkeredDeck",map.get("checkeredDeck"));
+        stakesUnlocked.put("zodiacDeck",map.get("zodiacDeck"));
+        stakesUnlocked.put("paintedDeck",map.get("paintedDeck"));
+        stakesUnlocked.put("anaglyphDeck",map.get("anaglyphDeck"));
+        stakesUnlocked.put("plasmaDeck",map.get("plasmaDeck"));
+        stakesUnlocked.put("erraticDeck",map.get("erraticDeck"));
+    }
+
+    public static void setStakeForDeck(String deck, Integer stake) {
+        stakesUnlocked.put(deck, stake);
+    }
+
+    public static Integer getStakeForDeck(String deck) {
+        return stakesUnlocked.get(deck);
+    }
+
+    public static Map<String, Integer> getStakesUnlocked() {
+        return stakesUnlocked;
     }
 
 }

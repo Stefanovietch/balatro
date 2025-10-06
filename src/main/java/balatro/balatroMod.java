@@ -10,6 +10,7 @@ import balatro.powers.*;
 import balatro.relics.*;
 import balatro.ui.DeckSelectionUI;
 import balatro.ui.GoldPerCombat;
+import balatro.ui.StakeSelectionUI;
 import balatro.util.Data;
 import balatro.util.GeneralUtils;
 import balatro.util.KeywordInfo;
@@ -19,6 +20,7 @@ import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
 import basemod.abstracts.CustomSavable;
+import basemod.abstracts.CustomUnlockBundle;
 import basemod.eventUtil.AddEventParams;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
@@ -34,6 +36,7 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -49,13 +52,13 @@ import com.megacrit.cardcrawl.relics.*;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import com.megacrit.cardcrawl.rooms.MonsterRoomElite;
+import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.scannotation.AnnotationDB;
 
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
@@ -75,7 +78,8 @@ public class balatroMod implements
         OnPlayerTurnStartSubscriber,
         PostPotionUseSubscriber,
         StartActSubscriber,
-        PostInitializeSubscriber {
+        PostInitializeSubscriber
+{
 
     public static String makeID(String id) {
         return modID + ":" + id;
@@ -104,9 +108,13 @@ public class balatroMod implements
 
     public static final String SELECTED_DECK_INDEX = "selectedDeckIndex";
     public static int selectedDeckIndex = 0;
-
     public static final String SELECTED_DECK = "selectedDeck";
     public static String selectedDeck = "redDeck";
+
+    public static final String SELECTED_STAKE_INDEX = "selectedStakeIndex";
+    public static int selectedStakeIndex = 0;
+    public static final String SELECTED_STAKE = "selectedStake";
+    public static String selectedStake = "whiteStake";
 
     public static final String COMBAT_GOLD_LIMIT = "combatGoldLimit";
     public static boolean combatGoldLimit = true;
@@ -114,6 +122,7 @@ public class balatroMod implements
     public static boolean blinds = true;
 
     public static DeckSelectionUI deckUI;
+    public static StakeSelectionUI stakeUI;
 
     //This will be called by ModTheSpire because of the @SpireInitializer annotation at the top of the class.
     public static void initialize() {
@@ -133,6 +142,8 @@ public class balatroMod implements
 
         balatroDefaultSettings.setProperty(SELECTED_DECK_INDEX, Integer.toString(selectedDeckIndex));
         balatroDefaultSettings.setProperty(SELECTED_DECK, selectedDeck);
+        balatroDefaultSettings.setProperty(SELECTED_STAKE_INDEX, Integer.toString(selectedStakeIndex));
+        balatroDefaultSettings.setProperty(SELECTED_STAKE, selectedStake);
         balatroDefaultSettings.setProperty(COMBAT_GOLD_LIMIT, String.valueOf(combatGoldLimit));
         balatroDefaultSettings.setProperty(BLINDS, String.valueOf(blinds));
 
@@ -140,6 +151,8 @@ public class balatroMod implements
             balatroConfig = new SpireConfig("balatroMod", "balatroModConfig", balatroDefaultSettings);
             selectedDeckIndex = balatroConfig.getInt(SELECTED_DECK_INDEX);
             selectedDeck = balatroConfig.getString(SELECTED_DECK);
+            selectedStakeIndex = balatroConfig.getInt(SELECTED_STAKE_INDEX);
+            selectedStake = balatroConfig.getString(SELECTED_STAKE);
             combatGoldLimit = balatroConfig.getBool(COMBAT_GOLD_LIMIT);
             blinds = balatroConfig.getBool(BLINDS);
         } catch (IOException e) {
@@ -150,6 +163,7 @@ public class balatroMod implements
     @Override
     public void receivePostInitialize() {
         deckUI = new DeckSelectionUI();
+        stakeUI = new StakeSelectionUI();
         GoldPerCombat goldPerCombatPanel = new GoldPerCombat();
         if(combatGoldLimit) {BaseMod.addTopPanelItem(goldPerCombatPanel);}
 
@@ -430,6 +444,22 @@ public class balatroMod implements
                 }
             }
         });
+        BaseMod.addSaveField("StakesUnlocked", new CustomSavable<Map<String, Integer>>() {
+            @Override
+            public Type savedType() {
+                return new TypeToken<Map<String, Integer>>(){}.getType();
+            }
+            @Override
+            public Map<String, Integer> onSave() {
+                return Data.getStakesUnlocked();
+            }
+            @Override
+            public void onLoad(Map<String, Integer> dataMap) {
+                if (dataMap != null) {
+                    Data.setStakesUnlocked(dataMap);
+                }
+            }
+        });
     }
 
     @Override
@@ -593,4 +623,5 @@ public class balatroMod implements
             if (c instanceof RandomType) {((RandomType) c).setRandomType();}
         }
     }
+
 }

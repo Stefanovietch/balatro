@@ -44,17 +44,11 @@ public abstract class ClickableDeck extends ClickableUIElement {
     @Override
     public void render(SpriteBatch sb, Color color) {
         super.render(sb, color);
-        //sb.setColor(Color.WHITE);
         if (selected) {
             float halfWidth = selectedTexture.packedWidth / 2.0F;
             float halfHeight = selectedTexture.packedHeight / 2.0F;
             sb.draw(selectedTexture, x - halfWidth + halfWidth * Settings.scale * texScale, y - halfHeight + halfHeight * Settings.scale * texScale, halfWidth, halfHeight, selectedTexture.packedWidth, selectedTexture.packedHeight, Settings.scale * texScale * 0.5f, Settings.scale * texScale * 0.5f, 0);
         }
-        /*if (hitbox.hovered && card != null) {
-            float scale = FontHelper.cardTitleFont.getData().scaleX;
-            card.render(sb);
-            FontHelper.cardTitleFont.getData().setScale(scale);
-        }*/
     }
 
     @Override

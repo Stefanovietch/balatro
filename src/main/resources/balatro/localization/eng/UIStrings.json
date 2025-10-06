@@ -104,6 +104,32 @@
       "erratic"
     ]
   },
+  "${modID}:whiteStake": {
+    "TEXT": [
+      "White Stake",
+      "Base difficulty."
+    ]
+  },
+  "${modID}:redStake": {
+    "TEXT": [
+      "Red Stake",
+      "Normal enemies drop half the #yGold."
+    ]
+  },
+  "${modID}:greenStake": {
+    "TEXT": [
+      "Green Stake",
+      "Enemies gain HP equal to the floor."
+    ]
+  },
+  "${modID}:blackStake": {
+    "TEXT": [
+      "Black Stake",
+      "Cannot remove starter cards from deck."
+    ]
+  },
+
+
 
   "${modID}:GoldPerCombat": {
     "TEXT": [

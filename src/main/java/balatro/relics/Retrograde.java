@@ -4,10 +4,8 @@ import balatro.character.baseDeck;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 import static balatro.balatroMod.makeID;
-import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.aiRng;
 
 public class Retrograde extends BaseRelic{
     private static final String NAME = "Retrograde"; //The name will be used for determining the image file as well as the ID.

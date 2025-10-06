@@ -11,7 +11,7 @@ public class DeckSelectionUI {
 
 
     public DeckSelectionUI() {
-        deckPanel = new DeckPanel(200.0F * Settings.scale, Settings.HEIGHT/2f);
+        deckPanel = new DeckPanel(200.0F * Settings.scale, Settings.HEIGHT/2f + 50.0F * Settings.scale);
 
         deckPanel.addDeck(new RedDeck());
         deckPanel.addDeck(new BlueDeck());

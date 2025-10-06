@@ -12,8 +12,6 @@ public class DeckPanel {
     public float y;
     public static final float PAD_X = (ClickableDeck.SIZE + 10f) * Settings.scale;
     public static final float PAD_Y = (ClickableDeck.SIZE + 10f) * Settings.scale;
-    public static final float CORR_X = ClickableDeck.SIZE/2f * Settings.scale;
-    public static final float CORR_Y = ClickableDeck.SIZE/2f * Settings.scale;
     public static final int DECKS_PER_ROW = 8;
 
     public DeckPanel(float x, float y) {
