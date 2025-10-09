@@ -20,7 +20,6 @@ import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
 import basemod.abstracts.CustomSavable;
-import basemod.abstracts.CustomUnlockBundle;
 import basemod.eventUtil.AddEventParams;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
@@ -36,7 +35,6 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -48,11 +46,11 @@ import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
+import com.megacrit.cardcrawl.powers.RagePower;
 import com.megacrit.cardcrawl.relics.*;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import com.megacrit.cardcrawl.rooms.MonsterRoomElite;
-import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -483,6 +481,29 @@ public class balatroMod implements
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         Data.saveBattleData();
         Data.resetBattleData();
+        if(balatroMod.selectedStakeIndex >= 2) {
+            int TotalHpToGive = AbstractDungeon.floorNum;
+            int enemyCount = AbstractDungeon.getCurrRoom().monsters.monsters.size();
+            int[] hpValues = new int[enemyCount];
+            int leftToDistribute = TotalHpToGive % enemyCount;
+            Arrays.fill(hpValues, TotalHpToGive / enemyCount);
+            Random random = new Random();
+            for (int i = 0; i < leftToDistribute; i++) {
+                hpValues[random.nextInt(enemyCount)]++;
+            }
+
+            for (int i = 0; i < enemyCount; i++) {
+                AbstractDungeon.getCurrRoom().monsters.monsters.get(i).maxHealth += hpValues[i];
+                AbstractDungeon.getCurrRoom().monsters.monsters.get(i).currentHealth += hpValues[i];
+            }
+        }
+        if(balatroMod.selectedStakeIndex >= 5) {
+            for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+                monster.addToBot(new ApplyPowerAction(monster, monster, new TopUpPower(monster, 1), 1));
+            }
+        }
+
+
         if (blinds && (AbstractDungeon.getCurrRoom() instanceof MonsterRoomElite || AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss)) {
             for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
                 if (m.type == AbstractMonster.EnemyType.ELITE) {

@@ -1,8 +1,7 @@
 package balatro.ui;
 
 import balatro.balatroMod;
-import balatro.ui.stakes.RedStake;
-import balatro.ui.stakes.WhiteStake;
+import balatro.ui.stakes.*;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.core.Settings;
 
@@ -16,6 +15,12 @@ public class StakeSelectionUI {
 
         stakePanel.addStake(new WhiteStake());
         stakePanel.addStake(new RedStake());
+        stakePanel.addStake(new GreenStake());
+        stakePanel.addStake(new BlackStake());
+        stakePanel.addStake(new BlueStake());
+        stakePanel.addStake(new PurpleStake());
+        stakePanel.addStake(new OrangeStake());
+        stakePanel.addStake(new GoldStake());
 
         stakePanel.layoutDecks();
 

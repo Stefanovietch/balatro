@@ -104,6 +104,55 @@
       "古怪"
     ]
   },
+  "${modID}:whiteStake": {
+    "TEXT": [
+      "白注",
+      "Base difficulty."
+    ]
+  },
+  "${modID}:redStake": {
+    "TEXT": [
+      "红注",
+      "Normal enemies drop half the #yGold."
+    ]
+  },
+  "${modID}:greenStake": {
+    "TEXT": [
+      "绿注",
+      "Enemies gain extra #yHP."
+    ]
+  },
+  "${modID}:blackStake": {
+    "TEXT": [
+      "蓝注",
+      "Cannot remove starter cards from deck."
+    ]
+  },
+  "${modID}:blueStake": {
+    "TEXT": [
+      "蓝注",
+      "(WIP)"
+    ]
+  },
+  "${modID}:purpleStake": {
+    "TEXT": [
+      "紫注",
+      "Enemies start combat with #y充值标签 "
+    ]
+  },
+  "${modID}:orangeStake": {
+    "TEXT": [
+      "橙注",
+      "(WIP) Some cards perish after 10 uses."
+    ]
+  },
+  "${modID}:goldStake": {
+    "TEXT": [
+      "金注",
+      "Playing a card costs #b1 #yGold."
+    ]
+  },
+
   "Balatro:GoldPerCombat": {
     "TEXT": [
       "战斗获得的金币。",

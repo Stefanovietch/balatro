@@ -1,8 +1,8 @@
 package balatro.ui.stakes;
 
 import balatro.balatroMod;
-import balatro.ui.DeckPanel;
 import balatro.ui.StakePanel;
+import balatro.util.Data;
 import balatro.util.TextureLoader;
 import basemod.ClickableUIElement;
 import com.badlogic.gdx.graphics.Color;
@@ -46,20 +46,18 @@ public abstract class ClickableStake extends ClickableUIElement {
     @Override
     public void update() {
         super.update();
+        this.unlocked = Data.getStakeForDeck(balatroMod.selectedDeck) >= containingPanel.stakes.indexOf(this);
+
         if (selected && !unlocked) {
-            int newIndex = containingPanel.stakes.indexOf(this)-1;
-            if (newIndex >= 0) {
-                containingPanel.selectStake(containingPanel.stakes.get(newIndex));
-            } else {
-                balatroMod.logger.info("negative index or is white stake locked???");
-            }
+            int newIndex = Data.getStakeForDeck(balatroMod.selectedDeck);
+            containingPanel.selectStake(containingPanel.stakes.get(newIndex));
         }
     }
 
     @Override
     public void render(SpriteBatch sb, Color color) {
         if (!unlocked) {
-            color = new Color(0.2F,0.2F,0.2F,1F);
+            color = new Color(0.3F,0.3F,0.3F,1F);
         }
         super.render(sb, color);
         if (selected) {
@@ -94,6 +92,7 @@ public abstract class ClickableStake extends ClickableUIElement {
             balatroMod.balatroConfig.save();
 
             balatroMod.selectedStake = this.stakeName;
+            balatroMod.selectedStakeIndex = containingPanel.stakes.indexOf(this);
             balatroMod.stakeUI.selectedStake = this.stakeName;
 
         } catch (IOException e) {

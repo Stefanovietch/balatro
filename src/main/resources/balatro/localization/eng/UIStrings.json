@@ -119,13 +119,37 @@
   "${modID}:greenStake": {
     "TEXT": [
       "Green Stake",
-      "Enemies gain HP equal to the floor."
+      "Enemies gain extra #yHP."
     ]
   },
   "${modID}:blackStake": {
     "TEXT": [
       "Black Stake",
-      "Cannot remove starter cards from deck."
+      "Cannot remove starter cards from deck"
+    ]
+  },
+  "${modID}:blueStake": {
+    "TEXT": [
+      "Blue Stake",
+      "(WIP)"
+    ]
+  },
+  "${modID}:purpleStake": {
+    "TEXT": [
+      "Purple Stake",
+      "Enemies start combat with #yTop-Up"
+    ]
+  },
+  "${modID}:orangeStake": {
+    "TEXT": [
+      "Orange Stake",
+      "(WIP) Some cards perish after 10 uses."
+    ]
+  },
+  "${modID}:goldStake": {
+    "TEXT": [
+      "Gold Stake",
+      "Playing a card costs #b1 #yGold."
     ]
   },
 

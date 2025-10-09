@@ -1,9 +1,6 @@
 package balatro.ui;
 
-import balatro.balatroMod;
-import balatro.ui.decks.ClickableDeck;
 import balatro.ui.stakes.ClickableStake;
-import balatro.util.Data;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.core.Settings;
 

@@ -1,7 +1,6 @@
 package balatro.ui.stakes;
 
 import balatro.balatroMod;
-import balatro.ui.decks.ClickableDeck;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 
 public class WhiteStake extends ClickableStake {
@@ -10,6 +9,5 @@ public class WhiteStake extends ClickableStake {
 
     public WhiteStake() {
         super(stakeName, TEXT[0], TEXT[1]);
-        unlocked = true;
     }
 }

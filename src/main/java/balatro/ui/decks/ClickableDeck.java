@@ -75,6 +75,7 @@ public abstract class ClickableDeck extends ClickableUIElement {
             balatroMod.balatroConfig.save();
 
             balatroMod.selectedDeck = this.deckName;
+            balatroMod.selectedDeckIndex = containingPanel.decks.indexOf(this);
             balatroMod.deckUI.selectedDeck = this.deckName;
 
         } catch (IOException e) {

@@ -25,10 +25,10 @@ public class Data {
         savedDataInBattle.put("GoldCombat", 0);
         savedDataInBattle.put("RemovedCards", 0);
 
-        stakesUnlocked.put("redDeck",1);
-        stakesUnlocked.put("blueDeck",0);
-        stakesUnlocked.put("yellowDeck",0);
-        stakesUnlocked.put("greenDeck",0);
+        stakesUnlocked.put("redDeck",7);
+        stakesUnlocked.put("blueDeck",3);
+        stakesUnlocked.put("yellowDeck",2);
+        stakesUnlocked.put("greenDeck",1);
         stakesUnlocked.put("blackDeck",0);
         stakesUnlocked.put("magicDeck",0);
         stakesUnlocked.put("nebulaDeck",0);
@@ -45,7 +45,6 @@ public class Data {
     public static void saveBattleData() {
         savedData.put("PotionsUsed", savedData.get("PotionsUsed") + savedDataInBattle.get("PotionsUsed"));
         savedData.put("RemovedCards", savedData.get("RemovedCards") + savedDataInBattle.get("RemovedCards"));
-        balatroMod.logger.info("save normal: {}, battle: {}",savedData.get("RemovedCards"),savedDataInBattle.get("RemovedCards"));
 
     }
 
@@ -127,8 +126,6 @@ public class Data {
 
     public static void changeRemovedCards(int amount) {
         savedDataInBattle.put("RemovedCards", savedDataInBattle.get("RemovedCards") + amount);
-        balatroMod.logger.info("new battle: {}",savedDataInBattle.get("RemovedCards"));
-
     }
 
     public static List<BlindPower.BlindType> getBossBlinds() {
@@ -172,8 +169,10 @@ public class Data {
         stakesUnlocked.put("erraticDeck",map.get("erraticDeck"));
     }
 
-    public static void setStakeForDeck(String deck, Integer stake) {
-        stakesUnlocked.put(deck, stake);
+    public static void unlockNextStakeForDeck(String deck) {
+        if (balatroMod.selectedStakeIndex >= stakesUnlocked.get(deck)) {
+            stakesUnlocked.put(deck, balatroMod.selectedStakeIndex + 1);
+        }
     }
 
     public static Integer getStakeForDeck(String deck) {

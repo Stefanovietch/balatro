@@ -26,12 +26,13 @@ public class MerryAndy extends BaseCard {
     public MerryAndy() {
         super(ID, info); //Pass the required information to the BaseCard constructor.
         setMagic(MAGIC,UPG_MAGIC);
+        setCustomVar("MADraw", MAGIC*2,UPG_MAGIC*2);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DiscardAction(p,p,magicNumber,false));
-        addToBot(new DrawCardAction(magicNumber));
+        addToBot(new DrawCardAction(customVar("MADraw")));
         addToBot(new ApplyPowerAction(p,p,new DrawReductionPower(p,1)));
     }
 

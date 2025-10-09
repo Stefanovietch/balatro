@@ -313,5 +313,13 @@
     "DESCRIPTIONS": [
       "在你的回合开始时，打出一张随机牌。"
     ]
+  },
+
+  "${modID}:TopUp": {
+    "NAME": "充值标签",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yBlock whenever you play an Attack."
+    ]
   }
 }

@@ -316,5 +316,13 @@
     "DESCRIPTIONS": [
       "At the start of your turn, play a random card."
     ]
+  },
+
+  "${modID}:TopUp": {
+    "NAME": "Top-Up",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yBlock whenever you play an Attack."
+    ]
   }
 }

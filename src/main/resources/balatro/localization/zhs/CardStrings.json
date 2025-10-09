@@ -516,7 +516,7 @@
   },
   "Balatro:MerryAndy": {
     "NAME": "快乐安迪",
-    "DESCRIPTION": "弃掉 !M! 张牌。 NL 抽 !M! 张牌。 NL 下回合少抽 1 张牌。"
+    "DESCRIPTION": "弃掉 !M! 张牌。 NL 抽 !${modID}:MAdraw! 张牌。 NL 下回合少抽 1 张牌。"
   },
   "Balatro:OopsAll6s": {
     "NAME": "六六大顺",
