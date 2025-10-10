@@ -25,10 +25,10 @@ public class Data {
         savedDataInBattle.put("GoldCombat", 0);
         savedDataInBattle.put("RemovedCards", 0);
 
-        stakesUnlocked.put("redDeck",7);
-        stakesUnlocked.put("blueDeck",3);
-        stakesUnlocked.put("yellowDeck",2);
-        stakesUnlocked.put("greenDeck",1);
+        stakesUnlocked.put("redDeck",0);
+        stakesUnlocked.put("blueDeck",0);
+        stakesUnlocked.put("yellowDeck",0);
+        stakesUnlocked.put("greenDeck",0);
         stakesUnlocked.put("blackDeck",0);
         stakesUnlocked.put("magicDeck",0);
         stakesUnlocked.put("nebulaDeck",0);

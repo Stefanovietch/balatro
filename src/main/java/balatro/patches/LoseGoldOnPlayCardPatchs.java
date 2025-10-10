@@ -1,5 +1,7 @@
 package balatro.patches;
 
+import balatro.balatroMod;
+import balatro.character.baseDeck;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch2;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -12,7 +14,9 @@ public class LoseGoldOnPlayCardPatchs {
     public static class PlayCardHook {
         @SpirePostfixPatch
         public static void loseGold() {
-            AbstractDungeon.player.loseGold(2);
+            if(balatroMod.selectedStakeIndex >= 7 && AbstractDungeon.player instanceof baseDeck) {
+                AbstractDungeon.player.loseGold(2);
+            }
         }
     }
 }
