@@ -509,7 +509,7 @@
   },
   "${modID}:MerryAndy": {
     "NAME": "Merry Andy",
-    "DESCRIPTION": "Discard !M! cards. NL Draw !${modID}:MAdraw! cards. NL Next turn draw 1 card less."
+    "DESCRIPTION": "Discard !M! cards. NL Draw !${modID}:MADraw! cards. NL Next turn draw 1 card less."
   },
   "${modID}:OopsAll6s": {
     "NAME": "Oops! All 6s",
