@@ -5,16 +5,13 @@ import balatro.cards.BaseCard;
 import basemod.abstracts.AbstractCardModifier;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
 import com.evacipated.cardcrawl.mod.stslib.util.extraicons.ExtraIcons;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 
 import static com.megacrit.cardcrawl.helpers.FontHelper.SCP_cardEnergyFont;
-import static com.megacrit.cardcrawl.helpers.FontHelper.prepFont;
 
 public class PerishableVisualModifier extends AbstractCardModifier {
     public static final String ID = balatroMod.makeID("PerishableVisualModifier");

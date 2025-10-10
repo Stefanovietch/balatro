@@ -1,35 +1,17 @@
 package balatro.patches;
 
 import balatro.balatroMod;
-import balatro.cards.CleverJoker;
-import balatro.cards.JollyJoker;
-import balatro.cards.MadJoker;
-import balatro.cards.SlyJoker;
 import balatro.character.baseDeck;
-import basemod.ReflectionHacks;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.evacipated.cardcrawl.modthespire.patcher.PatchingException;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.RoomEventDialog;
-import com.megacrit.cardcrawl.events.city.DrugDealer;
-import com.megacrit.cardcrawl.events.exordium.LivingWall;
-import com.megacrit.cardcrawl.events.shrines.Designer;
-import com.megacrit.cardcrawl.events.shrines.Transmogrifier;
 import com.megacrit.cardcrawl.neow.NeowEvent;
 import com.megacrit.cardcrawl.neow.NeowReward;
-import com.megacrit.cardcrawl.neow.NeowRoom;
-import com.megacrit.cardcrawl.potions.AbstractPotion;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import com.megacrit.cardcrawl.rooms.EventRoom;
-import com.megacrit.cardcrawl.rooms.TreasureRoomBoss;
 import javassist.CannotCompileException;
 import javassist.CtBehavior;
 
 import java.util.ArrayList;
-import java.util.Objects;
-import java.util.Optional;
 
 public class RemoveFromNeowPatches {
     @SpirePatch2(clz = NeowEvent.class,
