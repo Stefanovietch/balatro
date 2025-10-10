@@ -107,49 +107,49 @@
   "${modID}:whiteStake": {
     "TEXT": [
       "白注",
-      "Base difficulty."
+      "基础难度。"
     ]
   },
   "${modID}:redStake": {
     "TEXT": [
       "红注",
-      "Normal enemies drop half the #yGold."
+      "普通敌怪会掉落一半的 #y金币"
     ]
   },
   "${modID}:greenStake": {
     "TEXT": [
       "绿注",
-      "Enemies gain extra #yHP."
+      "敌人拥有更多最大生命值"
     ]
   },
   "${modID}:blackStake": {
     "TEXT": [
       "蓝注",
-      "Cannot remove starter cards from deck."
+      "无法从你的牌组中移除基本牌。"
     ]
   },
   "${modID}:blueStake": {
     "TEXT": [
       "蓝注",
-      "(WIP)"
+      "战斗开始时少抽 #b1 张牌。"
     ]
   },
   "${modID}:purpleStake": {
     "TEXT": [
       "紫注",
-      "Enemies start combat with #y充值标签 "
+      "敌人开始战斗时与 #y充值标签 "
     ]
   },
   "${modID}:orangeStake": {
     "TEXT": [
       "橙注",
-      "(WIP) Some cards perish after 10 uses."
+      "有些小丑在 #b10 使用后就会死亡。"
     ]
   },
   "${modID}:goldStake": {
     "TEXT": [
       "金注",
-      "Playing a card costs #b1 #yGold."
+      "打出一张牌需要花费 #b2 #y金币。"
     ]
   },
 

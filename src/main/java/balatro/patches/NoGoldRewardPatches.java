@@ -1,6 +1,7 @@
 package balatro.patches;
 
 import balatro.balatroMod;
+import balatro.character.baseDeck;
 import com.evacipated.cardcrawl.modthespire.lib.ByRef;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch2;
@@ -22,7 +23,7 @@ public class NoGoldRewardPatches {
         )
         public static void removeGold(@ByRef(type="int") int[] gold) {
             AbstractRoom curRoom = AbstractDungeon.getCurrRoom();
-            if (balatroMod.selectedDeckIndex >= 1) {
+            if (balatroMod.selectedDeckIndex >= 1 && AbstractDungeon.player instanceof baseDeck) {
                 if (curRoom instanceof MonsterRoom && !(curRoom instanceof MonsterRoomElite || curRoom instanceof MonsterRoomBoss)) {
                     gold[0] = gold[0]/2;
                 }

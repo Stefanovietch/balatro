@@ -321,8 +321,8 @@
   "${modID}:TopUp": {
     "NAME": "Top-Up",
     "DESCRIPTIONS": [
-      "Gain #b",
-      " #yBlock whenever you play an Attack."
+      "Whenever you play an Attack, gain #b",
+      " #yBlock."
     ]
   }
 }

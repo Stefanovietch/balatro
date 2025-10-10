@@ -4,17 +4,23 @@ import balatro.balatroMod;
 import balatro.patches.LegendaryPatch;
 import balatro.util.CardStats;
 import balatro.util.GeneralUtils;
+import balatro.util.PerishableVisualModifier;
 import basemod.BaseMod;
 import basemod.abstracts.CustomCard;
+import basemod.abstracts.CustomSavable;
 import basemod.abstracts.DynamicVariable;
+import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.Color;
+import com.google.gson.reflect.TypeToken;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -26,7 +32,7 @@ import static balatro.util.GeneralUtils.removePrefix;
 import static balatro.util.TextureLoader.getCardTextureString;
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.miscRng;
 
-public abstract class BaseCard extends CustomCard {
+public abstract class BaseCard extends CustomCard implements CustomSavable<Integer[]> {
     final private static Map<String, DynamicVariable> customVars = new HashMap<>();
 
     protected static String makeID(String name) { return balatroMod.makeID(name); }
@@ -55,6 +61,9 @@ public abstract class BaseCard extends CustomCard {
     protected boolean upgInnate = false;
     protected boolean baseRetain = false;
     protected boolean upgRetain = false;
+
+    protected Integer playsToPerish;
+    protected boolean perishable;
 
     String deckColour;
 
@@ -87,6 +96,10 @@ public abstract class BaseCard extends CustomCard {
 
         this.deckColour = balatroMod.selectedDeck;
         setBgColor(this.deckColour);
+
+        this.playsToPerish = 10;
+        this.perishable = false;
+
         if (this.rarity == LegendaryPatch.LEGENDARY) {
             setBannerTexture(imagePath("cards/legendary/banner_legendary.png"),imagePath("cards/legendary/banner_legendary_p.png"));
             if (this.type == CardType.ATTACK) {
@@ -100,11 +113,63 @@ public abstract class BaseCard extends CustomCard {
             }
         }
 
+        CardModifierManager.addModifier(this,new PerishableVisualModifier());
     }
     public BaseCard(String ID, int cost, CardType cardType, CardTarget target, CardRarity rarity, CardColor color, boolean upgradesDescription)
     {
         this(ID, cost, cardType, target, rarity, color);
         this.upgradesDescription = upgradesDescription;
+    }
+
+    @Override
+    public Type savedType() {
+        return new TypeToken<Integer[]>(){}.getType();
+    }
+
+    @Override
+    public Integer[] onSave() {
+        return new Integer[] {(perishable ? 1 : 0), playsToPerish};
+    }
+
+    @Override
+    public void onLoad(Integer[] data) {
+        if (data == null) {
+            return;
+        }
+        perishable = data[0]!=0;
+        playsToPerish = data[1];
+    }
+
+    public void setPerishable() {
+        perishable = true;
+    }
+
+    public boolean isPerishable() {
+        return perishable;
+    }
+
+    public int getPerishable() {
+        return playsToPerish;
+    }
+
+    public void reducePerishable() {
+        if (AbstractDungeon.player == null)
+            return;
+
+        if(perishable) {
+            playsToPerish--;
+            if(playsToPerish <= 0) {this.purgeOnUse = true;}
+            for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+                if (c.uuid.equals(this.uuid)){
+                    ((BaseCard) c).playsToPerish = playsToPerish;
+                    if(playsToPerish <= 0) {AbstractDungeon.player.masterDeck.removeCard(c);}
+                    break;
+                }
+            }
+        }
+
+
+
     }
 
     private static String getName(String ID) {
@@ -420,6 +485,14 @@ public abstract class BaseCard extends CustomCard {
         this.selfRetain = baseRetain;
     }
 
+    @Override
+    public AbstractCard makeCopy() {
+        AbstractCard card = super.makeCopy();
+        if (card instanceof BaseCard) {
+            ((BaseCard) card).perishable = this.perishable;
+        }
+        return card;
+    }
 
     @Override
     public AbstractCard makeStatEquivalentCopy() {
@@ -450,6 +523,9 @@ public abstract class BaseCard extends CustomCard {
             ((BaseCard) card).upgInnate = this.upgInnate;
             ((BaseCard) card).baseRetain = this.baseRetain;
             ((BaseCard) card).upgRetain = this.upgRetain;
+
+            ((BaseCard) card).perishable = this.perishable;
+            ((BaseCard) card).playsToPerish = this.playsToPerish;
 
             for (Map.Entry<String, LocalVarInfo> varEntry : cardVariables.entrySet()) {
                 LocalVarInfo target = ((BaseCard) card).getCustomVar(varEntry.getKey()),

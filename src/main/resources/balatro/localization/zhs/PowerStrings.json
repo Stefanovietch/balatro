@@ -318,8 +318,8 @@
   "${modID}:TopUp": {
     "NAME": "充值标签",
     "DESCRIPTIONS": [
-      "Gain #b",
-      " #yBlock whenever you play an Attack."
+      "你在这回合每打出一张攻击牌，获得 #b",
+      " 点 #y格挡 。"
     ]
   }
 }

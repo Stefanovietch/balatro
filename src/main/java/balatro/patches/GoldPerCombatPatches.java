@@ -1,5 +1,6 @@
 package balatro.patches;
 
+import balatro.character.baseDeck;
 import balatro.util.Data;
 import com.evacipated.cardcrawl.modthespire.lib.ByRef;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
@@ -16,7 +17,7 @@ public class GoldPerCombatPatches {
                 localvars={"amount"}
         )
         public static void checkGold(@ByRef(type="int") int[] amount) {
-            if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
+            if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && AbstractDungeon.player instanceof baseDeck) {
                 if (Data.getGoldCombat() < Data.getMaxGoldCombat()) {
                     if (Data.getGoldCombat() + amount[0] <= Data.getMaxGoldCombat()) {
                         Data.changeGoldCombat(amount[0]);

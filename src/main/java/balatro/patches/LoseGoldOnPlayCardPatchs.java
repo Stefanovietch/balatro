@@ -13,7 +13,7 @@ public class LoseGoldOnPlayCardPatchs {
     public static class PlayCardHook {
         @SpirePostfixPatch
         public static void loseGold() {
-            AbstractDungeon.player.loseGold(1);
+            AbstractDungeon.player.loseGold(2);
         }
     }
 }

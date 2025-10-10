@@ -93,7 +93,7 @@
   "${modID}:plasmaDeck": {
     "TEXT": [
       "Plasma Deck",
-      "The fourth act is what that matters.",
+      "The fourth act is what matters.",
       "plasmatic"
     ]
   },
@@ -119,37 +119,37 @@
   "${modID}:greenStake": {
     "TEXT": [
       "Green Stake",
-      "Enemies gain extra #yHP."
+      "Enemies have more maximum #yHP."
     ]
   },
   "${modID}:blackStake": {
     "TEXT": [
       "Black Stake",
-      "Cannot remove starter cards from deck"
+      "Cannot remove basic cards from your deck."
     ]
   },
   "${modID}:blueStake": {
     "TEXT": [
       "Blue Stake",
-      "(WIP)"
+      "At start of combat draw #b1 less card."
     ]
   },
   "${modID}:purpleStake": {
     "TEXT": [
       "Purple Stake",
-      "Enemies start combat with #yTop-Up"
+      "Enemies start combat with #yTop-Up."
     ]
   },
   "${modID}:orangeStake": {
     "TEXT": [
       "Orange Stake",
-      "(WIP) Some cards perish after 10 uses."
+      "Some jokers perish after #b10 uses."
     ]
   },
   "${modID}:goldStake": {
     "TEXT": [
       "Gold Stake",
-      "Playing a card costs #b1 #yGold."
+      "Playing a card costs #b2 #yGold."
     ]
   },
 
