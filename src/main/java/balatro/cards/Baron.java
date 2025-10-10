@@ -26,7 +26,6 @@ public class Baron extends BaseCard {
     public Baron() {
         super(ID, info); //Pass the required information to the BaseCard constructor.
         setDamage(DAMAGE, UPG_DAMAGE);
-        setExhaust(true);
     }
 
     @Override
