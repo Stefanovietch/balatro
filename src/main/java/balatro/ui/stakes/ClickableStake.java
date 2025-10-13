@@ -46,10 +46,10 @@ public abstract class ClickableStake extends ClickableUIElement {
     @Override
     public void update() {
         super.update();
-        this.unlocked = Data.getStakeForDeck(balatroMod.selectedDeck) >= containingPanel.stakes.indexOf(this);
+        this.unlocked = balatroMod.stakeGetters.get(balatroMod.selectedDeck).get() >= containingPanel.stakes.indexOf(this);
 
         if (selected && !unlocked) {
-            int newIndex = Data.getStakeForDeck(balatroMod.selectedDeck);
+            int newIndex = balatroMod.stakeGetters.get(balatroMod.selectedDeck).get();
             containingPanel.selectStake(containingPanel.stakes.get(newIndex));
         }
     }

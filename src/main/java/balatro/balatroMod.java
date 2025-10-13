@@ -56,9 +56,12 @@ import org.apache.logging.log4j.Logger;
 import org.scannotation.AnnotationDB;
 
 import java.io.IOException;
+import java.lang.reflect.Field;
 import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
+import java.util.function.Consumer;
+import java.util.function.Supplier;
 
 import static balatro.character.baseDeck.Enums.BASEDECK;
 
@@ -107,7 +110,6 @@ public class balatroMod implements
     public static int selectedDeckIndex = 0;
     public static final String SELECTED_DECK = "selectedDeck";
     public static String selectedDeck = "redDeck";
-
     public static final String SELECTED_STAKE_INDEX = "selectedStakeIndex";
     public static int selectedStakeIndex = 0;
     public static final String SELECTED_STAKE = "selectedStake";
@@ -117,6 +119,56 @@ public class balatroMod implements
     public static boolean combatGoldLimit = true;
     public static final String BLINDS = "blinds";
     public static boolean blinds = true;
+
+    public static int redDeckStake = 0;
+    public static int blueDeckStake = 0;
+    public static int yellowDeckStake = 0;
+    public static int greenDeckStake = 0;
+    public static int blackDeckStake = 0;
+    public static int magicDeckStake = 0;
+    public static int nebulaDeckStake = 0;
+    public static int ghostDeckStake = 0;
+    public static int abandonedDeckStake = 0;
+    public static int checkeredDeckStake = 0;
+    public static int paintedDeckStake = 0;
+    public static int anaglyphDeckStake = 0;
+    public static int plasmaDeckStake = 0;
+    public static int erraticDeckStake = 0;
+
+    public static final Map<String, Supplier<Integer>> stakeGetters = new HashMap<>();
+    public static final Map<String, Consumer<Integer>> stakeSetters = new HashMap<>();
+
+    static {
+        stakeGetters.put("redDeck", () -> balatroMod.redDeckStake);
+        stakeGetters.put("blueDeck", () -> balatroMod.blueDeckStake);
+        stakeGetters.put("yellowDeck", () -> balatroMod.yellowDeckStake);
+        stakeGetters.put("greenDeck", () -> balatroMod.greenDeckStake);
+        stakeGetters.put("blackDeck", () -> balatroMod.blackDeckStake);
+        stakeGetters.put("magicDeck", () -> balatroMod.magicDeckStake);
+        stakeGetters.put("nebulaDeck", () -> balatroMod.nebulaDeckStake);
+        stakeGetters.put("ghostDeck", () -> balatroMod.ghostDeckStake);
+        stakeGetters.put("abandonedDeck", () -> balatroMod.abandonedDeckStake);
+        stakeGetters.put("checkeredDeck", () -> balatroMod.checkeredDeckStake);
+        stakeGetters.put("paintedDeck", () -> balatroMod.paintedDeckStake);
+        stakeGetters.put("anaglyphDeck", () -> balatroMod.anaglyphDeckStake);
+        stakeGetters.put("plasmaDeck", () -> balatroMod.plasmaDeckStake);
+        stakeGetters.put("erraticDeck", () -> balatroMod.erraticDeckStake);
+
+        stakeSetters.put("redDeck", v -> balatroMod.redDeckStake = v);
+        stakeSetters.put("blueDeck", v -> balatroMod.blueDeckStake = v);
+        stakeSetters.put("yellowDeck", v -> balatroMod.yellowDeckStake = v);
+        stakeSetters.put("greenDeck", v -> balatroMod.greenDeckStake = v);
+        stakeSetters.put("blackDeck", v -> balatroMod.blackDeckStake = v);
+        stakeSetters.put("magicDeck", v -> balatroMod.magicDeckStake = v);
+        stakeSetters.put("nebulaDeck", v -> balatroMod.nebulaDeckStake = v);
+        stakeSetters.put("ghostDeck", v -> balatroMod.ghostDeckStake = v);
+        stakeSetters.put("abandonedDeck", v -> balatroMod.abandonedDeckStake = v);
+        stakeSetters.put("checkeredDeck", v -> balatroMod.checkeredDeckStake = v);
+        stakeSetters.put("paintedDeck", v -> balatroMod.paintedDeckStake = v);
+        stakeSetters.put("anaglyphDeck", v -> balatroMod.anaglyphDeckStake = v);
+        stakeSetters.put("plasmaDeck", v -> balatroMod.plasmaDeckStake = v);
+        stakeSetters.put("erraticDeck", v -> balatroMod.erraticDeckStake = v);
+    }
 
     public static DeckSelectionUI deckUI;
     public static StakeSelectionUI stakeUI;
@@ -144,6 +196,12 @@ public class balatroMod implements
         balatroDefaultSettings.setProperty(COMBAT_GOLD_LIMIT, String.valueOf(combatGoldLimit));
         balatroDefaultSettings.setProperty(BLINDS, String.valueOf(blinds));
 
+        balatroMod.logger.info("save");
+
+        for (Map.Entry<String, Supplier<Integer>> entry : stakeGetters.entrySet()) {
+            balatroDefaultSettings.setProperty(entry.getKey() + "Stake", Integer.toString(entry.getValue().get()));
+        }
+
         try {
             balatroConfig = new SpireConfig("balatroMod", "balatroModConfig", balatroDefaultSettings);
             selectedDeckIndex = balatroConfig.getInt(SELECTED_DECK_INDEX);
@@ -152,6 +210,13 @@ public class balatroMod implements
             selectedStake = balatroConfig.getString(SELECTED_STAKE);
             combatGoldLimit = balatroConfig.getBool(COMBAT_GOLD_LIMIT);
             blinds = balatroConfig.getBool(BLINDS);
+
+            balatroMod.logger.info("load");
+
+            for (Map.Entry<String, Consumer<Integer>> entry: stakeSetters.entrySet()) {
+                entry.getValue().accept(balatroConfig.getInt(entry.getKey() + "Stake"));
+            }
+
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -362,39 +427,58 @@ public class balatroMod implements
             String deckName = balatroMod.deckUI.selectedDeck;
             ((baseDeck) AbstractDungeon.player).setDeck(deckName);
 
-            String relicID = Lantern.ID;
-            if (Objects.equals(deckName, "redDeck")) {
-                relicID = LowStakes.ID;
-                AbstractDungeon.relicsToRemoveOnStart.add(GamblingChip.ID);
-            } else if (Objects.equals(deckName, "blueDeck")) {
-                relicID = HeadsUp.ID;
-            } else if (Objects.equals(deckName, "yellowDeck")) {
-                relicID = NestEgg.ID;
-                AbstractDungeon.relicsToRemoveOnStart.add(OldCoin.ID);
-            } else if (Objects.equals(deckName, "greenDeck")) {
-                relicID = YouGetWhatYouGet.ID;
-            } else if (Objects.equals(deckName, "blackDeck")) {
-                relicID = Royale.ID;
-            } else if (Objects.equals(deckName, "magicDeck")) {
-                relicID = CrystalBall.ID;
-            } else if (Objects.equals(deckName, "nebulaDeck")) {
-                relicID = Astronomy.ID;
-            } else if (Objects.equals(deckName, "ghostDeck")) {
-                relicID = Clairvoyance.ID;
-            } else if (Objects.equals(deckName, "abandonedDeck")) {
-                relicID = Flushed.ID;
-            } else if (Objects.equals(deckName, "checkeredDeck")) {
-                relicID = Retrograde.ID;
-            } else if (Objects.equals(deckName, "zodiacDeck")) {
-                relicID = ROI.ID;
-            } else if (Objects.equals(deckName, "paintedDeck")) {
-                relicID = BigHands.ID;
-            } else if (Objects.equals(deckName, "anaglyphDeck")) {
-                relicID = HighStakes.ID;
-            } else if (Objects.equals(deckName, "plasmaDeck")) {
-                relicID = RuleBender.ID;
-            } else if (Objects.equals(deckName, "erraticDeck")) {
-                relicID = Shattered.ID;
+            String relicID;
+
+            switch (deckName) {
+                case "redDeck":
+                    relicID = LowStakes.ID;
+                    AbstractDungeon.relicsToRemoveOnStart.add(GamblingChip.ID);
+                    break;
+                case "blueDeck":
+                    relicID = HeadsUp.ID;
+                    break;
+                case "yellowDeck":
+                    relicID = NestEgg.ID;
+                    AbstractDungeon.relicsToRemoveOnStart.add(OldCoin.ID);
+                    break;
+                case "greenDeck":
+                    relicID = YouGetWhatYouGet.ID;
+                    break;
+                case "blackDeck":
+                    relicID = Royale.ID;
+                    break;
+                case "magicDeck":
+                    relicID = CrystalBall.ID;
+                    break;
+                case "nebulaDeck":
+                    relicID = Astronomy.ID;
+                    break;
+                case "ghostDeck":
+                    relicID = Clairvoyance.ID;
+                    break;
+                case "abandonedDeck":
+                    relicID = Flushed.ID;
+                    break;
+                case "checkeredDeck":
+                    relicID = Retrograde.ID;
+                    break;
+                case "zodiacDeck":
+                    relicID = ROI.ID;
+                    break;
+                case "paintedDeck":
+                    relicID = BigHands.ID;
+                    break;
+                case "anaglyphDeck":
+                    relicID = HighStakes.ID;
+                    break;
+                case "plasmaDeck":
+                    relicID = RuleBender.ID;
+                    break;
+                case "erraticDeck":
+                    relicID = Shattered.ID;
+                    break;
+                default:
+                    relicID = Lantern.ID;
             }
 
             AbstractDungeon.relicsToRemoveOnStart.add(StrikeDummy.ID);
@@ -438,22 +522,6 @@ public class balatroMod implements
             public void onLoad(List<BlindPower.BlindType> dataMap) {
                 if (dataMap != null) {
                     Data.setBossBlinds(dataMap);
-                }
-            }
-        });
-        BaseMod.addSaveField("StakesUnlocked", new CustomSavable<Map<String, Integer>>() {
-            @Override
-            public Type savedType() {
-                return new TypeToken<Map<String, Integer>>(){}.getType();
-            }
-            @Override
-            public Map<String, Integer> onSave() {
-                return Data.getStakesUnlocked();
-            }
-            @Override
-            public void onLoad(Map<String, Integer> dataMap) {
-                if (dataMap != null) {
-                    Data.setStakesUnlocked(dataMap);
                 }
             }
         });
