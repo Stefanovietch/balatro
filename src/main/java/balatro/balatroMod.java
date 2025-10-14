@@ -130,6 +130,7 @@ public class balatroMod implements
     public static int ghostDeckStake = 0;
     public static int abandonedDeckStake = 0;
     public static int checkeredDeckStake = 0;
+    public static int zodiacDeckStake = 0;
     public static int paintedDeckStake = 0;
     public static int anaglyphDeckStake = 0;
     public static int plasmaDeckStake = 0;
@@ -149,6 +150,7 @@ public class balatroMod implements
         stakeGetters.put("ghostDeck", () -> balatroMod.ghostDeckStake);
         stakeGetters.put("abandonedDeck", () -> balatroMod.abandonedDeckStake);
         stakeGetters.put("checkeredDeck", () -> balatroMod.checkeredDeckStake);
+        stakeGetters.put("zodiacDeck", () -> balatroMod.zodiacDeckStake);
         stakeGetters.put("paintedDeck", () -> balatroMod.paintedDeckStake);
         stakeGetters.put("anaglyphDeck", () -> balatroMod.anaglyphDeckStake);
         stakeGetters.put("plasmaDeck", () -> balatroMod.plasmaDeckStake);
@@ -164,6 +166,7 @@ public class balatroMod implements
         stakeSetters.put("ghostDeck", v -> balatroMod.ghostDeckStake = v);
         stakeSetters.put("abandonedDeck", v -> balatroMod.abandonedDeckStake = v);
         stakeSetters.put("checkeredDeck", v -> balatroMod.checkeredDeckStake = v);
+        stakeSetters.put("zodiacDeck", v -> balatroMod.zodiacDeckStake = v);
         stakeSetters.put("paintedDeck", v -> balatroMod.paintedDeckStake = v);
         stakeSetters.put("anaglyphDeck", v -> balatroMod.anaglyphDeckStake = v);
         stakeSetters.put("plasmaDeck", v -> balatroMod.plasmaDeckStake = v);

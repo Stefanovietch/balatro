@@ -23,8 +23,8 @@ public class Satellite extends BaseCard {
             2 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
 
-    private static final int MAGIC = 4;
-    private static final int UPG_MAGIC = 2;
+    private static final int MAGIC = 2;
+    private static final int UPG_MAGIC = 1;
 
     public Satellite() {
         super(ID, info); //Pass the required information to the BaseCard constructor.
