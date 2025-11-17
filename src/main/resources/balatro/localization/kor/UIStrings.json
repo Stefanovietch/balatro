@@ -1,0 +1,164 @@
+{
+  "Balatro:redDeck": {
+    "TEXT": [
+      "레드 덱",
+      "좋은 시작점.",
+      "레드"
+    ]
+  },
+  "Balatro:blueDeck": {
+    "TEXT": [
+      "블루 덱",
+      "가장 간편한 게임 플레이.",
+      "블루"
+    ]
+  },
+  "Balatro:yellowDeck": {
+    "TEXT": [
+      "옐로우 덱",
+      "추가 자금을 원하신다면.",
+      "옐로우"
+    ]
+  },
+  "Balatro:greenDeck": {
+    "TEXT": [
+      "그린 덱",
+      "상황에 따라 돈을 복사할 수 있습니다.",
+      "그린"
+    ]
+  },
+  "Balatro:blackDeck": {
+    "TEXT": [
+      "블랙 덱",
+      "더 많은 보상, 더 많은 게임 플레이 가짓수.",
+      "블랙"
+    ]
+  },
+  "Balatro:magicDeck": {
+    "TEXT": [
+      "매직 덱",
+      "마법을 좀 양조해왔습니다.",
+      "매직"
+    ]
+  },
+  "Balatro:nebulaDeck": {
+    "TEXT": [
+      "네뷸라 덱",
+      "사용해본뒤 배우고, 배운뒤에 사용해봅시다.",
+      "네뷸라"
+    ]
+  },
+  "Balatro:ghostDeck": {
+    "TEXT": [
+      "고스트 덱",
+      "예측하지 못 한 결과에 대비하라.",
+      "고스트"
+    ]
+  },
+  "Balatro:abandonedDeck": {
+    "TEXT": [
+      "버려진 덱",
+      "힘을 얻고 싶다면, 일단 힘이 빠진뒤에 생각해봅시다.",
+      "버려진"
+    ]
+  },
+  "Balatro:checkeredDeck": {
+    "TEXT": [
+      "체크무늬 덱",
+      "정확한 체크메이트.",
+      "체크무늬"
+    ]
+  },
+  "Balatro:zodiacDeck": {
+    "TEXT": [
+      "황도 덱",
+      "별이라도 소유한 것마냥 돈을 써대세요.",
+      "황도"
+    ]
+  },
+  "Balatro:paintedDeck": {
+    "TEXT": [
+      "칠한 덱",
+      "아름다움은 예술가의 손에 달려있습니다.",
+      "칠한"
+    ]
+  },
+  "Balatro:anaglyphDeck": {
+    "TEXT": [
+      "입체 사진 덱",
+      "뭔가를 두 번 보려면, 두 개의 눈이 필요하죠.",
+      "입체 사진"
+    ]
+  },
+  "Balatro:plasmaDeck": {
+    "TEXT": [
+      "플라스마",
+      "중요한 것은 4번째 막이죠.",
+      "플라스마"
+    ]
+  },
+  "Balatro:erraticDeck": {
+    "TEXT": [
+      "불규칙 덱",
+      "저 패턴을 보려고 하지 마세요. 당신이 그 패턴이 되는겁니다.",
+      "불규칙"
+    ]
+  },
+  "Balatro:whiteStake": {
+    "TEXT": [
+      "화이트 스테이크",
+      "기본 난이도."
+    ]
+  },
+  "Balatro:redStake": {
+    "TEXT": [
+      "레드 스테이크",
+      "일반 적의 전투 보상으로 얻는 #y골드 가 절반으로 감소합니다."
+    ]
+  },
+  "Balatro:greenStake": {
+    "TEXT": [
+      "그린 스테이크",
+      "적의 #y최대 #y체력이 증가합니다."
+    ]
+  },
+  "Balatro:blackStake": {
+    "TEXT": [
+      "블랙 스테이크",
+      "덱의 시작 카드를 제거할 수 없습니다."
+    ]
+  },
+  "Balatro:blueStake": {
+    "TEXT": [
+      "블루 스테이크",
+      "전투 시작시, 카드를 #b1 장 적게 뽑습니다."
+    ]
+  },
+  "Balatro:purpleStake": {
+    "TEXT": [
+      "퍼플 스테이크",
+      "이제 모든 적이 #y보충 #y태그 버프를 받은 상태로 전투를 시작합니다."
+    ]
+  },
+  "Balatro:orangeStake": {
+    "TEXT": [
+      "오렌지 스테이크",
+      "특정 조커 카드는 #b10 회 사용시 사라집니다."
+    ]
+  },
+  "Balatro:goldStake": {
+    "TEXT": [
+      "골드 스테이크",
+      "카드 사용시 #y골드를 #b2 소모합니다."
+    ]
+  },
+
+
+
+  "Balatro:GoldPerCombat": {
+    "TEXT": [
+      "전투 도중에 모은 골드.",
+      "각 전투에서 모을 수 있는 골드는 한계치가 존재합니다."
+    ]
+  }
+}

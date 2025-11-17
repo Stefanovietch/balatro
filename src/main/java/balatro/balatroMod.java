@@ -199,8 +199,6 @@ public class balatroMod implements
         balatroDefaultSettings.setProperty(COMBAT_GOLD_LIMIT, String.valueOf(combatGoldLimit));
         balatroDefaultSettings.setProperty(BLINDS, String.valueOf(blinds));
 
-        balatroMod.logger.info("save");
-
         for (Map.Entry<String, Supplier<Integer>> entry : stakeGetters.entrySet()) {
             balatroDefaultSettings.setProperty(entry.getKey() + "Stake", Integer.toString(entry.getValue().get()));
         }
@@ -213,8 +211,6 @@ public class balatroMod implements
             selectedStake = balatroConfig.getString(SELECTED_STAKE);
             combatGoldLimit = balatroConfig.getBool(COMBAT_GOLD_LIMIT);
             blinds = balatroConfig.getBool(BLINDS);
-
-            balatroMod.logger.info("load");
 
             for (Map.Entry<String, Consumer<Integer>> entry: stakeSetters.entrySet()) {
                 entry.getValue().accept(balatroConfig.getInt(entry.getKey() + "Stake"));

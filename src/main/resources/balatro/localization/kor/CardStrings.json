@@ -1,0 +1,647 @@
+{
+  "Balatro:JollyJoker": {
+    "NAME": "쾌활한 조커",
+    "DESCRIPTION": "피해를 !D! 줍니다."
+  },
+  "Balatro:SlyJoker": {
+    "NAME": "교활한 조커",
+    "DESCRIPTION": "방어도를 !B! 얻습니다."
+  },
+  "Balatro:MadJoker": {
+    "NAME": "미친 조커",
+    "DESCRIPTION": "이 전투에서 가장 마지막으로 사용한 카드가 공격 카드였다면, 피해를 !D! 줍니다."
+  },
+  "Balatro:CleverJoker": {
+    "NAME": "영리한 조커",
+    "DESCRIPTION": "이 전투에서 가장 마지막으로 사용한 카드가 스킬 카드였다면, 방어도를 !B! 얻습니다."
+  },
+  "Balatro:JokerStencil": {
+    "NAME": "조커 스텐실",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 비어있는 손패 1장당, 이 카드의 피해량이 100% 증가합니다."
+  },
+  "Balatro:FourFingers": {
+    "NAME": "네 개의 손가락",
+    "DESCRIPTION": "무작위 적들에게 !Balatro:damage1!, !Balatro:damage2!, !Balatro:damage3! , !Balatro:damage4! 피해를 순차적으로 줍니다.",
+    "UPGRADE_DESCRIPTION": "대상 적에게 !Balatro:damage1!, !Balatro:damage2!, !Balatro:damage3! , !Balatro:damage4! 피해를 순차적으로 줍니다."
+  },
+  "Balatro:Mime": {
+    "NAME": "마임",
+    "DESCRIPTION": "손패의 카드를 무작위 순서로 전부 사용하고 소멸 시킵니다."
+  },
+  "Balatro:CreditCard": {
+    "NAME": "신용카드",
+    "DESCRIPTION": "골드를 !M! 얻습니다. NL 카드를 1 장 뽑습니다. NL 소멸."
+  },
+  "Balatro:CeremonialDagger": {
+    "NAME": "의식용 단검",
+    "DESCRIPTION": "피해를 !D! 줍니다. 손패의 무작위 카드 1 장을 소멸시키고, 소멸시킨 카드의 비용의 2배만큼 이 카드의 피해량을 증가시킵니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. 손패의 카드 1 장을 선택해 소멸시키고, 소멸시킨 카드 비용의 2배만큼 이 카드의 피해량을 증가시킵니다. NL 소멸."
+  },
+  "Balatro:MarbleJoker": {
+    "NAME": "마블 조커",
+    "DESCRIPTION": "안전 1 장을 얻습니다. NL 카드를 1 장 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "안전+ 1 장을 얻습니다. NL 카드를 1 장 뽑습니다."
+  },
+  "Balatro:HalfJoker": {
+    "NAME": "반쪽짜리 조커",
+    "DESCRIPTION": "손패에 보유한 카드가 3 장 또는 그 이하라면, 피해를 !D! 줍니다."
+  },
+  "Balatro:Banner": {
+    "NAME": "깃발",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 버린 카드 더미의 카드 1장당 이 카드의 방어도가 감소합니다."
+  },
+  "Balatro:MysticSummit": {
+    "NAME": "신비의 정점",
+    "DESCRIPTION": "버린 카드 더미에 카드가 하나도 없다면, 피해를 !D! 줍니다. NL 소멸."
+  },
+  "Balatro:LoyaltyCard": {
+    "NAME": "로열티 카드",
+    "DESCRIPTION": "휘발성. NL 매 6번째로 사용하는 카드의 피해량이 4 배로 증가합니다.",
+    "UPGRADE_DESCRIPTION": "매 6번째로 사용하는 카드의 피해량이 4 배로 증가합니다."
+  },
+  "Balatro:EBall": {
+    "NAME": "8번 공",
+    "DESCRIPTION": "이번 턴 동안 대상 적의 힘을 !M! 감소시킵니다. NL !Balatro:chance! 분의 !Balatro:probability! Balatro:확률 로 무작위 포션 하나를 얻습니다. NL 소멸."
+  },
+  "Balatro:Misprint": {
+    "NAME": "인쇄 오류",
+    "DESCRIPTION": "피해를 1 에서 !D! 사이만큼 줍니다."
+  },
+  "Balatro:Dusk": {
+    "NAME": "땅거미",
+    "DESCRIPTION": "이 카드가 손패에 남아있는 마지막 카드라면, 이번 턴에 사용한 모든 카드를 다시 사용합니다."
+  },
+  "Balatro:RaisedFist": {
+    "NAME": "들어올린 주먹",
+    "DESCRIPTION": "손패의 카드 중 가장 비용이 낮은 카드의 2 배에 해당하는 임시 힘 을 얻습니다.",
+    "UPGRADE_DESCRIPTION": "보존. NL 손패의 카드 중 가장 비용이 낮은 카드의 2 배에 해당하는 임시 힘 을 얻습니다."
+
+  },
+  "Balatro:ChaosTheClown": {
+    "NAME": "혼돈의 광대",
+    "DESCRIPTION": "손패의 카드를 전부 버립니다. NL 버린 카드 더미를 뽑을 카드 더미에 넣고 섞습니다. NL 버린 카드 수만큼 카드를 뽑습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "손패의 카드를 전부 버립니다. NL 버린 카드 더미를 뽑을 카드 더미에 넣고 섞습니다. NL 버린 카드 수만큼 카드를 뽑습니다."
+
+  },
+  "Balatro:Fibonacci": {
+    "NAME": "피보나치",
+    "DESCRIPTION": "이번 턴의 피보나치 수와 동일한 피해를 줍니다. (턴 !Balatro:turn!: !Balatro:fibonacci_damage! 피해). NL 소멸.",
+    "UPGRADE_DESCRIPTION": "이번 턴의 피보나치 수와 동일한 피해를 줍니다.(턴 !Balatro:turn!: !Balatro:fibonacci_damage! 피해)."
+  },
+  "Balatro:SteelJoker": {
+    "NAME": "강철 조커",
+    "DESCRIPTION": "휘발성. NL 덱에 존재하는 강화된 카드 수만큼 판금 갑옷 을 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "덱에 존재하는 강화된 카드 수만큼 판금 갑옷 을 얻습니다. NL 소멸."
+
+  },
+  "Balatro:ScaryFace": {
+    "NAME": "무서운 얼굴",
+    "DESCRIPTION": "파워 카드를 사용할 때마다, 방어도를 !M! 얻습니다."
+  },
+  "Balatro:AbstractJoker": {
+    "NAME": "추상화 조커",
+    "DESCRIPTION": "손패에 보유한 카드 1장당, 피해를 !D! 줍니다."
+  },
+  "Balatro:DelayedGratification": {
+    "NAME": "늦춰진 희열",
+    "DESCRIPTION": "사용불가. NL 이번 턴에 이 카드를 버리지 않았다면, 턴 종료시 골드를 !M! 얻습니다."
+  },
+  "Balatro:Hack": {
+    "NAME": "삼류",
+    "DESCRIPTION": "뽑을 카드 더미에 있는 비용이 0인 모든 카드를 손으로 가져옵니다."
+  },
+  "Balatro:Pareidolia": {
+    "NAME": "변상증",
+    "DESCRIPTION": "이제 모든 카드가 파워 로 취급됩니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 이제 모든 카드가 파워 로 취급됩니다."
+  },
+  "Balatro:GrosMichel": {
+    "NAME": "그로 미셸",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL !Balatro:chance! 분의 !Balatro:probability! Balatro:확률 로 이 카드는 덱에서 제거됩니다."
+  },
+  "Balatro:EvenSteven": {
+    "NAME": "이븐 스티븐",
+    "DESCRIPTION": "이번 턴에 사용한 짝수 비용의 카드 1장당, 피해를 !D! 줍니다."
+  },
+  "Balatro:OddTodd": {
+    "NAME": "오드 토드",
+    "DESCRIPTION": "이번 턴에 사용한 홀수 비용의 카드 1장당, 방어도를 !B! 얻습니다."
+  },
+  "Balatro:Scholar": {
+    "NAME": "학자",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 피해를 !D! 줍니다. NL 카드를 1 장 뽑습니다."
+  },
+  "Balatro:BusinessCard": {
+    "NAME": "명함",
+    "DESCRIPTION": "파워 카드를 사용할 때마다, !Balatro:chance! 분의 !Balatro:probability! Balatro:확률 로 골드를 !M! 얻습니다."
+  },
+  "Balatro:Supernova": {
+    "NAME": "초신성",
+    "DESCRIPTION": "약화 를 X 부여합니다. NL 재생 을 X 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "약화 를 X+1 부여합니다. NL 재생 을 X+1 얻습니다. NL 소멸."
+  },
+  "Balatro:RideTheBus": {
+    "NAME": "버스 탑승",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 파워 카드를 사용하지 않은 상태로 사용한 카드 1장당, 이번 전투 동안 이 카드의 피해량이 !M! 증가합니다."
+  },
+  "Balatro:SpaceJoker": {
+    "NAME": "우주 조커",
+    "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL !Balatro:chance! 의 !Balatro:probability! Balatro:확률 로 손패의 카드를 전부 강화 합니다."
+  },
+  "Balatro:Egg": {
+    "NAME": "알",
+    "DESCRIPTION": "피해를 받지 않았다면, 턴 종료시 골드를 !M! 얻습니다."
+  },
+  "Balatro:Burglar": {
+    "NAME": "절도범",
+    "DESCRIPTION": "카드를 3 장 뽑습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 카드를 3 장 뽑습니다. NL 소멸."
+  },
+  "Balatro:Blackboard": {
+    "NAME": "칠판",
+    "DESCRIPTION": "힘 을 !M! 얻습니다. NL 턴 종료시 힘 을 !M! 잃습니다. NL 손패에 보유한 카드의 등급이 전부 특별 이라면, 힘 획득량이 3 배 증가합니다."
+  },
+  "Balatro:Runner": {
+    "NAME": "주자",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. 손패에 비용이 0, 1, 2 인 카드를 전부 들고 있다면, 이 카드의 방어도를 영구적으로 !M! 증가시킵니다."
+  },
+  "Balatro:IceCream": {
+    "NAME": "아이스크림",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 이번 전투에서 사용한 카드 1장당, 이 카드의 방어도가 감소합니다."
+  },
+  "Balatro:DNA": {
+    "NAME": "DNA",
+    "DESCRIPTION": "사용시, 이 카드는 전투에서 가장 마지막으로 사용했던 카드로 복사되어 영구적으로 덱에 추가됩니다.",
+    "UPGRADE_DESCRIPTION": "보존. NL 사용시, 이 카드는 전투에서 가장 마지막으로 사용했던 카드로 복사되어 영구적으로 덱에 추가됩니다."
+  },
+  "Balatro:Splash": {
+    "NAME": "첨벙",
+    "DESCRIPTION": "무작위 해로운 효과 !M! 개를 제거합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "무작위 해로운 효과 !M! 개를 제거합니다. NL 소멸."
+  },
+  "Balatro:BlueJoker": {
+    "NAME": "블루 조커",
+    "DESCRIPTION": "뽑을 카드 더미에 있는 카드의 수만큼 방어도를 얻습니다.",
+    "UPGRADE_DESCRIPTION": "뽑을 카드 더미에 있는 카드의 수 + 4 만큼 방어도를 얻습니다."
+  },
+  "Balatro:SixthSense": {
+    "NAME": "육감",
+    "DESCRIPTION": "사용불가. 선천성. NL 이 카드가 손패에 있을때, 처음 사용하는 카드가 덱에서 제거되고 전투 보상으로 무색 카드 보상을 얻습니다.",
+    "UPGRADE_DESCRIPTION": "사용불가. NL 이 카드가 손패에 있을때, 처음 사용하는 카드가 덱에서 제거되고 전투 보상으로 무색 카드 보상을 얻습니다."
+  },
+  "Balatro:Constellation": {
+    "NAME": "별자리",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 전투에서 강화된 카드를 사용할 때마다, 이 카드의 피해량이 +10% 증가합니다."
+  },
+  "Balatro:Hiker": {
+    "NAME": "도보 여행자",
+    "DESCRIPTION": "민첩 을 !M! 얻습니다."
+  },
+  "Balatro:FacelessJoker": {
+    "NAME": "얼굴 없는 조커",
+    "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 카드를 2 장 버립니다. NL 파워 카드를 2 장 버렸다면, 골드를 50 얻습니다."
+  },
+  "Balatro:GreenJoker": {
+    "NAME": "그린 조커",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 전투 동안 이 카드의 피해량이 !M! 증가합니다. NL 이 카드가 버려지면, 이번 전투 동안 이 카드의 피해량이 !M! 감소합니다."
+  },
+  "Balatro:Superposition": {
+    "NAME": "중첩",
+    "DESCRIPTION": "손패에 비용이 0, 1, 2 , 3 인 카드를 보유하고 있다면, 무작위 포션 하나를 얻습니다."
+  },
+  "Balatro:ToDoList": {
+    "NAME": "할 일 목록",
+    "DESCRIPTION": "[스킬/공격/파워] 카드를 사용할 때마다, 골드를 !M! 얻습니다. 요구 사항은 매 턴 종료시 변경됩니다."
+  },
+  "Balatro:Cavendish": {
+    "NAME": "캐번디시",
+    "DESCRIPTION": "휘발성. NL 다음에 사용하는 공격 카드의 피해량이 3 배가 됩니다. NL  !Balatro:chance! 분의 !Balatro:probability!  Balatro:확률 로 이 카드는 덱에서 제거됩니다.",
+    "UPGRADE_DESCRIPTION": "다음에 사용하는 공격 카드의 피해량이 3 배가 됩니다. NL !Balatro:chance! 분의 !Balatro:probability! Balatro:확률 로 이 카드는 덱에서 제거됩니다."
+  },
+  "Balatro:CardSharp": {
+    "NAME": "야바위꾼",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 이번 턴에 비용이 3 이상인 공격 카드를 사용했다면, 이 카드의 피해량이 3 배가 됩니다."
+  },
+  "Balatro:RedCard": {
+    "NAME": "레드 카드",
+    "DESCRIPTION": "사용불가. NL 이 카드가 버려지면, 적 전체에게 취약 을 !M! 부여합니다."
+  },
+  "Balatro:Madness": {
+    "NAME": "광기",
+    "DESCRIPTION": "선천성. NL 손패의 무작위 카드 1 장을 소멸 시키고 힘 을 !M! 얻습니다. NL 소멸."
+  },
+  "Balatro:SquareJoker": {
+    "NAME": "정사각형 조커",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 이번 턴에 카드를 정확히 4 장 사용했다면, 이 카드의 방어도를 영구적으로 !M! 증가시킵니다."
+  },
+  "Balatro:Seance": {
+    "NAME": "유령 교류회",
+    "DESCRIPTION": "손패에 보유한 카드가 전부 스킬 카드라면, 무작위 무색 스킬 카드 !M! 장을 얻습니다."
+  },
+  "Balatro:RiffRaff": {
+    "NAME": "쓰레기",
+    "DESCRIPTION": "무작위 일반 등급 카드 !M! 장을 얻습니다. 이번 턴 동안 그 카드의 비용이 0 이 됩니다."
+  },
+  "Balatro:Vampire": {
+    "NAME": "뱀파이어",
+    "DESCRIPTION": "대상 적의 힘을 X 감소 시킵니다. NL 힘 을 X 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "대상 적의 힘을 X+1 감소 시킵니다. NL 힘 을 X+1 얻습니다. 소멸."
+  },
+  "Balatro:Shortcut": {
+    "NAME": "지름길",
+    "DESCRIPTION": "버린 카드 더미에 있는 카드 1 장을 선택해 손으로 가져옵니다. 가져온 카드의 비용이 !M! 감소합니다. NL 소멸."
+  },
+  "Balatro:Hologram": {
+    "NAME": "홀로그램",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 게임에서 덱에 추가한 카드 1장당, 이 카드의 피해량이 +25% 증가합니다."
+  },
+  "Balatro:Vagabond": {
+    "NAME": "방랑자",
+    "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 보유한 골드가 100 이하라면, 무작위 포션 하나를 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 보유한 골드가 100 이하라면, 무작위 포션 하나를 얻습니다. NL 소멸."
+  },
+  "Balatro:Baron": {
+    "NAME": "남작",
+    "DESCRIPTION": "피해를 !D! 줍니다. 손패에 보유한 공격 카드 1장당, 이 카드의 피해량이 1.5배 증가합니다. ",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. 손패에 보유한 공격 카드 1장당, 이 카드의 피해량이 1.5배 증가합니다."
+  },
+  "Balatro:Cloud9": {
+    "NAME": "클라우드 9",
+    "DESCRIPTION": "다음 턴에 [E] [E] [E] 를 얻습니다. NL 덱에 존재하는 비용이 3 인 카드 1장당, 골드를 3 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "다음 턴에 [E] [E] [E] 를 얻습니다. NL 덱에 존재하는 비용이 3 인 카드 1장당, 골드를 3 얻습니다."
+  },
+  "Balatro:Rocket": {
+    "NAME": "로켓",
+    "DESCRIPTION": "이번 턴 동언 적 전체의 힘을 !M! 감소시킵니다. NL 현재 층 수에 해당하는 골드 를 얻습니다. NL 소멸."
+  },
+  "Balatro:Obelisk": {
+    "NAME": "오벨리스크",
+    "DESCRIPTION": "2번 선택합니다: NL 방어도 !B! 획득 또는 적 전체에게 피해를 !D! 주기 또는 이 카드의 방어도(+2)와 피해량(+1)을 영구적으로 증가시키기. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "2번 선택합니다: NL 방어도 !B! 획득 또는 적 전체에게 피해를 !D! 주기 또는 이 카드의 방어도(+2)와 피해량(+1)을 영구적으로 증가시키기. NL 소멸."
+  },
+  "Balatro:MidasMask": {
+    "NAME": "미다스 가면",
+    "DESCRIPTION": "사용불가. NL 이 카드가 손으로 들어오면, 카드를 1 장 뽑습니다. NL 카드를 사용할 때마다 골드를 !M! 얻습니다."
+  },
+  "Balatro:Luchador": {
+    "NAME": "루차도르",
+    "DESCRIPTION": "대상 적의 힘을 !M! 감소시킵니다. NL 사용시 이 카드는 덱에서 제거됩니다."
+  },
+  "Balatro:Photograph": {
+    "NAME": "사진",
+    "DESCRIPTION": "다음에 사용하는 파워 카드가 2 번 사용됩니다."
+  },
+  "Balatro:GiftCard": {
+    "NAME": "상품권",
+    "DESCRIPTION": "인공물 을 !M! 얻습니다. NL 이번 전투 보상의 골드량과 카드 보상 희귀도가 상승합니다. NL 소멸."
+  },
+  "Balatro:TurtleBean": {
+    "NAME": "거북이콩",
+    "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 이번 전투 동안 이 카드의 드로우 수량이 1 감소합니다.",
+    "UPGRADE_DESCRIPTION":"카드를 !M! 장 뽑습니다. NL 이번 전투 동안 이 카드의 드로우 수량이 1 감소합니다. 1 이하로는 감소하지 않습니다."
+  },
+  "Balatro:Erosion": {
+    "NAME": "침식",
+    "DESCRIPTION": "피해를 !D! 줍니다. 이번 게임에서 제거한 카드 1장당, 이 효과를 반복합니다.",
+    "EXTENDED_DESCRIPTION":[
+      " NL (!M! 장 제거됨)"
+    ]
+  },
+  "Balatro:ReservedParking": {
+    "NAME": "지정 주차 공간",
+    "DESCRIPTION": "뽑을 카드 더미에 있는 무작위 파워 카드 !M! 장을 손으로 가져옵니다. !Balatro:chance! 분의 !Balatro:probability! Balatro:확률 로 손패에 보유한 파워 카드 1장당 골드를 10 얻습니다.",
+    "UPGRADE_DESCRIPTION": "뽑을 카드 더미에 있는 무작위 파워 카드 !M! 장을 손으로 가져옵니다. !Balatro:chance! 분의 !Balatro:probability! Balatro:확률 로 손패에 보유한 파워 카드 1장당 골드를 10 얻습니다."
+  },
+  "Balatro:MailInRebate": {
+    "NAME": "우편 할인",
+    "DESCRIPTION": "카드를 1 장 버립니다. 버린 카드가 [스킬/공격/파워] 이었다면, 골드를 10 얻습니다, 요구 사항은 매 턴 종료시 변경됩니다. NL 카드를 !M! 장 뽑습니다.",
+    "EXTENDED_DESCRIPTION": [
+      "카드를 1 장 버립니다. 버린 카드가 ",
+      ", 이었다면, 골드를 10 얻습니다. 요구 사항은 매 턴 종료시 변경됩니다. NL 카드를 !M! 장 뽑습니다."
+    ]
+  },
+  "Balatro:ToTheMoon": {
+    "NAME": "폭등 기원",
+    "DESCRIPTION": "금속화 를 !M! 얻습니다. NL 10 골드당 골드를 1 얻습니다. NL 소멸."
+  },
+  "Balatro:Hallucination": {
+    "NAME": "환각",
+    "DESCRIPTION": "약화 를 !M! 부여합니다. NL !Balatro:chance! 분의 !Balatro:probability! Balatro:확률 로 이번 전투 보상에 포션 보상을 추가합니다. NL 소멸."
+  },
+  "Balatro:FortuneTeller": {
+    "NAME": "점쟁이",
+    "DESCRIPTION": "이번 게임에서 사용한 포션 1개당, 무작위 적에게 피해를 !D! 줍니다.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (포션을 !M! 개 사용했습니다.)"
+    ]
+  },
+  "Balatro:Juggler": {
+    "NAME": "저글러",
+    "DESCRIPTION": "매 턴 시작시, 카드를 1 장 더 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 매 턴 시작시, 카드를 1 장 더 뽑습니다."
+  },
+  "Balatro:Drunkard": {
+    "NAME": "술고래",
+    "DESCRIPTION": "원하는 만큼 손패의 카드를 선택해 버리고, 그 수만큼 카드를 뽑습니다."
+  },
+  "Balatro:StoneJoker": {
+    "NAME": "스톤 조커",
+    "DESCRIPTION": "손패, 뽑을 더미, 버린 더미, 소멸 더미에 있는 안전 1장당 방어도를 !B! 얻습니다."
+  },
+  "Balatro:GoldenJoker": {
+    "NAME": "골든 조커",
+    "DESCRIPTION": "휘발성. NL 골드를 !M! 얻습니다. NL 소멸."
+  },
+  "Balatro:LuckyCat": {
+    "NAME": "행운의 고양이",
+    "DESCRIPTION": "매 턴 시작시, !Balatro:chance! 분의 !Balatro:probability! Balatro:확률 로 방어도를 !M! 얻고 !Balatro:chance! 분의 !Balatro:probability! Balatro:확률 로 적 전체에게 피해를 !M! 줍니다."
+  },
+  "Balatro:BaseballCard": {
+    "NAME": "야구 카드",
+    "DESCRIPTION": "모든 특별 등급 카드의 피해량이 1.5배 증가합니다."
+  },
+  "Balatro:Bull": {
+    "NAME": "황소",
+    "DESCRIPTION": "!M! 골드당 방어도를 1 얻습니다."
+  },
+  "Balatro:DietCola": {
+    "NAME": "다이어트 콜라",
+    "DESCRIPTION": "소멸. NL 이 카드를 덱에서 제거하면, 무작위 일반 유물을 얻습니다.",
+    "UPGRADE_DESCRIPTION": "휘발성. NL 소멸. NL 이 카드를 덱에서 제거하면, 무작위 일반 유물을 얻습니다."
+  },
+  "Balatro:TradingCard": {
+    "NAME": "트레이딩 카드",
+    "DESCRIPTION": "매 턴 시작시, 카드를 1 장 소멸 시키고 골드를 !M! 얻습니다."
+  },
+  "Balatro:FlashCard": {
+    "NAME": "암기용 카드",
+    "DESCRIPTION": "예지 !M!. NL 카드를 1 장 뽑습니다."
+  },
+  "Balatro:Popcorn": {
+    "NAME": "팝콘",
+    "DESCRIPTION": "피해를 !D! 줍니다. 매 턴 종료시 이 카드의 피해량이 !M! 감소합니다."
+  },
+  "Balatro:SpareTrousers": {
+    "NAME": "여벌 바지",
+    "DESCRIPTION": "무작위 2 명의 적에게 피해를 !D! 줍니다. 치명타 라면, 이 카드의 피해량을 영구적으로 !M! 증가시킵니다."
+  },
+  "Balatro:AncientJoker": {
+    "NAME": "고대 조커",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴에 사용한 [스킬/공격/파워] 카드 1장당 이 카드의 피해량이 1.5배 증가합니다. 요구 사항은 매 턴 종료시 변경됩니다.",
+    "EXTENDED_DESCRIPTION" : [
+      "피해를 !D! 줍니다. NL 이번 턴에 사용한 ",
+      " 카드 1장당 이 카드의 피해량이 1.5배 증가합니다. 요구 사항은 매 턴 종료시 변경됩니다."
+    ]
+  },
+  "Balatro:Ramen": {
+    "NAME": "라면",
+    "DESCRIPTION": "!D! 피해를 2 번 줍니다. 손패에 보유하고 있을때 다른 카드를 사용할 때마다, 이 카드의 피해량이 1 감소합니다."
+  },
+  "Balatro:WalkieTalkie": {
+    "NAME": "워키토키",
+    "DESCRIPTION": "비용이 1 인 카드를 사용할 때마다, 방어도를 !M! 얻고 무작위 적에게 피해를 !M! 줍니다."
+  },
+  "Balatro:Seltzer": {
+    "NAME": "탄산수",
+    "DESCRIPTION": "다음에 사용하는 카드 !M! 장을 다시 사용합니다."
+  },
+  "Balatro:Castle": {
+    "NAME": "성",
+    "DESCRIPTION": "보존. NL 방어도를 !B! 얻습니다. NL [스킬/공격/파워] 카드를 버릴 때마다, 이번 전투 동안 이 카드의 방어도가 !M! 증가합니다. 요구 사항은 매 턴 종료시 변경됩니다.",
+    "EXTENDED_DESCRIPTION": [
+      "보존. NL 방어도를 !B! 얻습니다. NL 손에서 ",
+      " 카드를 버릴 때마다, 이번 전투 동안 이 카드의 방어도가 !M! 증가합니다. 요구 사항은 매 턴 종료시 변경됩니다."
+    ]
+  },
+  "Balatro:SmileyFace": {
+    "NAME": "웃는 얼굴",
+    "DESCRIPTION": "이번 전투에서 사용한 파워 카드 1장당, 피해를 !D! 줍니다."
+  },
+  "Balatro:Campfire": {
+    "NAME": "캠프파이어",
+    "DESCRIPTION": "힘 을 !M! 얻습니다. NL 이번 막에서 방문한 휴식 장소 1개당, 이 카드의 힘 획득량이 1 증가합니다. NL 소멸."
+  },
+  "Balatro:GoldenTicket": {
+    "NAME": "골든 티켓",
+    "DESCRIPTION": "무작위 희귀 카드 1 장을 얻습니다. NL 덱에 존재하는 희귀 등급 카드 1장당, 골드를 !M! 얻습니다. NL 소멸."
+  },
+  "Balatro:MrBones": {
+    "NAME": "해골 아저씨",
+    "DESCRIPTION": "휘발성. NL 사망시, 죽는 대신 체력을 25% 회복하고, 덱에서 이 카드를 제거합니다.",
+    "UPGRADE_DESCRIPTION": "사망시, 죽는 대신 체력을 25% 회복하고, 덱에서 이 카드를 제거합니다."
+  },
+  "Balatro:Acrobat": {
+    "NAME": "곡예사",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이 카드가 손패에 남은 유일한 카드라면, 이 카드의 피해량이 3 배가 됩니다."
+  },
+  "Balatro:SockAndBuskin": {
+    "NAME": "희극과 비극",
+    "DESCRIPTION": "턴 시작시 또는 턴 종료시 발동하는 모든 파워 효과를 즉시 발동합니다."
+  },
+  "Balatro:Swashbuckler": {
+    "NAME": "해적",
+    "DESCRIPTION": "보존. NL 피해를 !D! 줍니다. NL 카드를 뽑을 때마다, 뽑은 카드의 비용만큼 이번 전투 동안 이 카드의 피해량을 증가시킵니다."
+  },
+  "Balatro:Troubadour": {
+    "NAME": "음유시인",
+    "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 다음 턴 시작시 [E] 를 잃습니다."
+  },
+  "Balatro:Certificate": {
+    "NAME": "증명서",
+    "DESCRIPTION": "사용불가. 선천성. NL 이 카드가 뽑히면, 무작위 카드 !M! 장을 얻고 이 카드를 소멸 시킵니다."
+  },
+  "Balatro:SmearedJoker": {
+    "NAME": "얼룩진 조커",
+    "DESCRIPTION": "손패에 존재하는 모든 카드의 비용을 무작위 비용으로 변화시킵니다."
+  },
+  "Balatro:Throwback": {
+    "NAME": "회귀",
+    "DESCRIPTION": "이번 게임에서 방문한 ?(미지) 방 1개만큼, 취약 과 약화 를 부여합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "이번 게임에서 방문한 ?(미지) 방 1 +1개만큼, 취약 과 약화 를 부여합니다. NL 소멸.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (총합 부여량: !M!)"
+    ]
+  },
+  "Balatro:HangingChad": {
+    "NAME": "매달린 종이 조각",
+    "DESCRIPTION": "뽑을 카드 더미 맨 위의 카드 !M! 장을 사용한 뒤 소멸시킵니다."
+  },
+  "Balatro:RoughGem": {
+    "NAME": "원석",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 보유한 방어도 !M! 마다 골드를 2 얻습니다. NL 소멸."
+  },
+  "Balatro:Bloodstone": {
+    "NAME": "혈석",
+    "DESCRIPTION": "이번 턴에 사용한 공격 카드들을 !Balatro:chance! 분의 !Balatro:probability! Balatro:확률 로 다시 사용합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "이번 턴에 사용한 공격 카드들을 !Balatro:chance! 분의 !Balatro:probability! Balatro:확률 로 다시 사용합니다."
+  },
+  "Balatro:Arrowhead": {
+    "NAME": "화살촉",
+    "DESCRIPTION": "매 턴 시작시, 안전 !M! 장을 얻고 카드를 !M! 장 버립니다.",
+    "UPGRADE_DESCRIPTION": "매 턴 시작시, 안전 !M! 장을 얻고 카드를 !M! 장 버립니다."
+  },
+  "Balatro:OnyxAgate": {
+    "NAME": "흑마노",
+    "DESCRIPTION": "힘 을 !M! 얻습니다. NL 턴 종료시 힘 을 !M! 잃습니다."
+  },
+  "Balatro:GlassJoker": {
+    "NAME": "글래스 조커",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 이번 게임에서 제거한 카드 1장당, 피해량이 +75% 증가합니다. NL 치명타 라면, 덱에서 이 카드를 제거합니다."
+  },
+  "Balatro:Showman": {
+    "NAME": "쇼맨",
+    "DESCRIPTION": "뽑을 카드 더미의 카드 1 장을 선택하여, 선택한 카드와 해당 카드의 모든 복사본을 손으로 가져옵니다. NL 소멸."
+  },
+  "Balatro:FlowerPot": {
+    "NAME": "화분",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 손패에 3가지 다른 유형의 카드를 보유하고 있다면, 이 카드의 피해량이 3 배 증가합니다."
+  },
+  "Balatro:Blueprint": {
+    "NAME": "청사진",
+    "DESCRIPTION": "이번 턴에서 가장 마지막으로 사용한 카드를 다시 사용합니다."
+  },
+  "Balatro:WeeJoker": {
+    "NAME": "조그마한 조커",
+    "DESCRIPTION": "이번 전투에서 사용한 0 비용 카드 1장당, 방어도를 !B! 얻습니다.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (총합 !M! 방어도)"
+    ]
+  },
+  "Balatro:MerryAndy": {
+    "NAME": "즐거운 앤디",
+    "DESCRIPTION": "카드를 !M! 장 버립니다. NL 카드를 !Balatro:MADraw! 장 뽑습니다. NL 다음 턴 시작시 카드를 1 장 적게 뽑습니다."
+  },
+  "Balatro:OopsAll6s": {
+    "NAME": "이런, 모두 6이야!",
+    "DESCRIPTION": "모든 확률을 2 배로 증가시킵니다.",
+    "UPGRADE_DESCRIPTION": "모든 확률을 2 배로 증가시킵니다. NL 전투 보상에서 포션이 나올 추가 확률이 부여됩니다."
+  },
+  "Balatro:TheIdol": {
+    "NAME": "우상",
+    "DESCRIPTION": "비용이 [1,2,3] 인 [스킬/공격/파워] 카드를 뽑습니다. 이번 턴 동안 가져온 카드의 비용이 0 이 됩니다. 가져오는 카드와 비용은 매 턴 종료시 변경됩니다.",
+    "UPGRADE_DESCRIPTION": "보존. NL 비용이 [1,2,3] 인 [스킬/공격/파워] 카드를 뽑습니다. 이번 턴 동안 가져온 카드의 비용이 0 이 됩니다. 가져오는 카드와 비용은 매 턴 종료시 변경됩니다.",
+    "EXTENDED_DESCRIPTION": [
+      "비용 ",
+      " 카드를 뽑습니다. 이번 턴 동안 가져온 카드의 비용이 0 이 됩니다. 가져오는 카드와 비용은 매 턴 종료시 변경됩니다.",
+      "보존. NL "
+      ]
+  },
+  "Balatro:SeeingDouble": {
+    "NAME": "둘로 보기",
+    "DESCRIPTION": "혼란 효과를 얻습니다. NL 주는 피해량이 2 배로 증가합니다."
+  },
+  "Balatro:Matador": {
+    "NAME": "투우사",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 엘리트나 보스전일시, 사용하면 골드를 !M! 얻습니다. NL 소멸."
+  },
+  "Balatro:HitTheRoad": {
+    "NAME": "여행 출발",
+    "DESCRIPTION": "이번 턴에 버린 카드의 수만큼 힘 을 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "이번 턴에 버린 카드의 수만큼 힘 을 얻습니다.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (총합 !M! 힘)"
+      ]
+  },
+  "Balatro:TheDuo": {
+    "NAME": "듀오",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 손패에 다른 공격 카드를 보유하고 있다면, 이 카드의 피해량이 2 배가 됩니다."
+  },
+  "Balatro:TheTrio": {
+    "NAME": "트리오",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 손패에 다른 공격 카드 2 장을 보유하고 있다면, 이 카드의 피해량이 3 배가 됩니다."
+  },
+  "Balatro:TheFamily": {
+    "NAME": "가족",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 손패에 다른 공격 카드 3 장을 보유하고 있다면, 이 카드의 피해량이 4 배가 됩니다."
+  },
+  "Balatro:TheOrder": {
+    "NAME": "조직",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 손패에 비용이 0, 1, 2, 3 인 카드를 전부 보유하고 있다면, 이 카드의 피해량이 3 배가 됩니다."
+  },
+  "Balatro:TheTribe": {
+    "NAME": "부족",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 손패에 공격 카드만을 보유하고 있다면, 이 카드의 피해량이 2 배가 됩니다."
+  },
+  "Balatro:Stuntman": {
+    "NAME": "스턴트맨",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 다음 2 턴 동안, 턴 시작시 카드를 1 장 덜 뽑습니다."
+  },
+  "Balatro:InvisibleJoker": {
+    "NAME": "투명 조커",
+    "DESCRIPTION": "이 카드를 2 번 사용하면, 덱의 무작위 카드 중 하나를 비용이 0인 상태로 복사하여 영구적으로 추가한뒤 이 카드를 덱에서 제거합니다. NL 소멸."
+  },
+  "Balatro:Brainstorm": {
+    "NAME": "브레인스토밍",
+    "DESCRIPTION": "이번 턴에서 처음으로 사용했던 카드를 다시 사용합니다."
+  },
+  "Balatro:Satellite": {
+    "NAME": "인공위성",
+    "DESCRIPTION": "덱에 존재하는 무작위 카드 1 장을 영구적으로 강화 합니다. NL 덱의 강화된 카드 1장당, 골드를 !M! 얻습니다. NL 소멸."
+  },
+  "Balatro:ShootTheMoon": {
+    "NAME": "야반도주",
+    "DESCRIPTION": "손패에 보유한 스킬 카드 1장당, 피해를 !D! 줍니다."
+  },
+  "Balatro:DriversLicense": {
+    "NAME": "운전면허증",
+    "DESCRIPTION": "덱에 희귀 등급 카드를 최소 4 장 이상 보유하고 있다면, 힘 을 !M! 얻고 민첩 을 !M! 얻습니다. NL 소멸."
+  },
+  "Balatro:Cartomancer": {
+    "NAME": "카드 점술가",
+    "DESCRIPTION": "무작위 일반 등급 포션을 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 무작위 일반 등급 포션을 얻습니다. NL 소멸."
+  },
+  "Balatro:Astronomer": {
+    "NAME": "천문학자",
+    "DESCRIPTION": "다음에 사용하는 강화된 카드의 비용이 0 이 됩니다.",
+    "UPGRADE_DESCRIPTION": "다음에 사용하는 강화된 카드 !M! 장의 비용이 0 이 됩니다."
+  },
+  "Balatro:BurntJoker": {
+    "NAME": "타버린 조커",
+    "DESCRIPTION": "원하는 만큼 손패의 카드를 선택해 버리고, 버린 카드들을 강화 합니다. NL 카드를 !M! 장 뽑습니다."
+  },
+  "Balatro:Bootstraps": {
+    "NAME": "자력",
+    "DESCRIPTION": "보유한 골드 만큼의 피해를 줍니다. NL 골드 를 !M! 잃습니다. NL 소멸."
+  },
+
+  "Balatro:Canio": {
+    "NAME": "카니오",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 소멸 카드 더미에 있는 파워 카드 1장당, 이 카드의 피해량이 +100% 증가합니다."
+  },
+  "Balatro:Triboulet": {
+    "NAME": "트리뷸렛",
+    "DESCRIPTION": "비용이 2 인 모든 카드들의 피해량과 방어도 획득량을 2 배로 증가시킵니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 비용이 2 인 모든 카드들의 피해량과 방어도 획득량을 2 배로 증가시킵니다."
+  },
+  "Balatro:Yorick": {
+    "NAME": "요릭",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 전투에서 버린 카드 !M! 장당, 이 카드의 피해량이 +100% 증가합니다."
+  },
+  "Balatro:Chicot": {
+    "NAME": "치코",
+    "DESCRIPTION": "휘발성. NL 보스에게 기절 을 부여합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "보스에게 기절 을 부여합니다. NL 소멸."
+  },
+  "Balatro:Perkeo": {
+    "NAME": "페르케오",
+    "DESCRIPTION": "이번 전투 보상에서 카드 보상 1개를 추가로 얻습니다. NL 소멸."
+  },
+  "Balatro:Dilation": {
+    "NAME": "팽창",
+    "DESCRIPTION": "이 카드를 뽑으면, 이 카드를 복사하여 얻습니다. NL 소멸."
+  },
+
+  "Balatro:Blockade": {
+    "NAME": "봉쇄",
+    "DESCRIPTION": "방어도를 !B! 얻습니다."
+  },
+  "Balatro:Assault": {
+    "NAME": "강습",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다."
+  },
+  "Balatro:Enhance": {
+    "NAME": "향상",
+    "DESCRIPTION": "이 카드의 방어도(+2)와 피해량(+1)을 영구적으로 증가시킵니다."
+  }
+}
