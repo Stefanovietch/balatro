@@ -155,12 +155,12 @@
 
   "${modID}:randomType": {
     "TEXT": [
-      "an Attack",
-      "a Skill",
-      "a Power",
-      " Attack ",
-      " Skill ",
-      " Power "
+      "공격",
+      "스킬",
+      "파워",
+      " 공격 ",
+      " 스킬 ",
+      " 파워 "
     ]
   },
 

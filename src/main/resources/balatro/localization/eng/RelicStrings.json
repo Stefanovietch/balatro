@@ -59,7 +59,7 @@
     "NAME": "Flushed",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "If you have not played any #yPowers during your turn, gain an extra [E] next turn."
+      "If you have not played any #yPowers during your turn, gain an extra [E][E] next turn."
     ]
   },
   "${modID}:Retrograde": {

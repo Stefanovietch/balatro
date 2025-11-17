@@ -50,6 +50,8 @@ public class FortuneTeller extends BaseCard {
 
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new FortuneTeller();
+        FortuneTeller newFortuneTeller = new FortuneTeller();
+        newFortuneTeller.magicNumber = Data.getPotionsUsed();
+        return newFortuneTeller;
     }
 }

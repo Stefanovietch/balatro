@@ -40,7 +40,7 @@ public class Flushed extends BaseRelic{
         if (this.gainEnergyNext && !this.firstTurn) {
             flash();
             addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            addToBot(new GainEnergyAction(1));
+            addToBot(new GainEnergyAction(2));
         }
         this.firstTurn = false;
         this.gainEnergyNext = true;
