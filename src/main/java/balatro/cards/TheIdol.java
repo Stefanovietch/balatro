@@ -64,11 +64,11 @@ public class TheIdol extends BaseCard implements RandomType{
 
                     String typeString;
                     if (cardtype == CardType.ATTACK) {
-                        typeString = " Attack ";
+                        typeString = randomTypeString.TEXT[3];
                     } else if (cardtype == CardType.SKILL) {
-                        typeString = " Skill ";
+                        typeString = randomTypeString.TEXT[4];
                     } else {
-                        typeString = " Power ";
+                        typeString = randomTypeString.TEXT[5];
                     }
 
                     if (upgraded) {

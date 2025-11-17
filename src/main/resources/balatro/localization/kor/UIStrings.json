@@ -153,6 +153,17 @@
     ]
   },
 
+  "${modID}:randomType": {
+    "TEXT": [
+      "an Attack",
+      "a Skill",
+      "a Power",
+      " Attack ",
+      " Skill ",
+      " Power "
+    ]
+  },
+
 
 
   "Balatro:GoldPerCombat": {

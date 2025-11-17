@@ -54,11 +54,11 @@ public class MailInRebate extends BaseCard implements RandomType{
             cardtype = typeList.get(typeRandom.random(2));
             String typeString;
             if (cardtype == CardType.ATTACK) {
-                typeString = "an Attack";
+                typeString = attackString;
             } else if (cardtype == CardType.SKILL) {
-                typeString = "a Skill";
+                typeString = skillString;
             } else {
-                typeString = "a Power";
+                typeString = powerString;
             }
             this.rawDescription = cardStrings.EXTENDED_DESCRIPTION[0] + typeString + cardStrings.EXTENDED_DESCRIPTION[1];
         } else {
